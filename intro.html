@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>مهندسی انرژی شریف | معرفی رشته</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="description" content="معرفی کامل دوره کارشناسی مهندسی انرژی دانشگاه صنعتی شریف.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -293,6 +294,27 @@ body{position:relative}
 .cover .chips{animation:fadeSlide .9s .46s both}
 @keyframes coverFloat{50%{transform:translateY(-50%) translate(-18px,16px) scale(1.08)}}
 @keyframes fadeSlide{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+/* ===== Light theme ===== */
+body.light{
+  --bg:#F3F7F8; --panel:#FFFFFF; --panel-2:#EEF5F6; --line:#D5E1E4;
+  --text:#17303A; --muted:#60757D; --accent:#0AA895; --accent-dim:rgba(10,168,149,.11);
+  --glow:rgba(10,168,149,.20);
+}
+body.light .topbar{background:rgba(243,247,248,.82);border-bottom-color:var(--line)}
+body.light .topbar a,body.light .topbar button{background:rgba(255,255,255,.88)}
+body.light .nav{background:rgba(255,255,255,.94);box-shadow:0 10px 30px rgba(31,62,71,.14)}
+body.light .nav button{background:var(--panel-2)}
+body.light .section-menu{background:rgba(255,255,255,.98);box-shadow:0 24px 70px rgba(31,62,71,.18)}
+body.light .cover .glow{background:radial-gradient(circle at 40% 35%, rgba(10,168,149,.45) 0%, rgba(10,168,149,.09) 60%, transparent 75%)}
+body.light .brand b{color:var(--text)}
+
+/* Section index / dots */
+.dots{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:7px;padding:8px}
+.dot{width:7px;height:7px;padding:0;border:1px solid var(--muted);background:transparent;border-radius:50%;cursor:pointer;opacity:.65;transition:.2s}
+.dot:hover{opacity:1;border-color:var(--accent);transform:scale(1.25)}
+.dot.active{width:9px;height:9px;background:var(--accent);border-color:var(--accent);opacity:1;box-shadow:0 0 12px var(--glow)}
+@media(max-width:700px){.dots{right:8px;gap:6px}.dot{width:6px;height:6px}.dot.active{width:8px;height:8px}}
+
 @media(max-width:700px){
   .topbar{height:58px;padding:0 4vw}
   .topbar a,.topbar button{padding:7px 9px;font-size:12px}
@@ -335,10 +357,6 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 
 
 
-
-<div class="brand"><b>SHARIF</b> · مهندسی انرژی</div>
-<div class="page-index" id="pageIndex">۰۱ / ۱۹</div>
-
 <!-- 1: COVER -->
 <section class="slide" id="s1" cover">
   <div class="glow"></div>
@@ -351,13 +369,13 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
     <div class="chip">برنامهٔ بازنگری‌شده ۱۴۰۰</div>
   </div>
   <footer class="slide-footer">
-    <span>نسخهٔ بازطراحی‌شده · ۱۴۰۵</span>
+    <span>مهندسی انرژی · دانشگاه صنعتی شریف</span>
     <span>دانشکده مهندسی انرژی</span>
   </footer>
 </section>
 
 <!-- 2: WHAT IS IT -->
-<section class="slide" id="s2"">
+<section class="slide" id="s2">
   <div class="kicker"><span class="num">۰۲ · تصویر کلی</span></div>
   <h1 class="title">این رشته دقیقاً چیست؟</h1>
   <div class="grid-2" style="margin-top:20px;">
@@ -385,7 +403,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 3: WHY ENERGY -->
-<section class="slide" id="s3"">
+<section class="slide" id="s3">
   <div class="kicker"><span class="num">۰۳ · چرا انرژی؟</span></div>
   <h1 class="title">مسئله‌ای بزرگ‌تر از یک نیروگاه</h1>
   <div class="grid-4">
@@ -410,7 +428,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 4: KEY NUMBERS -->
-<section class="slide" id="s4"">
+<section class="slide" id="s4">
   <div class="kicker"><span class="num">۰۴ · ساختار دوره</span></div>
   <h1 class="title">اعداد مهم دورهٔ کارشناسی</h1>
   <div class="stat-row">
@@ -432,7 +450,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 5: YEAR 1 -->
-<section class="slide" id="s5"">
+<section class="slide" id="s5">
   <div class="kicker"><span class="num">۰۵ · سال اول</span></div>
   <h1 class="title">پایه‌ها را محکم کن</h1>
   <div class="grid-2">
@@ -455,7 +473,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 6: YEAR 2 -->
-<section class="slide" id="s6"">
+<section class="slide" id="s6">
   <div class="kicker"><span class="num">۰۶ · سال دوم</span></div>
   <h1 class="title">ورود جدی به مهندسی</h1>
   <div class="grid-2">
@@ -478,7 +496,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 7: YEAR 3 -->
-<section class="slide" id="s7"">
+<section class="slide" id="s7">
   <div class="kicker"><span class="num">۰۷ · سال سوم</span></div>
   <h1 class="title">از «درس» به «سیستم انرژی»</h1>
   <div class="grid-2">
@@ -501,7 +519,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 8: YEAR 4 -->
-<section class="slide" id="s8"">
+<section class="slide" id="s8">
   <div class="kicker"><span class="num">۰۸ · سال چهارم</span></div>
   <h1 class="title">تخصصی‌سازی و پروژه</h1>
   <div class="grid-2">
@@ -523,7 +541,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 9: CORE KNOWLEDGE -->
-<section class="slide" id="s9"">
+<section class="slide" id="s9">
   <div class="kicker"><span class="num">۰۹ · هستهٔ تخصصی</span></div>
   <h1 class="title">چه چیزهایی واقعاً یاد می‌گیری؟</h1>
   <div class="grid-3">
@@ -537,7 +555,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 10: ELECTIVES / TRACKS -->
-<section class="slide" id="s10"">
+<section class="slide" id="s10">
   <div class="kicker"><span class="num">۱۰ · انتخابی‌ها</span></div>
   <h1 class="title">اینجا مسیر خودت را می‌سازی</h1>
   <div class="grid-2">
@@ -568,7 +586,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 11: SKILLS -->
-<section class="slide" id="s11"">
+<section class="slide" id="s11">
   <div class="kicker"><span class="num">۱۱ · مهارت‌ها</span></div>
   <h1 class="title">مهندس انرژی باید چه ابزارهایی بلد باشد؟</h1>
   <div class="grid-3">
@@ -583,7 +601,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 12: LABS & PROJECT -->
-<section class="slide" id="s12"">
+<section class="slide" id="s12">
   <div class="kicker"><span class="num">۱۲ · آزمایشگاه و پروژه</span></div>
   <h1 class="title">رشته فقط تئوری نیست</h1>
   <div class="grid-3">
@@ -597,7 +615,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 13: FACULTY -->
-<section class="slide" id="s13"">
+<section class="slide" id="s13">
   <div class="kicker"><span class="num">۱۳ · دانشکده</span></div>
   <h1 class="title">محیطی میان‌رشته‌ای در قلب شریف</h1>
   <div class="grid-2">
@@ -619,7 +637,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 14: JOB MARKET (EXPANDED) -->
-<section class="slide" id="s14"">
+<section class="slide" id="s14">
   <div class="kicker"><span class="num">۱۴ · بازار کار</span></div>
   <h1 class="title">بعد از کارشناسی، در چه صنایعی کار می‌کنی؟</h1>
   <div class="grid-3" style="margin-top:14px;">
@@ -664,7 +682,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 15: GRAD SCHOOL / APPLY (EXPANDED) -->
-<section class="slide" id="s15"">
+<section class="slide" id="s15">
   <div class="kicker"><span class="num">۱۵ · ادامهٔ مسیر</span></div>
   <h1 class="title">فرصت‌های تحصیلات تکمیلی و اپلای</h1>
   <div class="two-col-list">
@@ -709,7 +727,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 16: PROS/CONS -->
-<section class="slide" id="s16"">
+<section class="slide" id="s16">
   <div class="kicker"><span class="num">۱۶ · واقع‌بینانه</span></div>
   <h1 class="title">مزیت‌ها و چالش‌های رشته</h1>
   <div class="grid-2">
@@ -736,7 +754,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 17: IS IT FOR YOU -->
-<section class="slide" id="s17"">
+<section class="slide" id="s17">
   <div class="kicker"><span class="num">۱۷ · برای چه کسی؟</span></div>
   <h1 class="title">آیا مهندسی انرژی برای تو مناسب است؟</h1>
   <div class="card" style="margin-top:10px;">
@@ -750,7 +768,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 18: ONE SLIDE SUMMARY -->
-<section class="slide" id="s18"">
+<section class="slide" id="s18">
   <div class="kicker"><span class="num">۱۸ · جمع‌بندی</span></div>
   <h1 class="title">انرژی شریف، در یک نگاه</h1>
   <div class="chain">
@@ -777,7 +795,7 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
 </section>
 
 <!-- 19: SOURCES -->
-<section class="slide" id="s19"">
+<section class="slide" id="s19">
   <div class="kicker"><span class="num">۱۹ · منابع</span></div>
   <h1 class="title">منابع و مبنای اطلاعات</h1>
   <div class="card">
@@ -814,86 +832,108 @@ padding:9px 10px;border-radius:8px;cursor:pointer}
   const progress=document.getElementById('progress');
   const themeBtn=document.getElementById('themeBtn');
   const menuBtn=document.getElementById('menuBtn');
+  const pageIndex=document.getElementById('pageIndex');
+  const navCount=document.getElementById('navCount');
   const total=slides.length;
   const fa=['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
   const faNum=n=>String(n).split('').map(x=>fa[+x]).join('');
   let current=0;
 
-  slides.forEach((s,i)=>{
-    s.querySelectorAll(':scope > *').forEach((el,j)=>{
-      if(j<5) el.classList.add('reveal');
-    });
-    const d=document.createElement('button');
-    d.className='dot'; d.type='button'; d.title='بخش '+faNum(i+1);
-    d.setAttribute('aria-label','بخش '+faNum(i+1));
-    d.addEventListener('click',()=>goTo(i));
-    dots.appendChild(d);
-  });
-  const dotEls=[...dots.children];
+  function update(i){
+    current=Math.max(0,Math.min(total-1,i));
+    if(pageIndex) pageIndex.textContent=faNum(current+1).padStart(2,'۰')+' / '+faNum(total);
+    if(navCount) navCount.textContent=faNum(current+1)+' / '+faNum(total);
+    [...dots.children].forEach((d,j)=>d.classList.toggle('active',j===current));
+    if(progress) progress.style.width=((current+1)/total*100)+'%';
+  }
 
   function goTo(i){
     i=Math.max(0,Math.min(total-1,i));
     slides[i].scrollIntoView({behavior:'smooth',block:'start'});
   }
-  function update(i){
-    current=i;
-    document.getElementById('pageIndex').textContent=faNum(i+1).padStart(2,'۰')+' / '+faNum(total);
-    const navCount=document.getElementById('navCount');
-    if(navCount) navCount.textContent=faNum(i+1)+' / '+faNum(total);
-    dotEls.forEach((d,j)=>d.classList.toggle('active',j===i));
-    progress.style.width=((i+1)/total*100)+'%';
-  }
+
+  // Dots / section index
+  slides.forEach((s,i)=>{
+    s.querySelectorAll(':scope > *').forEach((el,j)=>{ if(j<6) el.classList.add('reveal'); });
+    const d=document.createElement('button');
+    d.className='dot'; d.type='button';
+    d.title='بخش '+faNum(i+1); d.setAttribute('aria-label','رفتن به بخش '+faNum(i+1));
+    d.addEventListener('click',()=>goTo(i));
+    dots.appendChild(d);
+  });
 
   const io=new IntersectionObserver(entries=>{
     entries.forEach(e=>{
-      if(!e.isIntersecting)return;
+      if(!e.isIntersecting) return;
       const i=slides.indexOf(e.target);
-      update(i);
-      e.target.querySelectorAll('.reveal').forEach((x,k)=>{
-        x.style.transitionDelay=(Math.min(k,5)*70)+'ms';
-        x.classList.add('visible');
-      });
+      if(i>=0){
+        update(i);
+        e.target.querySelectorAll('.reveal').forEach((x,k)=>{
+          x.style.transitionDelay=(Math.min(k,5)*65)+'ms';
+          x.classList.add('visible');
+        });
+      }
     });
   },{threshold:.45});
   slides.forEach(s=>io.observe(s));
 
-  // Preserve original next/prev controls.
-  const next=document.getElementById('nextBtn'), prev=document.getElementById('prevBtn');
-  if(next) next.onclick=()=>goTo(current+1);
-  if(prev) prev.onclick=()=>goTo(current-1);
+  document.getElementById('nextBtn')?.addEventListener('click',()=>goTo(current+1));
+  document.getElementById('prevBtn')?.addEventListener('click',()=>goTo(current-1));
 
   window.addEventListener('keydown',e=>{
-    if(['ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();goTo(current+1)}
-    if(['ArrowUp','PageUp'].includes(e.key)){e.preventDefault();goTo(current-1)}
-    if(e.key==='Home'){e.preventDefault();goTo(0)}
-    if(e.key==='End'){e.preventDefault();goTo(total-1)}
+    if(['ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();goTo(current+1);}
+    else if(['ArrowUp','PageUp'].includes(e.key)){e.preventDefault();goTo(current-1);}
+    else if(e.key==='Home'){e.preventDefault();goTo(0);}
+    else if(e.key==='End'){e.preventDefault();goTo(total-1);}
+    else if(e.key==='Escape') closeMenu();
   });
 
-  menuBtn.addEventListener('click',()=>{
-    const existing=document.querySelector('.section-menu');
-    if(existing){existing.remove();return}
-    const panel=document.createElement('div');
-    panel.className='section-menu';
-    panel.innerHTML='<div class="section-menu-title">رفتن به بخش</div>';
+  let menuPanel=null;
+  function closeMenu(){ if(menuPanel){menuPanel.remove();menuPanel=null;} }
+  menuBtn?.addEventListener('click',e=>{
+    e.stopPropagation();
+    if(menuPanel){closeMenu();return;}
+    menuPanel=document.createElement('div');
+    menuPanel.className='section-menu';
+    menuPanel.setAttribute('role','dialog');
+    menuPanel.innerHTML='<div class="section-menu-title">فهرست بخش‌ها</div>';
     slides.forEach((s,i)=>{
       const b=document.createElement('button');
       b.type='button';
-      b.textContent=(i+1)+' · '+(s.querySelector('h1,h2')?.textContent?.trim()||'بخش');
-      b.onclick=()=>{panel.remove();goTo(i)};
-      panel.appendChild(b);
+      const title=s.querySelector('h1,h2')?.textContent?.trim() || ('بخش '+faNum(i+1));
+      b.textContent=faNum(i+1)+' · '+title;
+      b.addEventListener('click',()=>{closeMenu();goTo(i);});
+      menuPanel.appendChild(b);
     });
-    document.body.appendChild(panel);
+    document.body.appendChild(menuPanel);
   });
+  document.addEventListener('click',e=>{ if(menuPanel && !menuPanel.contains(e.target) && e.target!==menuBtn) closeMenu(); });
 
   const saved=localStorage.getItem('energy-theme');
-  if(saved==='light')body.classList.add('light');
-  const setThemeText=()=>themeBtn.textContent=body.classList.contains('light')?'☾ حالت تیره':'☼ حالت روشن';
+  if(saved==='light') body.classList.add('light');
+  function setThemeText(){
+    if(themeBtn) themeBtn.textContent=body.classList.contains('light')?'☾ حالت تیره':'☼ حالت روشن';
+  }
   setThemeText();
-  themeBtn.onclick=()=>{
+  themeBtn?.addEventListener('click',()=>{
     body.classList.toggle('light');
     localStorage.setItem('energy-theme',body.classList.contains('light')?'light':'dark');
     setThemeText();
-  };
+  });
+
+  // Support direct links such as intro.html#s14 from the home page.
+  function openHash(){
+    const hash=decodeURIComponent(location.hash||'').replace(/^#/,'');
+    if(!hash) return;
+    const target=document.getElementById(hash);
+    if(target){
+      const i=slides.indexOf(target);
+      setTimeout(()=>{target.scrollIntoView({behavior:'smooth',block:'start'}); if(i>=0) update(i);},80);
+    }
+  }
+  window.addEventListener('hashchange',openHash);
+  window.addEventListener('load',openHash);
+  update(0);
 })();
 </script>
 
