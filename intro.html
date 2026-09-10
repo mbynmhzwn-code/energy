@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>معرفی رشته مهندسی انرژی | دانشگاه صنعتی شریف</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --bg:#07111f; --bg2:#0b1627; --panel:#101d30; --panel2:#0d192a;
+  --line:#21324b; --text:#eef4fb; --muted:#9cafc8; --accent:#35d6be;
+  --accent2:#6fe9d5; --shadow:0 20px 60px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.topbar{
+ position:fixed;top:0;left:0;right:0;height:68px;z-index:100;
+ display:flex;align-items:center;justify-content:space-between;padding:0 5vw;
+ background:rgba(7,17,31,.72);backdrop-filter:blur(16px);
+ border-bottom:1px solid rgba(33,50,75,.75)
+}
+.brand-link{font-weight:800;letter-spacing:.2px}.brand-link span{color:var(--accent)}
+.top-actions{display:flex;gap:8px;align-items:center}
+.nav-btn{
+ border:1px solid var(--line);background:rgba(16,29,48,.8);color:var(--text);
+ padding:9px 14px;border-radius:10px;cursor:pointer;transition:.2s
+}
+.nav-btn:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
+.progress{position:fixed;top:67px;left:0;height:2px;background:var(--accent);width:0;z-index:101;transition:width .35s}
+.page{padding-top:68px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.hero{
+ min-height:calc(100vh - 68px);display:flex;align-items:center;justify-content:center;
+ padding:70px 8vw;position:relative;overflow:hidden
+}
+.hero::before{
+ content:"";position:absolute;width:560px;height:560px;border-radius:50%;
+ background:radial-gradient(circle,rgba(53,214,190,.18),transparent 68%);
+ top:8%;right:-100px;animation:floatGlow 7s ease-in-out infinite
+}
+.hero-content{max-width:1050px;position:relative;z-index:1}
+.eyebrow{color:var(--accent);font-weight:700;font-size:14px;margin-bottom:16px}
+.hero h1{font-size:clamp(40px,7vw,82px);line-height:1.15;margin:0 0 20px;font-weight:800}
+.hero p{max-width:780px;color:var(--muted);font-size:18px;line-height:2}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.primary,.secondary{
+ display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;
+ transition:.25s;border:1px solid var(--line)
+}
+.primary{background:var(--accent);color:#06131c;font-weight:800;border-color:var(--accent)}
+.secondary{background:var(--panel);color:var(--text)}
+.primary:hover,.secondary:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.section{padding:90px 8vw;border-top:1px solid var(--line)}
+.section-inner{max-width:1150px;margin:auto}
+.section h2{font-size:clamp(28px,4vw,48px);margin:0 0 14px}
+.section .lead{color:var(--muted);line-height:1.9;max-width:760px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.portal-card{
+ background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);
+ border-radius:18px;padding:25px;min-height:190px;display:flex;flex-direction:column;
+ transition:.3s;position:relative;overflow:hidden
+}
+.portal-card::after{content:"";position:absolute;inset:auto -20% -60% 20%;height:150px;
+background:radial-gradient(circle,rgba(53,214,190,.13),transparent 65%)}
+.portal-card:hover{transform:translateY(-7px);border-color:rgba(53,214,190,.55);box-shadow:var(--shadow)}
+.portal-card .icon{font-size:30px;margin-bottom:15px}.portal-card h3{margin:0 0 9px;font-size:20px}
+.portal-card p{color:var(--muted);line-height:1.8;margin:0}
+.portal-card .arrow{margin-top:auto;color:var(--accent);padding-top:18px;font-weight:700}
+.footer{padding:35px 8vw;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:13px}
+.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);opacity:0;
+background:var(--panel);border:1px solid var(--line);padding:11px 16px;border-radius:10px;z-index:200;transition:.25s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes floatGlow{50%{transform:translate(-20px,20px) scale(1.08)}}
+@media(max-width:850px){
+ .topbar{padding:0 4vw}.top-actions .optional{display:none}
+ .cards{grid-template-columns:1fr}.hero{padding:60px 6vw}.section{padding:70px 6vw}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}.reveal{transition:none}.hero::before{animation:none}
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مهندسی انرژی شریف</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- Enhanced UI -->
+<meta name="description" content="معرفی جامع دوره کارشناسی مهندسی انرژی دانشگاه صنعتی شریف؛ برنامه درسی، مهارت‌ها، آزمایشگاه‌ها، بازار کار و مسیر اپلای.">
+<meta name="theme-color" content="#0B1220">
+<meta property="og:title" content="مهندسی انرژی شریف | معرفی دوره کارشناسی">
+<meta property="og:description" content="برنامه درسی، مهارت‌ها، بازار کار، آزمایشگاه‌ها و مسیر ادامه تحصیل مهندسی انرژی شریف.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B1220'/%3E%3Cpath d='M36 6 16 36h14l-3 22 21-31H34z' fill='%2335D6BE'/%3E%3C/svg%3E">
+
+
+/* intro overrides */
+body{overflow-y:auto}
+.slide{min-height:100vh;padding:96px 8vw 96px;position:relative;border-bottom:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+.brand,.page-index{display:none}
+@media(max-width:900px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+.slide > *{max-width:1200px;width:100%;margin-inline:auto}
+</style>
+</head>
+<body>
+<div class="topbar">
+ <a class="brand-link" href="index.html">مهندسی انرژی <span>شریف</span></a>
+ <div class="top-actions"><a class="nav-btn" href="index.html">⌂ خانه</a><a class="nav-btn" href="chart.html">چارت درسی</a></div>
+</div>
+<div class="progress"></div>
+<main class="page">
+<div class="topbar" aria-label="ناوبری سایت">
+  <span class="mini-brand">مهندسی انرژی شریف</span>
+  <a href="#s1" aria-label="بازگشت به ابتدا">خانه</a>
+  <a href="#s19" aria-label="منابع">منابع</a>
+  <button id="themeBtn" type="button" aria-label="تغییر حالت رنگ">☀️ حالت روشن</button>
+  <button id="menuBtn" type="button" aria-label="باز کردن فهرست">☰ فهرست</button>
+  <div class="progress" id="progress"></div>
+</div>
+<div class="dots" id="dots" aria-label="فهرست بخش‌ها"></div>
+
+
+
+<div class="page-index" id="pageIndex">۰۱ / ۱۹</div>
+
+<!-- 1: COVER -->
+<section class="slide cover">
+  <div class="glow"></div>
+  <div class="sharif">دانشگاه صنعتی شریف — دانشکده مهندسی انرژی</div>
+  <h1 class="title">مهندسی انرژی</h1>
+  <p class="subtitle">معرفی کامل دورهٔ کارشناسی؛ از ترمودینامیک و برق تا انرژی‌های تجدیدپذیر، اقتصاد انرژی و تحلیل سیستم‌ها.</p>
+  <div class="chips" style="margin-top:36px;">
+    <div class="chip">۱۴۰ واحد</div>
+    <div class="chip">۸ نیمسال پیشنهادی</div>
+    <div class="chip">برنامهٔ بازنگری‌شده ۱۴۰۰</div>
+  </div>
+  <footer class="slide-footer">
+    <span>نسخهٔ بازطراحی‌شده · ۱۴۰۵</span>
+    <span>دانشکده مهندسی انرژی</span>
+  </footer>
+</section>
+
+<!-- 2: WHAT IS IT -->
+<section class="slide">
+  <div class="kicker"><span class="num">۰۲ · تصویر کلی</span></div>
+  <h1 class="title">این رشته دقیقاً چیست؟</h1>
+  <div class="grid-2" style="margin-top:20px;">
+    <div class="card">
+      <h3>یک مهندس انرژی چه مسئله‌ای را حل می‌کند؟</h3>
+      <ul class="list">
+        <li><b>تحلیل زنجیرهٔ انرژی</b> از منبع تا مصرف: استخراج، تبدیل، انتقال، توزیع و مصرف</li>
+        <li><b>طراحی و بهینه‌سازی سیستم‌های انرژی</b> با دیدن هم‌زمان ملاحظات فنی، اقتصادی و زیست‌محیطی</li>
+        <li><b>کار در تقاطع چند رشته:</b> مکانیک، برق، شیمی، فیزیک، اقتصاد و مدل‌سازی</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="accent">هویت رشته</h3>
+      <div class="chips">
+        <div class="chip">ترمودینامیک</div>
+        <div class="chip">سیستم‌های قدرت</div>
+        <div class="chip">تجدیدپذیرها</div>
+        <div class="chip">بهینه‌سازی</div>
+        <div class="chip">اقتصاد انرژی</div>
+        <div class="chip">محیط‌زیست</div>
+      </div>
+      <p class="note">رویکرد رشته «سیستمی» است؛ نه صرفاً یک فناوری خاص.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3: WHY ENERGY -->
+<section class="slide">
+  <div class="kicker"><span class="num">۰۳ · چرا انرژی؟</span></div>
+  <h1 class="title">مسئله‌ای بزرگ‌تر از یک نیروگاه</h1>
+  <div class="grid-4">
+    <div class="card">
+      <h3 class="accent">تقاضا</h3>
+      <p style="color:var(--muted);font-size:14px;line-height:1.85;">رشد مصرف انرژی، شبکه‌ها و زیرساخت‌های پیچیده‌تر را به مسئلهٔ مهندسی تبدیل می‌کند.</p>
+    </div>
+    <div class="card">
+      <h3 class="accent">امنیت</h3>
+      <p style="color:var(--muted);font-size:14px;line-height:1.85;">تنوع‌بخشی به منابع و افزایش تاب‌آوری سیستم‌های انرژی اهمیت پیدا می‌کند.</p>
+    </div>
+    <div class="card">
+      <h3 class="accent">اقتصاد</h3>
+      <p style="color:var(--muted);font-size:14px;line-height:1.85;">هزینه، قیمت، سرمایه‌گذاری و بهره‌وری مستقیماً روی طراحی سیستم اثر می‌گذارند.</p>
+    </div>
+    <div class="card">
+      <h3 class="accent">محیط‌زیست</h3>
+      <p style="color:var(--muted);font-size:14px;line-height:1.85;">آلودگی و انتشار گازهای گلخانه‌ای، قید مهم تصمیم‌های انرژی هستند.</p>
+    </div>
+  </div>
+  <p class="note">در معرفی رسمی دانشکده، همین پیوند فنی–اقتصادی–زیست‌محیطی به‌عنوان منطق اصلی برنامهٔ کارشناسی مطرح شده است.</p>
+</section>
+
+<!-- 4: KEY NUMBERS -->
+<section class="slide">
+  <div class="kicker"><span class="num">۰۴ · ساختار دوره</span></div>
+  <h1 class="title">اعداد مهم دورهٔ کارشناسی</h1>
+  <div class="stat-row">
+    <div class="stat"><div class="n">۱۴۰</div><div class="l">واحد موردنیاز برای فارغ‌التحصیلی</div></div>
+    <div class="stat"><div class="n">۵ سال</div><div class="l">حداکثر مدت مجاز تحصیل</div></div>
+    <div class="stat"><div class="n">۳۵</div><div class="l">واحد پایه</div></div>
+    <div class="stat"><div class="n">۶۳</div><div class="l">واحد اصلی</div></div>
+  </div>
+  <div class="card" style="margin-top:22px;">
+    <h3 class="accent">ترکیب کلی</h3>
+    <div class="formula">
+      <span class="term">پایه ۳۵</span><span class="plus">+</span>
+      <span class="term">اصلی ۶۳</span><span class="plus">+</span>
+      <span class="term">عمومی ۲۲</span><span class="plus">+</span>
+      <span class="term">اختیاری، کارآموزی و پروژه ۲۰</span>
+    </div>
+  </div>
+  <p class="note">نکته: صفحهٔ رسمی دانشکده برنامه را در سال ۱۴۰۰ بازنگری‌شده معرفی می‌کند.</p>
+</section>
+
+<!-- 5: YEAR 1 -->
+<section class="slide">
+  <div class="kicker"><span class="num">۰۵ · سال اول</span></div>
+  <h1 class="title">پایه‌ها را محکم کن</h1>
+  <div class="grid-2">
+    <div class="card">
+      <div class="semester-head"><h3>نیمسال ۱</h3><span>۱۷ واحد</span></div>
+      <ul class="list">
+        <li>ریاضی عمومی ۱</li><li>فیزیک ۱</li><li>آزمایشگاه فیزیک ۱</li>
+        <li>شیمی عمومی</li><li>مبانی برنامه‌سازی</li><li>آشنایی با مهندسی انرژی</li><li>ادبیات فارسی</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="semester-head"><h3>نیمسال ۲</h3><span>۱۸ واحد</span></div>
+      <ul class="list">
+        <li>ریاضی عمومی ۲</li><li>فیزیک ۲</li><li>آزمایشگاه فیزیک ۲</li>
+        <li>مبانی اقتصاد</li><li>آزمایشگاه شیمی</li><li>معادلات دیفرانسیل</li>
+        <li>نقشه‌کشی صنعتی</li><li>درس عمومی</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 6: YEAR 2 -->
+<section class="slide">
+  <div class="kicker"><span class="num">۰۶ · سال دوم</span></div>
+  <h1 class="title">ورود جدی به مهندسی</h1>
+  <div class="grid-2">
+    <div class="card">
+      <div class="semester-head"><h3>نیمسال ۳</h3><span>۲۰ واحد</span></div>
+      <ul class="list">
+        <li>محاسبات عددی</li><li>استاتیک</li><li>ترمودینامیک مهندسی ۱</li>
+        <li>مکانیک سیالات</li><li>ریاضی مهندسی</li><li>الکترونیک</li>
+        <li>تربیت بدنی ۱</li><li>درس عمومی</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="semester-head"><h3>نیمسال ۴</h3><span>۲۰ واحد</span></div>
+      <ul class="list">
+        <li>ترمودینامیک مهندسی ۲</li><li>انتقال حرارت</li><li>سیستم‌های انرژی الکتریکی ۱</li>
+        <li>مقاومت مصالح</li><li>برنامه‌ریزی ریاضی</li><li>آمار و احتمالات مهندسی</li><li>درس عمومی</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 7: YEAR 3 -->
+<section class="slide">
+  <div class="kicker"><span class="num">۰۷ · سال سوم</span></div>
+  <h1 class="title">از «درس» به «سیستم انرژی»</h1>
+  <div class="grid-2">
+    <div class="card">
+      <div class="semester-head"><h3>نیمسال ۵</h3><span>۱۹ واحد</span></div>
+      <ul class="list">
+        <li>آزمایشگاه ترمودینامیک</li><li>کنترل اتوماتیک</li><li>مبانی تحلیل سیستم‌های انرژی</li>
+        <li>اقتصادسنجی</li><li>سیستم‌های انرژی الکتریکی ۲</li><li>تبدیل انرژی</li>
+        <li>تربیت بدنی ۲</li><li>درس عمومی</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="semester-head"><h3>نیمسال ۶</h3><span>۱۵ واحد</span></div>
+      <ul class="list">
+        <li>آزمایشگاه سیستم‌های انرژی الکتریکی</li><li>مبانی انرژی‌های تجدیدپذیر</li>
+        <li>مبانی انتگراسیون فرایند</li><li>ممیزی انرژی</li><li>زبان عمومی</li><li>درس عمومی</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 8: YEAR 4 -->
+<section class="slide">
+  <div class="kicker"><span class="num">۰۸ · سال چهارم</span></div>
+  <h1 class="title">تخصصی‌سازی و پروژه</h1>
+  <div class="grid-2">
+    <div class="card">
+      <div class="semester-head"><h3>نیمسال ۷</h3><span>۱۶ واحد</span></div>
+      <ul class="list">
+        <li>زبان تخصصی</li><li>درس اختیاری ۱</li><li>آثار زیست‌محیطی انرژی</li>
+        <li>درس اختیاری ۲</li><li>کارآموزی</li><li>اقتصاد انرژی</li><li>درس عمومی</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="semester-head"><h3>نیمسال ۸</h3><span>۱۵ واحد</span></div>
+      <ul class="list">
+        <li>درس اختیاری ۱</li><li>درس اختیاری ۲</li><li>درس اختیاری ۳</li>
+        <li>درس اختیاری ۴</li><li>پروژهٔ کارشناسی</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 9: CORE KNOWLEDGE -->
+<section class="slide">
+  <div class="kicker"><span class="num">۰۹ · هستهٔ تخصصی</span></div>
+  <h1 class="title">چه چیزهایی واقعاً یاد می‌گیری؟</h1>
+  <div class="grid-3">
+    <div class="card"><h3 class="accent">حرارت و سیالات</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">ترمودینامیک، انتقال حرارت، مکانیک سیالات، تبدیل انرژی</p></div>
+    <div class="card"><h3 class="accent">برق و کنترل</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">سیستم‌های انرژی الکتریکی، الکترونیک، کنترل اتوماتیک</p></div>
+    <div class="card"><h3 class="accent">مدل‌سازی و بهینه‌سازی</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">برنامه‌ریزی ریاضی، محاسبات عددی، تحلیل سیستم‌های انرژی</p></div>
+    <div class="card"><h3 class="accent">اقتصاد انرژی</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">اقتصاد، اقتصادسنجی، اقتصاد انرژی و تصمیم‌گیری</p></div>
+    <div class="card"><h3 class="accent">تجدیدپذیرها</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">خورشیدی، باد، زیست‌توده، زمین‌گرمایی، هیدروژن و پیل سوختی</p></div>
+    <div class="card"><h3 class="accent">محیط‌زیست</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">آثار زیست‌محیطی انرژی و سنجش اثرات سیستم‌ها</p></div>
+  </div>
+</section>
+
+<!-- 10: ELECTIVES / TRACKS -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۰ · انتخابی‌ها</span></div>
+  <h1 class="title">اینجا مسیر خودت را می‌سازی</h1>
+  <div class="grid-2">
+    <div class="card">
+      <h3>نمونه‌ای از دروس اختیاری</h3>
+      <ul class="list">
+        <li>مبانی قابلیت اطمینان و تحلیل ریسک</li>
+        <li>سیستم‌های تولید هم‌زمان</li>
+        <li>اصول کارایی انرژی</li>
+        <li>مبانی سیاست‌گذاری انرژی</li>
+        <li>مقدمه‌ای بر تحلیل اکسرژی</li>
+        <li>مهندسی فرآورش، انتقال و توزیع نفت و گاز</li>
+        <li>انرژی خورشیدی · انرژی باد · انرژی زیست‌توده</li>
+        <li>مبانی انرژی هسته‌ای</li>
+        <li>فناوری هیدروژن و پیل سوختی</li>
+        <li>انرژی زمین‌گرمایی</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="accent">سه مسیر پیشنهادی</h3>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px;">
+        <div><b>فنی</b><p style="color:var(--muted);font-size:14px;">نیروگاه، تبدیل انرژی، حرارت و سیالات</p></div>
+        <div><b>سیستمی</b><p style="color:var(--muted);font-size:14px;">بهینه‌سازی، تحلیل، اقتصاد و سیاست‌گذاری</p></div>
+        <div><b>پاک</b><p style="color:var(--muted);font-size:14px;">خورشیدی، باد، هیدروژن و پایداری</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11: SKILLS -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۱ · مهارت‌ها</span></div>
+  <h1 class="title">مهندس انرژی باید چه ابزارهایی بلد باشد؟</h1>
+  <div class="grid-3">
+    <div class="card"><h3 class="accent">تحلیل فنی</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">ترمودینامیک، انتقال حرارت، سیالات، برق، کنترل</p></div>
+    <div class="card"><h3 class="accent">مدل‌سازی</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">Python / MATLAB و ابزارهای شبیه‌سازی و محاسبات عددی</p></div>
+    <div class="card"><h3 class="accent">بهینه‌سازی</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">برنامه‌ریزی ریاضی (LP/NLP) و تصمیم‌گیری</p></div>
+    <div class="card"><h3 class="accent">داده و اقتصاد</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">آمار، اقتصادسنجی، تحلیل هزینه و سناریو</p></div>
+    <div class="card"><h3 class="accent">سیستم‌نگری</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">دیدن زنجیرهٔ کامل تولید تا مصرف انرژی</p></div>
+    <div class="card"><h3 class="accent">ارتباط و ارائه</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">زبان تخصصی، گزارش فنی، پروژه و کار تیمی</p></div>
+  </div>
+  <p class="note">پیشنهاد شخصی از ترم‌های اول: Python + Excel و یک ابزار شبیه‌سازی را جدی بگیر.</p>
+</section>
+
+<!-- 12: LABS & PROJECT -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۲ · آزمایشگاه و پروژه</span></div>
+  <h1 class="title">رشته فقط تئوری نیست</h1>
+  <div class="grid-3">
+    <div class="card"><h3 class="accent">آزمایشگاه ترمودینامیک</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">بررسی رفتار واقعی سامانه‌های حرارتی و مقایسه با مدل‌ها</p></div>
+    <div class="card"><h3 class="accent">آزمایشگاه برق</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">آشنایی عملی با سیستم‌های انرژی الکتریکی</p></div>
+    <div class="card"><h3 class="accent">آزمایشگاه کنترل</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">پیاده‌سازی و تحلیل حلقه‌های کنترل</p></div>
+    <div class="card"><h3 class="accent">آزمایشگاه انتقال حرارت</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">اندازه‌گیری و تحلیل انتقال انرژی حرارتی</p></div>
+    <div class="card"><h3 class="accent">آزمایشگاه خورشیدی</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">بررسی سامانه‌های خورشیدی و تبدیل انرژی</p></div>
+    <div class="card"><h3 class="accent">پروژهٔ کارشناسی</h3><p style="color:var(--muted);font-size:14px;line-height:1.85;">حل یک مسئلهٔ مشخص با خروجی فنی/تحلیلی</p></div>
+  </div>
+</section>
+
+<!-- 13: FACULTY -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۳ · دانشکده</span></div>
+  <h1 class="title">محیطی میان‌رشته‌ای در قلب شریف</h1>
+  <div class="grid-2">
+    <div class="card">
+      <h3>دانشکدهٔ مهندسی انرژی</h3>
+      <p style="color:var(--muted);font-size:14.5px;line-height:1.9;">اولین تجربهٔ دانشگاه صنعتی شریف در ایجاد یک دانشکدهٔ مهندسی با ماهیت چندرشته‌ای در مقطع تحصیلات تکمیلی؛ دانشکده در سال ۱۳۸۶ راه‌اندازی شد و از ۱۳۸۸ در ساختمان جدید فعالیت می‌کند.</p>
+      <p class="note" style="margin-top:20px;">گروه‌های اصلی مرتبط: مهندسی سیستم‌های انرژی · مهندسی هسته‌ای</p>
+    </div>
+    <div class="card">
+      <h3 class="accent">فضای پژوهش و آموزش</h3>
+      <ul class="list">
+        <li>آزمایشگاه‌های گروه مهندسی سیستم‌های انرژی و گروه مهندسی هسته‌ای</li>
+        <li>ارتباط با صنعت و مرکز نوآوری انرژی شریف</li>
+        <li>پژوهش در حوزه‌های انرژی، محیط‌زیست، فناوری و سیستم‌های پیچیده</li>
+        <li>دسترسی به جامعه‌ای از دانشجویان و استادان با پیشینه‌های مختلف</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 14: JOB MARKET (EXPANDED) -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۴ · بازار کار</span></div>
+  <h1 class="title">بعد از کارشناسی، در چه صنایعی کار می‌کنی؟</h1>
+  <div class="grid-3" style="margin-top:14px;">
+    <div class="sector">
+      <h4>نیروگاه و صنعت برق</h4>
+      <p>بهره‌برداری و نگهداری نیروگاه‌های حرارتی و سیکل‌ترکیبی، دیسپاچینگ، طراحی فنی در شرکت‌های برق منطقه‌ای و توانیر، تحلیل عملکرد و بهینه‌سازی واحدهای تولید.</p>
+    </div>
+    <div class="sector">
+      <h4>نفت، گاز و پتروشیمی</h4>
+      <p>مهندسی فرآیند و بهینه‌سازی مصرف انرژی در پالایشگاه‌ها، مهندسی فرآورش و انتقال، ارزیابی فنی‌–اقتصادی پروژه‌های بالادستی و پایین‌دستی.</p>
+    </div>
+    <div class="sector">
+      <h4>انرژی‌های تجدیدپذیر</h4>
+      <p>توسعه و طراحی پروژه‌های خورشیدی و بادی، شرکت‌های EPC تجدیدپذیر، تحلیل بازده و امکان‌سنجی، ذخیره‌سازی انرژی و هیدروژن سبز.</p>
+    </div>
+    <div class="sector">
+      <h4>مشاوره و ممیزی انرژی</h4>
+      <p>ممیزی مصرف انرژی صنایع و ساختمان، مدیریت انرژی مطابق استانداردهایی مانند ISO 50001، مطالعات امکان‌سنجی برای صنعت و دولت.</p>
+    </div>
+    <div class="sector">
+      <h4>شرکت‌های مهندسی و EPC</h4>
+      <p>طراحی سیستم‌های حرارتی، سیالاتی و برق در پروژه‌های صنعتی و ساختمانی؛ مدیریت پروژه‌های اجرایی انرژی.</p>
+    </div>
+    <div class="sector">
+      <h4>سیاست‌گذاری و بخش دولتی</h4>
+      <p>وزارت نیرو، سازمان بهره‌وری انرژی ایران (سابا)، شرکت‌های آب و برق منطقه‌ای، پژوهشگاه نیرو و مراکز پژوهشی سیاست انرژی.</p>
+    </div>
+    <div class="sector">
+      <h4>استارتاپ و فناوری‌های نو</h4>
+      <p>مانیتورینگ هوشمند انرژی، شبکه‌های هوشمند (Smart Grid)، خودروی برقی، پلتفرم‌های مدیریت مصرف صنعتی و خانگی.</p>
+    </div>
+    <div class="sector">
+      <h4>تحلیل داده و مالی انرژی</h4>
+      <p>تحلیلگر بازار برق و انرژی، مدل‌سازی قیمت و ریسک، تحلیل سبد پروژه‌های انرژی برای سرمایه‌گذاران و بانک‌ها.</p>
+    </div>
+    <div class="sector">
+      <h4>پژوهش و دانشگاه</h4>
+      <p>پژوهشگر در مراکز تحقیقاتی انرژی، همکاری با آزمایشگاه‌های دانشکده، مسیر به‌سوی عضویت هیئت‌علمی پس از تحصیلات تکمیلی.</p>
+    </div>
+  </div>
+  <p class="note">مهم: تجربهٔ پروژه‌ای واقعی و مهارت نرم‌افزاری (Python، MATLAB، ابزارهای شبیه‌سازی انرژی و GIS) اغلب از عنوان رشته روی رزومه مهم‌تر است — کارآموزی را جدی بگیر.</p>
+</section>
+
+<!-- 15: GRAD SCHOOL / APPLY (EXPANDED) -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۵ · ادامهٔ مسیر</span></div>
+  <h1 class="title">فرصت‌های تحصیلات تکمیلی و اپلای</h1>
+  <div class="two-col-list">
+    <div class="card">
+      <h3 class="accent">ادامهٔ تحصیل در داخل</h3>
+      <ul class="list">
+        <li>کارشناسی ارشد مهندسی سیستم‌های انرژی، همین دانشکده در شریف</li>
+        <li>رشته‌های نزدیک در سایر دانشگاه‌ها: مهندسی مکانیک (تبدیل انرژی)، برق (قدرت)، شیمی (فرآیند)، اقتصاد انرژی</li>
+        <li>دانشکده در مقاطع تکمیلی، مسیرهای متنوعی در سیستم‌های انرژی و حوزه‌های مرتبط ارائه می‌کند</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="accent">زمینه‌های رایج برای اپلای خارج از کشور</h3>
+      <ul class="list">
+        <li>مهندسی مکانیک/حرارتی: سیستم‌های انرژی، احتراق، HVAC</li>
+        <li>مهندسی برق/قدرت: شبکه‌های هوشمند، سیستم‌های قدرت تجدیدپذیر</li>
+        <li>مهندسی شیمی: فرآیند، تبدیل انرژی، سوخت‌های جایگزین</li>
+        <li>محیط‌زیست، پایداری و سیاست آب‌وهوا (Sustainability / Climate Policy)</li>
+        <li>اقتصاد انرژی و فناوری‌–سیاست (Energy Economics / Technology &amp; Policy)</li>
+        <li>مهندسی صنایع و تحقیق در عملیات (بهینه‌سازی سیستم‌های انرژی)</li>
+        <li>علم داده و یادگیری ماشین در حوزهٔ انرژی</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top:22px;">
+    <h3>برای پروندهٔ اپلای قوی، از همین حالا روی این‌ها کار کن</h3>
+    <div class="grid-3" style="margin-top:14px;">
+      <ul class="list">
+        <li>معدل خوب و پروژه‌های تحقیقاتی از ترم‌های میانی</li>
+        <li>همکاری پژوهشی با اساتید گروه سیستم‌های انرژی یا هسته‌ای؛ حتی یک مقاله یا پوستر کنفرانسی امتیاز بزرگی است</li>
+      </ul>
+      <ul class="list">
+        <li>تسلط بر زبان انگلیسی (آیلتس/تافل) و در صورت نیاز GRE</li>
+        <li>کارآموزی مرتبط با مسیر انتخابی (نیرو، تجدیدپذیر، اقتصاد انرژی)</li>
+      </ul>
+      <ul class="list">
+        <li>شبکه‌سازی با دانش‌آموختگان (لینکدین، انجمن دانشکده) و شناسایی زودهنگام آزمایشگاه‌های پژوهشی هدف</li>
+        <li>هم‌راستا کردن پروژهٔ کارشناسی با زمینهٔ مدنظر برای اپلای یا شغل</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 16: PROS/CONS -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۶ · واقع‌بینانه</span></div>
+  <h1 class="title">مزیت‌ها و چالش‌های رشته</h1>
+  <div class="grid-2">
+    <div class="card">
+      <h3 class="accent">مزیت‌ها</h3>
+      <ul class="list">
+        <li>میان‌رشته‌ای و مناسب برای حل مسئله‌های واقعی</li>
+        <li>انعطاف بالا در انتخاب مسیر تخصصی</li>
+        <li>اتصال قوی به مسائل روز صنعت و سیاست انرژی</li>
+        <li>امکان ادامهٔ تحصیل در چندین حوزهٔ مهندسی و بین‌رشته‌ای</li>
+        <li>ترکیب مهارت‌های فنی، اقتصادی و تحلیلی</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="accent">چالش‌ها</h3>
+      <ul class="list">
+        <li>دامنهٔ دروس گسترده است؛ عمق‌گرفتن نیازمند انتخاب هوشمندانه است</li>
+        <li>بدون مهارت نرم‌افزاری و پروژهٔ عملی، رزومه ناقص می‌ماند</li>
+        <li>برای برخی مسیرهای شغلی، کارشناسی ارشد مزیت مهمی است</li>
+        <li>اقتصاد و سیاست انرژی به‌اندازهٔ درس‌های فنی جدی‌اند</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 17: IS IT FOR YOU -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۷ · برای چه کسی؟</span></div>
+  <h1 class="title">آیا مهندسی انرژی برای تو مناسب است؟</h1>
+  <div class="card" style="margin-top:10px;">
+    <div class="check-item"><div class="tick">✓</div><p>از فیزیک و ریاضی فرار نمی‌کنی؟</p></div>
+    <div class="check-item"><div class="tick">✓</div><p>به حل مسئله‌های واقعی صنعت علاقه داری؟</p></div>
+    <div class="check-item"><div class="tick">✓</div><p>هم مکانیک و هم برق برایت جذاب‌اند؟</p></div>
+    <div class="check-item"><div class="tick">✓</div><p>با اقتصاد و داده هم کنار می‌آیی؟</p></div>
+    <div class="check-item"><div class="tick">✓</div><p>از یادگیری نرم‌افزار و مدل‌سازی لذت می‌بری؟</p></div>
+  </div>
+  <p class="note">جمع‌بندی سریع: اگر «سیستم» برایت جذاب‌تر از «یک قطعه» است، انرژی می‌تواند انتخاب بسیار خوبی باشد.</p>
+</section>
+
+<!-- 18: ONE SLIDE SUMMARY -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۸ · جمع‌بندی</span></div>
+  <h1 class="title">انرژی شریف، در یک نگاه</h1>
+  <div class="chain">
+    <div class="node">منبع</div><span class="arrow">←</span>
+    <div class="node">تبدیل</div><span class="arrow">←</span>
+    <div class="node">انتقال</div><span class="arrow">←</span>
+    <div class="node">توزیع</div><span class="arrow">←</span>
+    <div class="node">مصرف</div><span class="arrow">←</span>
+    <div class="node">بهینه‌سازی</div>
+  </div>
+  <p class="subtitle" style="margin-top:30px;">یک مهندس انرژی باید بتواند این زنجیره را «با هم» ببیند:</p>
+  <div class="formula">
+    <span class="term">فنی</span><span class="plus">+</span>
+    <span class="term">اقتصادی</span><span class="plus">+</span>
+    <span class="term">محیط‌زیستی</span><span class="plus">+</span>
+    <span class="term">داده</span><span class="plus">+</span>
+    <span class="term">تصمیم‌گیری</span>
+  </div>
+  <div class="chips" style="margin-top:34px;">
+    <div class="chip">۱۴۰ واحد</div>
+    <div class="chip">برنامهٔ بازنگری‌شده ۱۴۰۰</div>
+    <div class="chip">۸ نیمسال پیشنهادی</div>
+  </div>
+</section>
+
+<!-- 19: SOURCES -->
+<section class="slide">
+  <div class="kicker"><span class="num">۱۹ · منابع</span></div>
+  <h1 class="title">منابع و مبنای اطلاعات</h1>
+  <div class="card">
+    <ul class="list">
+      <li>وبگاه رسمی دانشکده مهندسی انرژی دانشگاه صنعتی شریف — صفحهٔ «کارشناسی» و برنامهٔ آموزشی</li>
+      <li>وبگاه رسمی دانشکده مهندسی انرژی دانشگاه صنعتی شریف — معرفی دانشکده و امکانات</li>
+      <li>اطلاعات به‌روز وبگاه دانشکده در شهریور ۱۴۰۵ بررسی شده است</li>
+      <li>بخش‌های بازار کار و اپلای بر پایهٔ الگوهای رایج مسیر شغلی و تحصیلی دانش‌آموختگان این حوزه نوشته شده و جای مشاورهٔ تخصصی فردی را نمی‌گیرد</li>
+      <li>نکته: جزئیات انتخاب واحد و پیش‌نیازها ممکن است برای ورودی‌های جدید تغییر کند؛ برای ثبت‌نام، آخرین نسخهٔ آموزش دانشکده ملاک است</li>
+    </ul>
+    <p class="note">منبع اصلی: <a class="src-link" href="https://energy.sharif.ir" target="_blank">energy.sharif.ir</a></p>
+  </div>
+  <p class="note">این فایل با هدف معرفی آموزشی ساخته شده و جایگزین آیین‌نامهٔ رسمی آموزشی نیست.</p>
+</section>
+
+
+  <button id="nextBtn" title="بعدی">↓</button>
+</div>
+</main>
+<footer class="footer">← <a href="index.html">بازگشت به صفحه اصلی</a> · مهندسی انرژی شریف</footer>
+<div class="toast"></div>
+<script>
+(() => {
+ const slides=[...document.querySelectorAll('.slide')];
+ const bar=document.querySelector('.progress');
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.18});
+ slides.forEach((s,i)=>{s.classList.add('reveal');io.observe(s)});
+ window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+'%'},{passive:true});
+})();
+</script>
+</body></html>
