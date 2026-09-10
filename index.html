@@ -16,6 +16,24 @@
 footer{padding:35px 8vw;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
 @keyframes float{50%{transform:translate(-20px,20px) scale(1.08)}}@media(max-width:850px){.cards{grid-template-columns:1fr 1fr}.top .optional{display:none}}@media(max-width:560px){.cards{grid-template-columns:1fr}.hero{padding-inline:6vw}.section{padding-inline:6vw}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none}.hero:before{animation:none}}
+
+/* ===== Mobile hardening v6 ===== */
+@media(max-width:700px){
+  html,body{overflow-x:hidden}
+  .top{height:auto;min-height:58px;padding:8px 4vw;gap:8px;flex-wrap:nowrap}
+  .top>a:first-child{font-size:12px;padding:7px 8px;white-space:nowrap}
+  .top>div{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;min-width:0}
+  .top>div::-webkit-scrollbar{display:none}
+  .top>div a{font-size:10.5px;padding:7px 8px;white-space:nowrap}
+  .hero{min-height:100svh;padding:105px 6vw 55px;align-items:center}
+  .hero:before{width:300px;height:300px;right:-110px;top:12%}
+  .hero h1{font-size:clamp(38px,12vw,58px)}
+  .hero p{font-size:14px;line-height:1.9}
+  .actions{gap:8px;margin-top:22px}.btn{padding:11px 13px;font-size:12px}
+  .section{padding:58px 6vw}.section h2{font-size:28px;line-height:1.45}
+  .cards{grid-template-columns:1fr;gap:12px;margin-top:20px}.card{min-height:0;padding:19px}.card p{font-size:13px;line-height:1.85}.card .icon{font-size:25px}
+  footer{padding:25px 6vw;font-size:11px}
+}
 </style></head>
 <body>
 <nav class="top"><a href="index.html">مهندسی انرژی <span style="color:var(--accent)">شریف</span></a><div><a class="optional" href="intro.html">معرفی رشته</a> <a href="chart.html">چارت درسی</a></div>  <a href="notes.html">جزوه‌ها و منابع</a>

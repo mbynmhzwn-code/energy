@@ -85,6 +85,19 @@ body{margin:0;background:var(--site-bg);color:var(--site-text);font-family:Vazir
 
 .chart-outer{animation:chartIn .7s ease-out both}
 @keyframes chartIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+@media(max-width:700px){
+  html,body{overflow-x:hidden}
+  .sitebar{height:auto;min-height:58px;padding:8px 4vw;gap:6px}
+  .sitebar>a:first-child{font-size:11px;white-space:nowrap;padding:7px 8px}
+  .sitebar>div{display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;min-width:0}.sitebar>div::-webkit-scrollbar{display:none}
+  .sitebar a{font-size:10px;padding:7px 8px;white-space:nowrap}
+  .chart-main{padding:78px 8px 28px}
+  .chart-hero{display:block;margin-bottom:12px}.chart-hero h1{font-size:25px;line-height:1.45}.chart-hero p{font-size:12px;line-height:1.8}
+  .chart-card{padding:7px;border-radius:12px;overflow:hidden}.chart-card .chart-outer{max-height:none;overflow:auto;-webkit-overflow-scrolling:touch}
+  .chart{min-width:760px}
+  .hint,.note{font-size:10.5px;line-height:1.8}
+}
 </style>
 </head>
 <body>

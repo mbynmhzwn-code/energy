@@ -336,6 +336,53 @@ padding:12px;box-shadow:0 24px 70px rgba(0,0,0,.42);animation:menuIn .2s ease-ou
 padding:9px 10px;border-radius:8px;cursor:pointer}
 .section-menu button:hover{background:var(--accent-dim);color:var(--text)}
 @keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+/* ===== Mobile hardening v6 ===== */
+@media (max-width:700px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  body{height:auto;min-height:100vh;overflow-y:auto;scroll-snap-type:none;-webkit-overflow-scrolling:touch}
+  .topbar{height:auto;min-height:58px;padding:8px 4vw;gap:7px;align-items:center}
+  .topbar .mini-brand{font-size:12px;white-space:nowrap;flex:none}
+  .topbar .site-actions{gap:5px;flex:1;justify-content:flex-end;min-width:0;overflow-x:auto;scrollbar-width:none}
+  .topbar .site-actions::-webkit-scrollbar{display:none}
+  .topbar a,.topbar button{padding:7px 8px;font-size:11px;line-height:1.3;white-space:nowrap;flex:none}
+  .topbar .optional{display:none}
+  .progress{top:100%;height:2px}
+  .slide{min-height:0;height:auto;padding:88px 5vw 92px;justify-content:flex-start;overflow:visible}
+  .slide::after{inset-inline:5vw}
+  .kicker{font-size:12px;margin-bottom:12px}
+  h1.title{font-size:clamp(25px,8vw,34px);line-height:1.45;margin-bottom:12px}
+  p.subtitle{font-size:14px;line-height:1.9}
+  .grid-2,.grid-3,.grid-4,.two-col-list{grid-template-columns:1fr;gap:12px}
+  .card,.sector{padding:17px 16px;border-radius:12px}
+  .card h3{font-size:16px;margin-bottom:9px}
+  .list{gap:8px}.list li{font-size:13.5px;line-height:1.9;padding-inline-start:13px}
+  .stat-row{grid-template-columns:1fr 1fr;gap:10px}
+  .stat{padding:17px 10px}.stat .n{font-size:28px}.stat .l{font-size:11.5px}
+  .chain{gap:8px}.chain .node{font-size:12.5px;padding:10px 12px}.chain .arrow{font-size:15px}
+  .formula{gap:8px;margin-top:15px}.formula .term,.formula .plus{font-size:14px}
+  .check-item{gap:9px;padding:12px 0}.check-item .tick{width:25px;height:25px;font-size:12px}.check-item p{font-size:13.5px;line-height:1.85}
+  .semester-head{align-items:flex-start;gap:8px}.semester-head h3{font-size:17px}.semester-head span{font-size:11.5px}
+  .cover{padding-top:105px}.cover .glow{width:180px;height:180px;right:-55px;top:28%;opacity:.8}
+  .cover .sharif{font-size:12px;margin-bottom:24px;letter-spacing:1px}
+  .cover h1{font-size:clamp(34px,12vw,50px)}
+  .cover .subtitle{max-width:100%}
+  .cover .chips{gap:7px;margin-top:22px!important}.chip{font-size:12px;padding:7px 10px}
+  footer.slide-footer{position:static;margin-top:30px;display:block;font-size:10.5px;line-height:1.9}
+  footer.slide-footer span{display:block}.dots{display:none}
+  .brand,.page-index{position:fixed;z-index:105;top:auto;bottom:78px;font-size:10px;opacity:.75}
+  .brand{inset-inline-start:5vw}.page-index{inset-inline-end:5vw}
+  .nav{bottom:10px;gap:9px;padding:7px 8px 7px 11px;max-width:calc(100vw - 24px);width:max-content}
+  .nav button{width:35px;height:35px}.nav .count{font-size:11px;min-width:50px}
+  .section-menu{top:66px;right:4vw;width:92vw;max-height:calc(100vh - 85px);border-radius:14px;padding:9px}
+  .section-menu-title{padding:8px 9px 10px;font-size:13px}.section-menu button{padding:10px 9px;font-size:12px;line-height:1.5}
+  .site-footer{padding:24px 5vw!important;font-size:12px;line-height:2}
+}
+@media (max-width:380px){
+  .topbar .mini-brand{font-size:11px}
+  .topbar a,.topbar button{font-size:10px;padding:6px 7px}
+  .slide{padding-inline:4vw}.stat-row{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
