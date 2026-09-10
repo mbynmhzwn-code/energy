@@ -1,156 +1,33 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>مهندسی انرژی شریف | مرکز اطلاعات</title>
-<meta name="description" content="مرکز معرفی رشته مهندسی انرژی دانشگاه صنعتی شریف، چارت درسی، مسیر تحصیلی، بازار کار و تحصیلات تکمیلی.">
-<meta name="theme-color" content="#07111f">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مهندسی انرژی شریف</title>
+<meta name="description" content="مرکز معرفی رشته مهندسی انرژی دانشگاه صنعتی شریف، چارت درسی و مسیرهای آینده.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#07111f; --bg2:#0b1627; --panel:#101d30; --panel2:#0d192a;
-  --line:#21324b; --text:#eef4fb; --muted:#9cafc8; --accent:#35d6be;
-  --accent2:#6fe9d5; --shadow:0 20px 60px rgba(0,0,0,.28);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-.topbar{
- position:fixed;top:0;left:0;right:0;height:68px;z-index:100;
- display:flex;align-items:center;justify-content:space-between;padding:0 5vw;
- background:rgba(7,17,31,.72);backdrop-filter:blur(16px);
- border-bottom:1px solid rgba(33,50,75,.75)
-}
-.brand-link{font-weight:800;letter-spacing:.2px}.brand-link span{color:var(--accent)}
-.top-actions{display:flex;gap:8px;align-items:center}
-.nav-btn{
- border:1px solid var(--line);background:rgba(16,29,48,.8);color:var(--text);
- padding:9px 14px;border-radius:10px;cursor:pointer;transition:.2s
-}
-.nav-btn:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
-.progress{position:fixed;top:67px;left:0;height:2px;background:var(--accent);width:0;z-index:101;transition:width .35s}
-.page{padding-top:68px}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
-.hero{
- min-height:calc(100vh - 68px);display:flex;align-items:center;justify-content:center;
- padding:70px 8vw;position:relative;overflow:hidden
-}
-.hero::before{
- content:"";position:absolute;width:560px;height:560px;border-radius:50%;
- background:radial-gradient(circle,rgba(53,214,190,.18),transparent 68%);
- top:8%;right:-100px;animation:floatGlow 7s ease-in-out infinite
-}
-.hero-content{max-width:1050px;position:relative;z-index:1}
-.eyebrow{color:var(--accent);font-weight:700;font-size:14px;margin-bottom:16px}
-.hero h1{font-size:clamp(40px,7vw,82px);line-height:1.15;margin:0 0 20px;font-weight:800}
-.hero p{max-width:780px;color:var(--muted);font-size:18px;line-height:2}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.primary,.secondary{
- display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;
- transition:.25s;border:1px solid var(--line)
-}
-.primary{background:var(--accent);color:#06131c;font-weight:800;border-color:var(--accent)}
-.secondary{background:var(--panel);color:var(--text)}
-.primary:hover,.secondary:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.section{padding:90px 8vw;border-top:1px solid var(--line)}
-.section-inner{max-width:1150px;margin:auto}
-.section h2{font-size:clamp(28px,4vw,48px);margin:0 0 14px}
-.section .lead{color:var(--muted);line-height:1.9;max-width:760px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.portal-card{
- background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);
- border-radius:18px;padding:25px;min-height:190px;display:flex;flex-direction:column;
- transition:.3s;position:relative;overflow:hidden
-}
-.portal-card::after{content:"";position:absolute;inset:auto -20% -60% 20%;height:150px;
-background:radial-gradient(circle,rgba(53,214,190,.13),transparent 65%)}
-.portal-card:hover{transform:translateY(-7px);border-color:rgba(53,214,190,.55);box-shadow:var(--shadow)}
-.portal-card .icon{font-size:30px;margin-bottom:15px}.portal-card h3{margin:0 0 9px;font-size:20px}
-.portal-card p{color:var(--muted);line-height:1.8;margin:0}
-.portal-card .arrow{margin-top:auto;color:var(--accent);padding-top:18px;font-weight:700}
-.footer{padding:35px 8vw;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:13px}
-.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);opacity:0;
-background:var(--panel);border:1px solid var(--line);padding:11px 16px;border-radius:10px;z-index:200;transition:.25s}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-@keyframes floatGlow{50%{transform:translate(-20px,20px) scale(1.08)}}
-@media(max-width:850px){
- .topbar{padding:0 4vw}.top-actions .optional{display:none}
- .cards{grid-template-columns:1fr}.hero{padding:60px 6vw}.section{padding:70px 6vw}
-}
-@media(prefers-reduced-motion:reduce){
- html{scroll-behavior:auto}.reveal{transition:none}.hero::before{animation:none}
-}
-</style>
-</head>
+:root{--bg:#07111f;--panel:#101d30;--panel2:#0d192a;--line:#21324b;--text:#eef4fb;--muted:#9cafc8;--accent:#35d6be}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif}
+.top{position:fixed;inset:0 0 auto;height:66px;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:0 5vw;background:rgba(7,17,31,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.top a{color:var(--text);text-decoration:none;border:1px solid var(--line);background:rgba(16,29,48,.85);padding:8px 13px;border-radius:10px}.top a:hover{color:var(--accent);border-color:var(--accent)}
+.hero{min-height:100vh;padding:120px 8vw 70px;display:flex;align-items:center;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:600px;height:600px;right:-140px;top:8%;border-radius:50%;background:radial-gradient(circle,rgba(53,214,190,.2),transparent 68%);animation:float 8s ease-in-out infinite}
+.content{position:relative;z-index:1;max-width:1050px}.ey{color:var(--accent);font-weight:800;margin-bottom:16px}.hero h1{font-size:clamp(44px,7vw,82px);line-height:1.15;margin:0 0 20px}.hero h1 span{color:var(--accent)}.hero p{color:var(--muted);font-size:18px;line-height:2;max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;padding:13px 20px;border-radius:12px;border:1px solid var(--line);text-decoration:none;color:var(--text);background:var(--panel);transition:.25s}.btn.primary{background:var(--accent);color:#06131c;border-color:var(--accent);font-weight:800}.btn:hover{transform:translateY(-4px)}
+.section{padding:85px 8vw;border-top:1px solid var(--line)}.inner{max-width:1150px;margin:auto}.section h2{font-size:clamp(28px,4vw,48px);margin:0 0 12px}.lead{color:var(--muted);line-height:1.9;max-width:800px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.card{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:18px;padding:25px;min-height:190px;display:flex;flex-direction:column;transition:.3s}.card:hover{transform:translateY(-7px);border-color:rgba(53,214,190,.6);box-shadow:0 20px 60px rgba(0,0,0,.25)}.card .icon{font-size:30px;margin-bottom:14px}.card h3{margin:0 0 9px}.card p{margin:0;color:var(--muted);line-height:1.8}.card .arrow{margin-top:auto;padding-top:16px;color:var(--accent);font-weight:700}.reveal{opacity:0;transform:translateY(22px);transition:.7s}.reveal.visible{opacity:1;transform:none}
+footer{padding:35px 8vw;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+@keyframes float{50%{transform:translate(-20px,20px) scale(1.08)}}@media(max-width:850px){.cards{grid-template-columns:1fr 1fr}.top .optional{display:none}}@media(max-width:560px){.cards{grid-template-columns:1fr}.hero{padding-inline:6vw}.section{padding-inline:6vw}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none}.hero:before{animation:none}}
+</style></head>
 <body>
-<div class="topbar">
-  <a class="brand-link" href="index.html">مهندسی انرژی <span>شریف</span></a>
-  <div class="top-actions">
-    <a class="nav-btn optional" href="intro.html">معرفی رشته</a>
-    <a class="nav-btn" href="chart.html">چارت درسی</a>
-  </div>
-</div>
-<div class="progress"></div>
-<main class="page">
-<section class="hero">
- <div class="hero-content reveal" data-reveal>
-  <div class="eyebrow">دانشگاه صنعتی شریف · کارشناسی مهندسی انرژی</div>
-  <h1>مهندسی انرژی<br><span style="color:var(--accent)">از اینجا شروع می‌شود.</span></h1>
-  <p>یک درگاه یکپارچه برای شناخت رشته، دیدن چارت درسی، بررسی مسیرهای شغلی و تحصیلات تکمیلی. این صفحه به‌عنوان Home طراحی شده تا بخش‌های مختلف سایت در آینده به آن اضافه شوند.</p>
-  <div class="hero-actions">
-   <a class="primary" href="intro.html">معرفی رشته ←</a>
-   <a class="secondary" href="chart.html">مشاهده چارت درسی</a>
-  </div>
- </div>
-</section>
-<section class="section">
- <div class="section-inner">
-  <div class="eyebrow reveal" data-reveal>مرکز اطلاعات</div>
-  <h2 class="reveal" data-reveal>هر چیزی که درباره رشته لازم داری، یکجا</h2>
-  <p class="lead reveal" data-reveal>ساختار سایت عمداً ماژولار است؛ هر کارت می‌تواند در آینده به یک صفحه مستقل تبدیل شود، بدون اینکه Home یا بخش‌های قبلی به‌هم بریزند.</p>
-  <div class="cards">
-   <a class="portal-card reveal" data-reveal href="intro.html"><div class="icon">◈</div><h3>معرفی رشته</h3><p>ماهیت رشته، ساختار دوره، مهارت‌ها، آزمایشگاه‌ها، بازار کار و مسیر اپلای.</p><div class="arrow">ورود به معرفی ←</div></a>
-   <a class="portal-card reveal" data-reveal href="chart.html"><div class="icon">⌘</div><h3>چارت درسی</h3><p>چارت تعاملی ۸ نیمسال با روابط پیش‌نیازها و هایلایت وابستگی بین دروس.</p><div class="arrow">مشاهده چارت ←</div></a>
-   <a class="portal-card reveal" data-reveal href="intro.html#roadmap-extra"><div class="icon">↗</div><h3>مسیر تحصیلی</h3><p>نقشه راه پیشنهادی از سال اول تا پروژه کارشناسی، کارآموزی و اپلای.</p><div class="arrow">مشاهده مسیر ←</div></a>
-   <a class="portal-card reveal" data-reveal href="intro.html#14"><div class="icon">▣</div><h3>بازار کار</h3><p>صنایع و حوزه‌هایی که یک مهندس انرژی می‌تواند در آن‌ها فعالیت کند.</p><div class="arrow">ورود به بخش ←</div></a>
-   <a class="portal-card reveal" data-reveal href="intro.html#15"><div class="icon">◎</div><h3>تحصیلات تکمیلی و اپلای</h3><p>مسیرهای بین‌رشته‌ای و حوزه‌های متداول برای ادامه تحصیل.</p><div class="arrow">ورود به بخش ←</div></a>
-   <a class="portal-card reveal" data-reveal href="intro.html#faq-extra"><div class="icon">?</div><h3>سؤالات متداول</h3><p>پاسخ به پرسش‌هایی که قبل از انتخاب رشته معمولاً مطرح می‌شوند.</p><div class="arrow">مشاهده FAQ ←</div></a>
-  </div>
- </div>
-</section>
-<section class="section">
- <div class="section-inner reveal" data-reveal>
-  <div class="eyebrow">نسخه توسعه‌پذیر</div><h2>این فقط شروع سایت است.</h2>
-  <p class="lead">در نسخه‌های بعدی می‌توانیم بخش‌های «اساتید»، «دروس با توضیح کامل»، «فرصت‌های پژوهشی»، «تجربه دانشجویان»، «منابع درسی»، «فرصت‌های شغلی»، «پروژه‌ها» و هر بخش دیگری را بدون تغییر معماری اصلی اضافه کنیم.</p>
- </div>
-</section>
-</main>
-<footer class="footer">مهندسی انرژی شریف · نسخه وب تعاملی</footer>
-<div class="toast"></div>
-
-<script>
-(() => {
- const progress=document.querySelector('.progress');
- const toast=document.querySelector('.toast');
- const sections=[...document.querySelectorAll('[data-reveal]')];
- const io=new IntersectionObserver(es=>{
-   es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
- },{threshold:.12});
- sections.forEach(x=>io.observe(x));
- window.addEventListener('scroll',()=>{
-   const max=document.documentElement.scrollHeight-innerHeight;
-   progress.style.width=(max>0?(scrollY/max)*100:0)+'%';
- },{passive:true});
- document.querySelectorAll('[data-toast]').forEach(b=>b.addEventListener('click',e=>{
-   e.preventDefault(); toast.textContent=b.dataset.toast; toast.classList.add('show');
-   setTimeout(()=>toast.classList.remove('show'),2200);
- }));
-})();
-</script>
-
+<nav class="top"><a href="index.html">مهندسی انرژی <span style="color:var(--accent)">شریف</span></a><div><a class="optional" href="intro.html">معرفی رشته</a> <a href="chart.html">چارت درسی</a></div></nav>
+<main>
+<section class="hero"><div class="content reveal"><div class="ey">دانشگاه صنعتی شریف · کارشناسی مهندسی انرژی</div><h1>مهندسی انرژی<br><span>از اینجا شروع می‌شود.</span></h1><p>یک درگاه یکپارچه برای شناخت رشته، چارت درسی و بخش‌هایی که در آینده به سایت اضافه می‌شوند.</p><div class="actions"><a class="btn primary" href="intro.html">معرفی رشته ←</a><a class="btn" href="chart.html">مشاهده چارت درسی</a></div></div></section>
+<section class="section"><div class="inner"><div class="ey reveal">بخش‌های سایت</div><h2 class="reveal">همه‌چیز یکجا، با طراحی یکپارچه</h2><p class="lead reveal">این ساختار عمداً ماژولار است؛ هر بخش جدید می‌تواند بعداً به‌صورت یک صفحه مستقل اضافه شود.</p><div class="cards">
+<a class="card reveal" href="intro.html"><div class="icon">◈</div><h3>معرفی رشته</h3><p>ماهیت رشته، ساختار دوره، مهارت‌ها، بازار کار و تحصیلات تکمیلی.</p><div class="arrow">ورود ←</div></a>
+<a class="card reveal" href="chart.html"><div class="icon">⌘</div><h3>چارت درسی</h3><p>۸ نیمسال با روابط پیش‌نیاز و هایلایت تعاملی.</p><div class="arrow">مشاهده ←</div></a>
+<a class="card reveal" href="intro.html#roadmap-extra"><div class="icon">↗</div><h3>مسیر تحصیلی</h3><p>نقشه راه پیشنهادی از سال اول تا پروژه و اپلای.</p><div class="arrow">مشاهده ←</div></a>
+<a class="card reveal" href="intro.html#14"><div class="icon">▣</div><h3>بازار کار</h3><p>حوزه‌های صنعتی و حرفه‌ای مرتبط با مهندسی انرژی.</p><div class="arrow">مشاهده ←</div></a>
+<a class="card reveal" href="intro.html#15"><div class="icon">◎</div><h3>تحصیلات تکمیلی</h3><p>مسیرهای بین‌رشته‌ای و گزینه‌های ادامه تحصیل.</p><div class="arrow">مشاهده ←</div></a>
+<a class="card reveal" href="intro.html#faq-extra"><div class="icon">?</div><h3>سؤالات متداول</h3><p>پاسخ به پرسش‌های مهم پیش از انتخاب رشته.</p><div class="arrow">مشاهده ←</div></a>
+</div></div></section>
+</main><footer>مهندسی انرژی شریف · نسخه توسعه‌پذیر سایت</footer>
+<script>const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));</script>
 </body></html>

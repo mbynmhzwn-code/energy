@@ -2,89 +2,30 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>چارت درسی مهندسی انرژی | دانشگاه صنعتی شریف</title>
-<meta name="description" content="چارت تعاملی دروس کارشناسی مهندسی انرژی دانشگاه صنعتی شریف با نمایش روابط پیش‌نیازها.">
+<title>چارت درسی مهندسی انرژی | شریف</title>
+<meta name="description" content="چارت تعاملی دروس کارشناسی مهندسی انرژی دانشگاه صنعتی شریف با روابط پیش‌نیازها.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-
-:root{
-  --bg:#07111f; --bg2:#0b1627; --panel:#101d30; --panel2:#0d192a;
-  --line:#21324b; --text:#eef4fb; --muted:#9cafc8; --accent:#35d6be;
-  --accent2:#6fe9d5; --shadow:0 20px 60px rgba(0,0,0,.28);
-}
+:root{--site-bg:#07111f;--site-panel:#0f1b2c;--site-line:#21324b;--site-text:#eef4fb;--site-muted:#9cafc8;--accent:#35d6be}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-.topbar{
- position:fixed;top:0;left:0;right:0;height:68px;z-index:100;
- display:flex;align-items:center;justify-content:space-between;padding:0 5vw;
- background:rgba(7,17,31,.72);backdrop-filter:blur(16px);
- border-bottom:1px solid rgba(33,50,75,.75)
-}
-.brand-link{font-weight:800;letter-spacing:.2px}.brand-link span{color:var(--accent)}
-.top-actions{display:flex;gap:8px;align-items:center}
-.nav-btn{
- border:1px solid var(--line);background:rgba(16,29,48,.8);color:var(--text);
- padding:9px 14px;border-radius:10px;cursor:pointer;transition:.2s
-}
-.nav-btn:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
-.progress{position:fixed;top:67px;left:0;height:2px;background:var(--accent);width:0;z-index:101;transition:width .35s}
-.page{padding-top:68px}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
-.hero{
- min-height:calc(100vh - 68px);display:flex;align-items:center;justify-content:center;
- padding:70px 8vw;position:relative;overflow:hidden
-}
-.hero::before{
- content:"";position:absolute;width:560px;height:560px;border-radius:50%;
- background:radial-gradient(circle,rgba(53,214,190,.18),transparent 68%);
- top:8%;right:-100px;animation:floatGlow 7s ease-in-out infinite
-}
-.hero-content{max-width:1050px;position:relative;z-index:1}
-.eyebrow{color:var(--accent);font-weight:700;font-size:14px;margin-bottom:16px}
-.hero h1{font-size:clamp(40px,7vw,82px);line-height:1.15;margin:0 0 20px;font-weight:800}
-.hero p{max-width:780px;color:var(--muted);font-size:18px;line-height:2}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.primary,.secondary{
- display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;
- transition:.25s;border:1px solid var(--line)
-}
-.primary{background:var(--accent);color:#06131c;font-weight:800;border-color:var(--accent)}
-.secondary{background:var(--panel);color:var(--text)}
-.primary:hover,.secondary:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.section{padding:90px 8vw;border-top:1px solid var(--line)}
-.section-inner{max-width:1150px;margin:auto}
-.section h2{font-size:clamp(28px,4vw,48px);margin:0 0 14px}
-.section .lead{color:var(--muted);line-height:1.9;max-width:760px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-.portal-card{
- background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);
- border-radius:18px;padding:25px;min-height:190px;display:flex;flex-direction:column;
- transition:.3s;position:relative;overflow:hidden
-}
-.portal-card::after{content:"";position:absolute;inset:auto -20% -60% 20%;height:150px;
-background:radial-gradient(circle,rgba(53,214,190,.13),transparent 65%)}
-.portal-card:hover{transform:translateY(-7px);border-color:rgba(53,214,190,.55);box-shadow:var(--shadow)}
-.portal-card .icon{font-size:30px;margin-bottom:15px}.portal-card h3{margin:0 0 9px;font-size:20px}
-.portal-card p{color:var(--muted);line-height:1.8;margin:0}
-.portal-card .arrow{margin-top:auto;color:var(--accent);padding-top:18px;font-weight:700}
-.footer{padding:35px 8vw;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:13px}
-.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);opacity:0;
-background:var(--panel);border:1px solid var(--line);padding:11px 16px;border-radius:10px;z-index:200;transition:.25s}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-@keyframes floatGlow{50%{transform:translate(-20px,20px) scale(1.08)}}
-@media(max-width:850px){
- .topbar{padding:0 4vw}.top-actions .optional{display:none}
- .cards{grid-template-columns:1fr}.hero{padding:60px 6vw}.section{padding:70px 6vw}
-}
-@media(prefers-reduced-motion:reduce){
- html{scroll-behavior:auto}.reveal{transition:none}.hero::before{animation:none}
-}
-
+body{margin:0;background:var(--site-bg);color:var(--site-text);font-family:Vazirmatn,Tahoma,sans-serif}
+.sitebar{position:fixed;inset:0 0 auto;height:66px;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:0 5vw;background:rgba(7,17,31,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--site-line)}
+.sitebar a{color:var(--site-text);text-decoration:none;border:1px solid var(--site-line);background:rgba(15,27,44,.9);padding:8px 13px;border-radius:10px;transition:.2s}
+.sitebar a:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.sitebar .brand{font-weight:800;border:0;background:none}.sitebar .brand span{color:var(--accent)}
+.chart-main{padding:94px 4vw 50px}
+.chart-hero{max-width:1500px;margin:0 auto 20px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.chart-hero .eyebrow{color:var(--accent);font-weight:700;margin-bottom:8px}
+.chart-hero h1{margin:0;font-size:clamp(28px,4vw,48px)}
+.chart-hero p{margin:8px 0 0;color:var(--site-muted);line-height:1.9}
+.chart-card{max-width:1500px;margin:auto;background:#f7f7f5;border:1px solid #2a3a50;border-radius:20px;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.28);overflow:hidden}
+.chart-card .chart-outer{max-height:calc(100vh - 245px);overflow:auto}
+.chart-card .hint{background:#fff;border:1px solid #e3e1da;border-radius:10px;padding:10px}
+.chart-card .chart-outer::-webkit-scrollbar{height:10px;width:10px}
+.chart-card .chart-outer::-webkit-scrollbar-thumb{background:#a8aaa5;border-radius:20px}
+@media(max-width:700px){.sitebar{height:58px;padding:0 4vw}.sitebar .optional{display:none}.chart-main{padding:82px 10px 35px}.chart-card{padding:9px;border-radius:14px}}
 
   :root{
     --bg:#f7f7f5; --card:#ffffff; --text:#22221f; --sub:#5c5b56; --border:#d8d6cf;
@@ -141,27 +82,21 @@ background:var(--panel);border:1px solid var(--line);padding:11px 16px;border-ra
   .course.hl-dep{box-shadow:0 0 0 2px #D85A30;}
   .note{font-size:11.3px; color:var(--sub); text-align:center; margin-top:16px; max-width:780px; margin-inline:auto;}
 
-.chart-page{padding:95px 24px 40px}
-.site-titlebar{max-width:1250px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.site-titlebar .actions{display:flex;gap:8px}
-.chart-shell{max-width:1500px;margin:auto;background:rgba(255,255,255,.72);border:1px solid #d8d6cf;border-radius:18px;padding:18px;box-shadow:var(--shadow);overflow:hidden}
-.chart-shell .chart-outer{max-height:calc(100vh - 230px);overflow:auto}
-.chart-shell .hint{background:#fff;border-radius:10px;padding:10px}
-@media(max-width:700px){.chart-page{padding-inline:10px}.chart-shell{padding:10px;border-radius:12px}}
+.chart-outer{animation:chartIn .7s ease-out both}
+@keyframes chartIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<div class="topbar">
- <a class="brand-link" href="index.html">مهندسی انرژی <span>شریف</span></a>
- <div class="top-actions"><a class="nav-btn" href="index.html">⌂ خانه</a><a class="nav-btn optional" href="intro.html">معرفی رشته</a></div>
-</div>
-<div class="progress" style="width:100%"></div>
-<main class="page chart-page">
- <div class="site-titlebar reveal" data-reveal>
-   <div><div class="eyebrow">چارت درسی تعاملی</div><h1 style="margin:0;font-size:clamp(25px,4vw,40px)">کارشناسی مهندسی انرژی — شریف</h1></div>
-   <div class="actions"><a class="nav-btn" href="index.html">بازگشت به Home</a><a class="nav-btn" href="intro.html">معرفی رشته</a></div>
- </div>
- <div class="chart-shell reveal" data-reveal>
+<nav class="sitebar">
+ <a class="brand" href="index.html">مهندسی انرژی <span>شریف</span></a>
+ <div style="display:flex;gap:8px"><a href="index.html">⌂ خانه</a><a class="optional" href="intro.html">معرفی رشته</a></div>
+</nav>
+<main class="chart-main">
+ <header class="chart-hero">
+  <div><div class="eyebrow">بخش دوم سایت</div><h1>چارت درسی کارشناسی مهندسی انرژی</h1>
+  <p>۸ نیمسال · ۱۴۰ واحد · با نمایش تعاملی پیش‌نیازها و درس‌های وابسته</p></div>
+ </header>
+ <section class="chart-card">
  
   <h1>چارت درختی دروس کارشناسی مهندسی انرژی — دانشگاه صنعتی شریف</h1>
   <p class="sub">۸ نیمسال، ۱۴۰ واحد — دروس هم‌موضوع در یک ردیف افقی چیده شده‌اند تا مسیر پیش‌نیازها واضح باشد</p>
@@ -372,9 +307,8 @@ function clearHighlight(){
 }
 </script>
 
- </div>
+ </section>
 </main>
-<div class="toast"></div>
 <script>
 
 // هر درس: id, نام, واحد, دسته, ستون=نیمسال, ردیف=لِین موضوعی, پیش‌نیاز[]
@@ -565,11 +499,5 @@ function clearHighlight(){
   document.querySelectorAll('.edge').forEach(p=>{p.setAttribute('opacity','0.5'); p.setAttribute('stroke','#8a8a83'); p.setAttribute('stroke-width','1.3');});
 }
 
-</script>
-<script>
-(() => {
- const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});
- document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
-})();
 </script>
 </body></html>
