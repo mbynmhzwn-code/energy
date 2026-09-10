@@ -271,6 +271,19 @@ body.light .topbar{background:rgba(244,247,251,.82)}
 @media(max-width:560px){.topbar a:nth-of-type(1){display:none}.roadmap{grid-template-columns:1fr}.topbar button,.topbar a{padding:0 9px;font-size:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.progress{transition:none}}
 @media print{.topbar,.dots,.nav{display:none!important}.slide{min-height:auto;page-break-after:always}.reveal{opacity:1;transform:none}}
+.nav button:disabled{opacity:.35;cursor:not-allowed;transform:none!important}
+.section-menu{position:fixed;top:68px;inset-inline-end:18px;width:min(390px,calc(100vw - 36px));max-height:calc(100vh - 92px);overflow:auto;z-index:100;background:color-mix(in srgb,var(--panel) 94%,transparent);border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:0 24px 70px rgba(0,0,0,.38);backdrop-filter:blur(18px);animation:menuIn .22s ease both}
+.section-menu-title{font-weight:800;font-size:15px;padding:10px 10px 12px;color:var(--accent);border-bottom:1px solid var(--line);margin-bottom:5px}
+.section-menu button{width:100%;display:flex;align-items:center;gap:12px;text-align:right;background:transparent;color:var(--text);border:0;border-radius:11px;padding:10px;cursor:pointer;font-family:inherit}
+.section-menu button:hover{background:var(--accent-dim);color:var(--accent)}
+.section-menu button span{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--accent-dim);color:var(--accent);font-size:12px;flex:none}
+.section-menu button strong{font-size:13px;line-height:1.6}
+.reveal{transition-delay:var(--delay,0ms)}
+@keyframes menuIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes floatGlow{0%,100%{transform:translateY(-50%) scale(1)}50%{transform:translateY(-54%) scale(1.06)}}
+.cover .glow{animation:floatGlow 5s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.cover .glow{animation:none}.section-menu{animation:none}}
+
 </style>
 </head>
 <body>
@@ -286,7 +299,7 @@ body.light .topbar{background:rgba(244,247,251,.82)}
 
 
 <div class="brand"><b>SHARIF</b> · مهندسی انرژی</div>
-<div class="page-index" id="pageIndex">۰۱ / ۱۹</div>
+<div class="page-index" id="pageIndex">۰۱ / ۲۱</div>
 
 <!-- 1: COVER -->
 <section class="slide cover">
@@ -744,45 +757,11 @@ body.light .topbar{background:rgba(244,247,251,.82)}
 
 <div class="nav">
   <button id="prevBtn" title="قبلی">↑</button>
-  <div class="count" id="navCount">۱ / ۱۹</div>
+  <div class="count" id="navCount">۱ / ۲۱</div>
   <button id="nextBtn" title="بعدی">↓</button>
 </div>
 
-<script>
-  const slides = document.querySelectorAll('.slide');
-  const total = slides.length;
-  const faDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
-  function toFa(n){ return String(n).split('').map(d => faDigits[+d]).join(''); }
 
-  let current = 0;
-  function updateIndex(i){
-    current = i;
-    document.getElementById('navCount').textContent = toFa(i+1) + ' / ' + toFa(total);
-    document.getElementById('pageIndex').textContent = toFa(i+1).padStart(2,'0') + ' / ' + toFa(total);
-  }
-
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        const idx = Array.from(slides).indexOf(e.target);
-        updateIndex(idx);
-      }
-    });
-  }, { threshold:0.6 });
-  slides.forEach(s=>observer.observe(s));
-
-  function goTo(i){
-    if(i<0) i=0;
-    if(i>total-1) i=total-1;
-    slides[i].scrollIntoView({behavior:'smooth'});
-  }
-  document.getElementById('nextBtn').addEventListener('click', ()=>goTo(current+1));
-  document.getElementById('prevBtn').addEventListener('click', ()=>goTo(current-1));
-  window.addEventListener('keydown', (e)=>{
-    if(['ArrowDown','PageDown',' '].includes(e.key)){ e.preventDefault(); goTo(current+1); }
-    if(['ArrowUp','PageUp'].includes(e.key)){ e.preventDefault(); goTo(current-1); }
-  });
-</script>
 
 
 <!-- Enhanced content -->
@@ -816,21 +795,151 @@ body.light .topbar{background:rgba(244,247,251,.82)}
 
 <script>
 (function(){
- const body=document.body, slides=[...document.querySelectorAll('.slide')], progress=document.getElementById('progress'), dots=document.getElementById('dots');
- // Mark cards/headings for reveal without disturbing original slide logic.
- document.querySelectorAll('.slide > *').forEach(el=>el.classList.add('reveal'));
- slides.forEach((sl,i)=>{const d=document.createElement('button');d.className='dot';d.title='بخش '+(i+1);d.setAttribute('aria-label','بخش '+(i+1));d.onclick=()=>sl.scrollIntoView({behavior:'smooth'});dots.appendChild(d)});
- const dotEls=[...dots.children];
- const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.reveal').forEach(x=>x.classList.add('visible')); const i=slides.indexOf(e.target);dotEls.forEach((d,j)=>d.classList.toggle('active',j===i));progress.style.width=((i+1)/slides.length*100)+'%';}})},{threshold:.35});
- slides.forEach(s=>io.observe(s));
- const themeBtn=document.getElementById('themeBtn');
- const saved=localStorage.getItem('energy-theme'); if(saved==='light') body.classList.add('light');
- function themeText(){themeBtn.textContent=body.classList.contains('light')?'🌙 حالت تیره':'☀️ حالت روشن'} themeText();
- themeBtn.onclick=()=>{body.classList.toggle('light');localStorage.setItem('energy-theme',body.classList.contains('light')?'light':'dark');themeText()};
- document.getElementById('menuBtn').onclick=()=>{const names=slides.map((s,i)=>`${i+1}. ${s.querySelector('h1,h2')?.textContent?.trim()||'بخش '+(i+1)}`); const pick=prompt('شماره بخش موردنظر را وارد کنید:
+  'use strict';
 
-'+names.join('
-')); const n=parseInt(pick,10); if(n>=1&&n<=slides.length) slides[n-1].scrollIntoView({behavior:'smooth'});};
+  const body = document.body;
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const total = slides.length;
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const navCount = document.getElementById('navCount');
+  const pageIndex = document.getElementById('pageIndex');
+  const progress = document.getElementById('progress');
+  const dots = document.getElementById('dots');
+  const themeBtn = document.getElementById('themeBtn');
+  const menuBtn = document.getElementById('menuBtn');
+  const faDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+  const toFa = n => String(n).split('').map(d => faDigits[Number(d)]).join('');
+  let current = 0;
+  let scrolling = false;
+
+  // Add stable IDs for navigation and improve animation structure.
+  slides.forEach((slide, i) => {
+    slide.id = `s${i+1}`;
+    slide.querySelectorAll(':scope > *:not(.glow)').forEach((el, j) => {
+      el.classList.add('reveal');
+      el.style.setProperty('--delay', `${Math.min(j * 70, 420)}ms`);
+    });
+  });
+
+  // Build section dots after ALL slides exist.
+  if (dots) {
+    dots.innerHTML = '';
+    slides.forEach((slide, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'dot';
+      dot.type = 'button';
+      dot.title = `بخش ${i+1}`;
+      dot.setAttribute('aria-label', `رفتن به بخش ${i+1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dots.appendChild(dot);
+    });
+  }
+  const dotEls = dots ? Array.from(dots.children) : [];
+
+  function updateUI(i) {
+    current = Math.max(0, Math.min(total - 1, i));
+    const n = current + 1;
+    if (navCount) navCount.textContent = `${toFa(n)} / ${toFa(total)}`;
+    if (pageIndex) pageIndex.textContent = `${toFa(n).padStart(2,'0')} / ${toFa(total)}`;
+    if (progress) progress.style.width = `${(n / total) * 100}%`;
+    dotEls.forEach((d, j) => {
+      d.classList.toggle('active', j === current);
+      d.setAttribute('aria-current', j === current ? 'true' : 'false');
+    });
+    if (prevBtn) prevBtn.disabled = current === 0;
+    if (nextBtn) nextBtn.disabled = current === total - 1;
+  }
+
+  function goTo(i) {
+    const target = Math.max(0, Math.min(total - 1, i));
+    if (!slides[target]) return;
+    scrolling = true;
+    slides[target].scrollIntoView({behavior:'smooth', block:'start'});
+    updateUI(target);
+    window.setTimeout(() => { scrolling = false; }, 700);
+  }
+
+  prevBtn?.addEventListener('click', () => goTo(current - 1));
+  nextBtn?.addEventListener('click', () => goTo(current + 1));
+
+  // Keyboard navigation.
+  window.addEventListener('keydown', e => {
+    const tag = document.activeElement?.tagName;
+    if (['INPUT','TEXTAREA','SELECT'].includes(tag)) return;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+      e.preventDefault(); goTo(current + 1);
+    } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault(); goTo(current - 1);
+    } else if (e.key === 'Home') {
+      e.preventDefault(); goTo(0);
+    } else if (e.key === 'End') {
+      e.preventDefault(); goTo(total - 1);
+    }
+  });
+
+  // Reveal + current section tracking.
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const idx = slides.indexOf(entry.target);
+      entry.target.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      if (idx !== -1) updateUI(idx);
+    });
+  }, {threshold: 0.55});
+  slides.forEach(slide => observer.observe(slide));
+
+  // Theme toggle with persistence.
+  const savedTheme = localStorage.getItem('energy-theme');
+  if (savedTheme === 'light') body.classList.add('light');
+  function updateThemeLabel(){
+    if (!themeBtn) return;
+    const light = body.classList.contains('light');
+    themeBtn.textContent = light ? '🌙 حالت تیره' : '☀️ حالت روشن';
+    themeBtn.setAttribute('aria-label', light ? 'فعال کردن حالت تیره' : 'فعال کردن حالت روشن');
+  }
+  updateThemeLabel();
+  themeBtn?.addEventListener('click', () => {
+    body.classList.toggle('light');
+    localStorage.setItem('energy-theme', body.classList.contains('light') ? 'light' : 'dark');
+    updateThemeLabel();
+  });
+
+  // Accessible section menu instead of prompt().
+  menuBtn?.addEventListener('click', () => {
+    const existing = document.getElementById('sectionMenu');
+    if (existing) { existing.remove(); return; }
+    const panel = document.createElement('div');
+    panel.id = 'sectionMenu';
+    panel.className = 'section-menu';
+    panel.setAttribute('role','dialog');
+    panel.setAttribute('aria-label','فهرست بخش‌ها');
+    const title = document.createElement('div');
+    title.className = 'section-menu-title';
+    title.textContent = 'فهرست بخش‌ها';
+    panel.appendChild(title);
+    slides.forEach((slide, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      const heading = slide.querySelector('h1,h2')?.textContent?.trim() || `بخش ${i+1}`;
+      b.innerHTML = `<span>${toFa(i+1)}</span><strong>${heading}</strong>`;
+      b.addEventListener('click', () => { panel.remove(); goTo(i); });
+      panel.appendChild(b);
+    });
+    document.body.appendChild(panel);
+  });
+
+  // Swipe gestures on touch screens.
+  let touchStartY = null;
+  window.addEventListener('touchstart', e => { touchStartY = e.touches[0].clientY; }, {passive:true});
+  window.addEventListener('touchend', e => {
+    if (touchStartY === null) return;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    touchStartY = null;
+    if (Math.abs(dy) > 60) goTo(dy < 0 ? current + 1 : current - 1);
+  }, {passive:true});
+
+  updateUI(0);
 })();
 </script>
 </body>
