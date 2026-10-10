@@ -159,7 +159,8 @@ $('addDeadline').onclick=async()=>{
   const course=$('dCourse').value.trim();
   const file=$('dImage').files[0];
   if(!title||!course){$('dMsg').textContent='عنوان و درس را کامل کنید.';return}
-  const isEdit=!!editingId;\n   const event_type=$("dType").value;
+  const isEdit=!!editingId;
+   const event_type=$("dType").value;
   try{
     $('dMsg').textContent=isEdit?'در حال ذخیره تغییرات…':'در حال ثبت…';
     $('addDeadline').disabled=true;
