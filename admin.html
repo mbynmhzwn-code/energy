@@ -181,12 +181,15 @@ $('addDeadline').onclick=async()=>{
     }
 
     const row={
-      title,course,
+      title,
+      course,
+      event_type: event_type,   /* ← اصلاح: این فیلد اضافه شد */
       description:$('dDesc').value.trim(),
       due_at:makeDue(),
       submit_place:$('dPlace').value.trim(),
       submit_url:$('dUrl').value.trim(),
-      image_path,image_url,
+      image_path,
+      image_url,
       published:true
     };
 
