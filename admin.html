@@ -19,9 +19,10 @@
 </div>
 
 <div id="deadlinePanel" class="hidden">
-<p class="muted">تاریخ را به شمسی وارد کن. ددلاین‌ها در صفحه عمومی از نزدیک‌ترین مورد به دورترین مورد مرتب می‌شوند.</p>
-<div id="editingBanner" class="editing-banner hidden">در حال ویرایش ددلاین. پس از تغییر، دکمهٔ «ذخیره تغییرات» را بزن.</div>
-<label>عنوان کار</label><input id="dTitle" placeholder="مثلاً تمرین سری دوم">
+<p class="muted">نوع رویداد را انتخاب کن و تاریخ را به شمسی وارد کن. تمرین و پروژه بر اساس مهلت تحویل و کوییز و امتحان بر اساس زمان برگزاری نمایش داده می‌شوند.</p>
+<div id="editingBanner" class="editing-banner hidden">در حال ویرایش رویداد. پس از تغییر، دکمهٔ «ذخیره تغییرات» را بزن.</div>
+<label>نوع رویداد</label><select id="dType"><option value="assignment">تمرین و پروژه</option><option value="quiz">کوییز</option><option value="exam">امتحان</option></select>
+ <label>عنوان کار / رویداد</label><input id="dTitle" placeholder="مثلاً کوییز فصل دوم یا امتحان میان‌ترم">
 <div class="row"><div><label>درس</label><input id="dCourse" placeholder="مثلاً مکانیک سیالات"></div><div><label>محل تحویل</label><input id="dPlace" placeholder="مثلاً کوئرا / سامانه آموزش / ایمیل استاد"></div></div>
 <label>تاریخ ددلاین</label><div class="row3"><select id="jy"></select><select id="jm"></select><select id="jd"></select></div>
 <label>ساعت</label><input id="jtime" type="time" value="23:59">
@@ -103,6 +104,7 @@ function resetDeadlineForm(){
   editingId=null;
   editingImage={path:'',url:''};
   $('dTitle').value='';
+  $('dType').value='assignment';
   $('dCourse').value='';
   $('dPlace').value='';
   $('dUrl').value='';
@@ -111,7 +113,7 @@ function resetDeadlineForm(){
   $('dImageName').textContent='هنوز تصویری انتخاب نشده';
   $('preview').style.display='none';
   $('preview').src='';
-  $('addDeadline').textContent='ثبت ددلاین';
+  $('addDeadline').textContent='ثبت رویداد';
   $('cancelEdit').classList.add('hidden');
   $('editingBanner').classList.add('hidden');
 }
@@ -121,6 +123,7 @@ window.editDeadline=function(id){
   editingId=id;
   editingImage={path:x.image_path||'',url:x.image_url||''};
   $('dTitle').value=x.title||'';
+   $('dType').value=x.event_type||'assignment';
   $('dCourse').value=x.course||'';
   $('dPlace').value=x.submit_place||'';
   $('dUrl').value=x.submit_url||'';
@@ -156,7 +159,7 @@ $('addDeadline').onclick=async()=>{
   const course=$('dCourse').value.trim();
   const file=$('dImage').files[0];
   if(!title||!course){$('dMsg').textContent='عنوان و درس را کامل کنید.';return}
-  const isEdit=!!editingId;
+  const isEdit=!!editingId;\n   const event_type=$("dType").value;
   try{
     $('dMsg').textContent=isEdit?'در حال ذخیره تغییرات…':'در حال ثبت…';
     $('addDeadline').disabled=true;
@@ -200,7 +203,7 @@ $('addDeadline').onclick=async()=>{
       await sb.storage.from('deadline-images').remove([editingImage.path]);
     }
 
-    const successMsg=isEdit?'تغییرات ذخیره شد.':'ددلاین با موفقیت ثبت شد.';
+    const successMsg=isEdit?'تغییرات ذخیره شد.':'رویداد با موفقیت ثبت شد.';
     resetDeadlineForm();
     $('dMsg').textContent=successMsg;
     loadDeadlines();
@@ -219,7 +222,7 @@ async function loadDeadlines(){
     <div class="item deadline-item${editingId===x.id?' editing':''}">
       <div>
         <b>${esc(x.title)}</b><br>
-        <small>${esc(x.course)} · ${faDate(x.due_at)}<br>${esc(x.submit_place||'')}</small>
+        <small>${esc(x.course)} · ${{assignment:'تمرین و پروژه',quiz:'کوییز',exam:'امتحان'}[x.event_type||'assignment']} · ${faDate(x.due_at)}<br>${esc(x.submit_place||'')}</small>
       </div>
       <div class="actions-cell">
         <button class="danger edit-btn" onclick="editDeadline('${x.id}')">ویرایش</button>
@@ -229,12 +232,12 @@ async function loadDeadlines(){
 }
 
 async function delDeadline(id,path){
-  if(!confirm('این ددلاین حذف شود؟'))return;
+  if(!confirm('این رویداد حذف شود؟'))return;
   if(path){const a=await sb.storage.from('deadline-images').remove([path]);if(a.error){$('dMsg').textContent=a.error.message;return}}
   const d=await sb.from('deadlines').delete().eq('id',id);
   if(d.error){$('dMsg').textContent='خطا: '+d.error.message}
   else{
-    $('dMsg').textContent='ددلاین حذف شد.';
+    $('dMsg').textContent='رویداد حذف شد.';
     if(editingId===id)resetDeadlineForm();
   }
   loadDeadlines();
