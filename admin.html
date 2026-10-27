@@ -4,7 +4,7 @@
 <style>
 :root{--bg:#07131d;--p:#0d202d;--line:#1d4252;--t:#eaf7fa;--m:#91aeb8;--a:#29d3c2;--d:#ff6b7a;--amber:#ffc857}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0%,#123b4a,#07131d 48%,#050d14);color:var(--t);font-family:Vazirmatn,sans-serif;min-height:100vh}.wrap{max-width:900px;margin:auto;padding:30px 20px 70px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.brand{font-weight:800}.brand span{color:var(--a)}a{color:inherit;text-decoration:none}.back{border:1px solid var(--line);padding:9px 13px;border-radius:10px}.panel{background:linear-gradient(180deg,#102632,#091923);border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 25px 70px #0005;margin-bottom:18px}.panel h1{margin-top:0}.muted{color:var(--m);line-height:1.8}label{display:block;font-size:13px;color:var(--m);margin:13px 0 6px}input,textarea,select{width:100%;background:#071720;color:var(--t);border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}textarea{min-height:85px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.btn{border:0;background:var(--a);color:#06201f;font:inherit;font-weight:800;padding:12px 16px;border-radius:11px;cursor:pointer;margin-top:16px}.danger{background:#3b1720;color:#ffb8c0;border:1px solid #672b37;padding:7px 10px;border-radius:8px;cursor:pointer}.edit-btn{background:#152f3c;color:#9fe2e8;border:1px solid #285060}.hidden{display:none}.msg{margin-top:12px;color:var(--m);min-height:24px}.list{margin-top:24px;display:grid;gap:10px}.item{border:1px solid var(--line);border-radius:14px;padding:14px;background:#0a1b26;display:flex;justify-content:space-between;gap:10px;align-items:center}.item small{color:var(--m);line-height:1.8}.tabs{display:flex;gap:8px;margin-bottom:18px}.tab{flex:1;border:1px solid var(--line);background:#0a1b26;color:var(--m);padding:11px;border-radius:11px;font:inherit;cursor:pointer}.tab.active{background:rgba(41,211,194,.12);border-color:var(--a);color:var(--a);font-weight:800}.filepick{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 12px;border:1px solid var(--line);border-radius:16px;background:#091923}.filepick input{max-width:100%;min-width:0}.filepick span{font-size:.92rem;color:var(--m);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}.preview{max-width:100%;max-height:220px;border-radius:12px;border:1px solid var(--line);margin-top:10px;display:none}.deadline-item{border-color:rgba(41,211,194,.25)}.deadline-item.editing{border-color:var(--amber);box-shadow:0 0 0 2px rgba(255,200,87,.15)}.actions-cell{display:flex;gap:8px;flex-wrap:wrap;flex-shrink:0}.form-actions{display:flex;gap:10px;flex-wrap:wrap}.form-actions .btn{margin-top:16px}.cancel-btn{background:#3b1720;color:#ffb8c0;border:1px solid #672b37}.editing-banner{background:rgba(255,200,87,.08);border:1px solid rgba(255,200,87,.4);color:var(--amber);padding:10px 12px;border-radius:12px;font-size:13px;margin-bottom:12px}
 @media(max-width:650px){.row,.row3{grid-template-columns:1fr}.top{align-items:flex-start;gap:10px}.item{align-items:flex-start;flex-direction:column}.panel{padding:17px 14px;border-radius:17px}.panel h1{font-size:24px;line-height:1.5}.muted{font-size:12px}.tabs{position:sticky;top:8px;z-index:4;background:#091923;padding:5px;border-radius:14px}label{font-size:12px}input,textarea,select{font-size:13px;padding:11px}.btn{width:100%;font-size:13px}.filepick{display:block}.filepick input{width:100%;margin-bottom:8px}.filepick span{display:block}.actions-cell{width:100%}.form-actions{flex-direction:column}.form-actions .btn{width:100%}}
-</style></head><body><main class="wrap">
+.attach-list{display:grid;gap:8px;margin-top:10px}.attach-item{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);background:#091923;border-radius:11px;padding:8px 12px;font-size:13px}.attach-item span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}.attach-item small{color:var(--m)}.attach-item button{flex-shrink:0;padding:5px 9px;font-size:12px}.check{display:flex;align-items:center;gap:10px;margin-top:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#091923;color:var(--t);font-size:13px;cursor:pointer}.check input{width:auto;margin:0;flex-shrink:0}.botcount{display:inline-block;margin-bottom:10px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--m)}</style></head><body><main class="wrap">
 <header class="top"><a class="brand" href="index.html">مهندسی انرژی <span>شریف</span></a><div><a class="back" href="notes.html">منابع</a> <a class="back" href="deadlines.html">ددلاین‌ها</a></div></header>
 
 <section id="loginPanel" class="panel"><h1>ورود مدیر</h1><p class="muted">برای جلوگیری از لو رفتن رمز، احراز هویت توسط Supabase انجام می‌شود؛ رمز داخل کد سایت ذخیره نشده است.</p><label>نام کاربری / ایمیل</label><input id="email" type="email" autocomplete="username"><label>رمز عبور</label><input id="password" type="password" autocomplete="current-password"><button id="login" class="btn">ورود</button><div id="loginMsg" class="msg"></div></section>
@@ -20,6 +20,7 @@
 
 <div id="deadlinePanel" class="hidden">
 <p class="muted">نوع رویداد را انتخاب کن و تاریخ را به شمسی وارد کن. تمرین و پروژه بر اساس مهلت تحویل و کوییز و امتحان بر اساس زمان برگزاری نمایش داده می‌شوند.</p>
+<div id="botCount" class="botcount hidden"></div>
 <div id="editingBanner" class="editing-banner hidden">در حال ویرایش رویداد. پس از تغییر، دکمهٔ «ذخیره تغییرات» را بزن.</div>
 <label>نوع رویداد</label><select id="dType"><option value="assignment">تمرین و پروژه</option><option value="quiz">کوییز</option><option value="exam">امتحان</option></select>
  <label>عنوان کار / رویداد</label><input id="dTitle" placeholder="مثلاً کوییز فصل دوم یا امتحان میان‌ترم">
@@ -29,6 +30,8 @@
 <label>لینک محل بارگذاری (اختیاری)</label><input id="dUrl" type="url" placeholder="https://...">
 <label>توضیحات و سایر جزئیات</label><textarea id="dDesc" placeholder="مثلاً فقط فایل PDF، نام فایل شامل شماره دانشجویی باشد و ..."></textarea>
 <label>عکس سؤال / صورت تمرین (اختیاری)</label><div class="filepick"><input id="dImage" type="file" accept="image/*"><span id="dImageName">هنوز تصویری انتخاب نشده</span></div><img id="preview" class="preview" alt="پیش‌نمایش">
+<label>فایل سؤال / پیوست‌ها (اختیاری، تا ۸ فایل)</label><div class="filepick"><input id="dFiles" type="file" multiple accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip,.rar,.txt,image/*"><span id="dFilesName">هنوز فایلی انتخاب نشده</span></div><div class="muted" style="font-size:12px;margin-top:6px">PDF، Word، PowerPoint، Excel، ZIP، متن یا عکس. حداکثر ۲۰ مگابایت برای هر فایل.</div><div id="dFilesList" class="attach-list"></div>
+<label class="check"><input type="checkbox" id="dNotify"><span>📣 ارسال اعلان به مشترکین ربات تلگرام (برای رویداد جدید یا تغییر مهم)</span></label>
 <div class="form-actions">
   <button id="addDeadline" class="btn">ثبت ددلاین</button>
   <button id="cancelEdit" class="btn cancel-btn hidden">لغو ویرایش</button>
@@ -99,6 +102,22 @@ function makeDue(){const g=jalaliToGregorian(+$('jy').value,+$('jm').value,+$('j
 let allDeadlines=[];
 let editingId=null;
 let editingImage={path:'',url:''};
+let editingFiles=[],removedFiles=[];
+const MAX_FILES=8,MAX_FILE_MB=20;
+function fmtSize(n){return n>=1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.round(n/1024))+' KB'}
+function renderAttachList(){
+  const box=$('dFilesList');
+  box.innerHTML=editingFiles.map((f,i)=>`<div class="attach-item"><span>📎 <a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.name)}</a> <small>${f.size?fmtSize(f.size):''}</small></span><button type="button" class="danger" onclick="removeAttach(${i})">حذف</button></div>`).join('');
+}
+window.removeAttach=function(i){
+  const f=editingFiles[i];if(!f)return;
+  removedFiles.push(f);editingFiles.splice(i,1);renderAttachList();
+  $('dMsg').textContent='فایل از لیست برداشته شد؛ بعد از «ذخیره تغییرات» از سیستم حذف می‌شود.';
+};
+function updateFilesLabel(){
+  const n=$('dFiles').files.length;
+  $('dFilesName').textContent=n?(n===1?$('dFiles').files[0].name:n+' فایل جدید انتخاب شد'):'هنوز فایلی انتخاب نشده';
+}
 
 function resetDeadlineForm(){
   editingId=null;
@@ -113,6 +132,8 @@ function resetDeadlineForm(){
   $('dImageName').textContent='هنوز تصویری انتخاب نشده';
   $('preview').style.display='none';
   $('preview').src='';
+  editingFiles=[];removedFiles=[];$('dFiles').value='';updateFilesLabel();renderAttachList();
+  $('dNotify').checked=false;
   $('addDeadline').textContent='ثبت رویداد';
   $('cancelEdit').classList.add('hidden');
   $('editingBanner').classList.add('hidden');
@@ -144,6 +165,7 @@ window.editDeadline=function(id){
     $('preview').style.display='none';
     $('preview').src='';
   }
+  editingFiles=Array.isArray(x.attachments)?x.attachments.map(f=>({...f})):[];removedFiles=[];$('dFiles').value='';updateFilesLabel();renderAttachList();
   $('addDeadline').textContent='ذخیره تغییرات';
   $('cancelEdit').classList.remove('hidden');
   $('editingBanner').classList.remove('hidden');
@@ -152,6 +174,12 @@ window.editDeadline=function(id){
 };
 $('cancelEdit').onclick=()=>{resetDeadlineForm();$('dMsg').textContent='ویرایش لغو شد.';loadDeadlines()};
 
+$('dFiles').addEventListener('change',()=>{
+  const files=[...$('dFiles').files];
+  if(editingFiles.length+files.length>MAX_FILES){$('dMsg').textContent='حداکثر '+MAX_FILES+' فایل برای هر رویداد مجاز است.';$('dFiles').value=''}
+  else if(files.some(f=>f.size>MAX_FILE_MB*1048576)){$('dMsg').textContent='حجم هر فایل باید کمتر از '+MAX_FILE_MB+' مگابایت باشد.';$('dFiles').value=''}
+  updateFilesLabel();
+});
 $('dImage').addEventListener('change',()=>{const f=$('dImage').files[0];if(f){$('dImageName').textContent=f.name;const r=new FileReader();r.onload=()=>{$('preview').src=r.result;$('preview').style.display='block'};r.readAsDataURL(f)}else{$('dImageName').textContent=editingId&&editingImage.url?'تصویر فعلی (برای تغییر، تصویر جدید انتخاب کن)':'هنوز تصویری انتخاب نشده';if(editingId&&editingImage.url){$('preview').src=editingImage.url;$('preview').style.display='block'}else{$('preview').style.display='none'}}});
 
 $('addDeadline').onclick=async()=>{
@@ -161,6 +189,7 @@ $('addDeadline').onclick=async()=>{
   if(!title||!course){$('dMsg').textContent='عنوان و درس را کامل کنید.';return}
   const isEdit=!!editingId;
    const event_type=$("dType").value;
+  const newFiles=[];let saved=false;
   try{
     $('dMsg').textContent=isEdit?'در حال ذخیره تغییرات…':'در حال ثبت…';
     $('addDeadline').disabled=true;
@@ -180,6 +209,21 @@ $('addDeadline').onclick=async()=>{
       image_url=sb.storage.from('deadline-images').getPublicUrl(path).data.publicUrl;
     }
 
+    /* پیوست‌ها: آپلود فایل‌های جدید */
+    const picked=[...$('dFiles').files];
+    if(editingFiles.length+picked.length>MAX_FILES)throw Error('حداکثر '+MAX_FILES+' فایل مجاز است.');
+    for(let i=0;i<picked.length;i++){
+      const f=picked[i];
+      if(f.size>MAX_FILE_MB*1048576)throw Error('حجم «'+f.name+'» بیشتر از '+MAX_FILE_MB+' مگابایت است.');
+      $('dMsg').textContent='در حال آپلود فایل '+(i+1)+' از '+picked.length+'…';
+      const ext=(f.name.split('.').pop()||'bin').toLowerCase().replace(/[^a-z0-9]/g,'')||'bin';
+      const fpath=`files/${crypto.randomUUID()}.${ext}`;
+      const up2=await sb.storage.from('deadline-images').upload(fpath,f,{upsert:false,contentType:f.type||'application/octet-stream'});
+      if(up2.error)throw up2.error;
+      newFiles.push({name:f.name,path:fpath,url:sb.storage.from('deadline-images').getPublicUrl(fpath).data.publicUrl,size:f.size,type:f.type||''});
+    }
+    const attachments=[...editingFiles,...newFiles];
+
     const row={
       title,
       course,
@@ -190,35 +234,54 @@ $('addDeadline').onclick=async()=>{
       submit_url:$('dUrl').value.trim(),
       image_path,
       image_url,
+      attachments,
       published:true
     };
 
     let res;
     if(isEdit) res=await sb.from('deadlines').update(row).eq('id',editingId);
-    else       res=await sb.from('deadlines').insert(row);
+    else       res=await sb.from('deadlines').insert(row).select('id').single();
 
     if(res.error){
       if(newUploadedPath) await sb.storage.from('deadline-images').remove([newUploadedPath]);
       throw res.error;
     }
+    saved=true;
+    const notify=$('dNotify').checked;
+    const targetId=isEdit?editingId:(res.data&&res.data.id);
+    let notifyMsg='';
+    if(notify){
+      if(!targetId){notifyMsg=' ولی شناسه رویداد برای اعلان پیدا نشد.'}
+      else{
+        const an=await sb.from('bot_announcements').insert({deadline_id:targetId,kind:isEdit?'update':'new'});
+        notifyMsg=an.error?' ولی ثبت اعلان ناموفق بود: '+an.error.message:' اعلان در صف ارسال قرار گرفت و تا یکی دو دقیقه به مشترکین می‌رسد.';
+      }
+    }
+    if(removedFiles.length){await sb.storage.from('deadline-images').remove(removedFiles.map(f=>f.path).filter(Boolean))}
 
     // اگر در حالت ویرایش تصویر جدید جایگزین شد، تصویر قدیمی را پاک کن
     if(isEdit && newUploadedPath && editingImage.path && editingImage.path!==newUploadedPath){
       await sb.storage.from('deadline-images').remove([editingImage.path]);
     }
 
-    const successMsg=isEdit?'تغییرات ذخیره شد.':'رویداد با موفقیت ثبت شد.';
+    const successMsg=(isEdit?'تغییرات ذخیره شد.':'رویداد با موفقیت ثبت شد.')+notifyMsg;
     resetDeadlineForm();
     $('dMsg').textContent=successMsg;
     loadDeadlines();
   }catch(e){
+    if(!saved&&newFiles.length){try{await sb.storage.from('deadline-images').remove(newFiles.map(f=>f.path))}catch(_){}}
     $('dMsg').textContent='خطا: '+e.message;
   }finally{
     $('addDeadline').disabled=false;
   }
 };
 
+async function loadBotCount(){
+  try{const {data,error}=await sb.rpc('bot_subscriber_count');if(error||data==null)return;const b=$('botCount');b.textContent='👥 مشترکین ربات: '+Number(data).toLocaleString('fa-IR')+' نفر';b.classList.remove('hidden')}catch(_){}
+}
+
 async function loadDeadlines(){
+  loadBotCount();
   const {data,error}=await sb.from('deadlines').select('*').order('due_at',{ascending:true});
   if(error){$('dList').innerHTML='<div class="msg">'+esc(error.message)+'</div>';return}
   allDeadlines=data||[];
@@ -226,7 +289,7 @@ async function loadDeadlines(){
     <div class="item deadline-item${editingId===x.id?' editing':''}">
       <div>
         <b>${esc(x.title)}</b><br>
-        <small>${esc(x.course)} · ${{assignment:'تمرین و پروژه',quiz:'کوییز',exam:'امتحان'}[x.event_type||'assignment']} · ${faDate(x.due_at)}<br>${esc(x.submit_place||'')}</small>
+        <small>${esc(x.course)} · ${{assignment:'تمرین و پروژه',quiz:'کوییز',exam:'امتحان'}[x.event_type||'assignment']} · ${faDate(x.due_at)}${(x.attachments||[]).length?' · 📎 '+x.attachments.length+' فایل':''}<br>${esc(x.submit_place||'')}</small>
       </div>
       <div class="actions-cell">
         <button class="danger edit-btn" onclick="editDeadline('${x.id}')">ویرایش</button>
@@ -237,7 +300,9 @@ async function loadDeadlines(){
 
 async function delDeadline(id,path){
   if(!confirm('این رویداد حذف شود؟'))return;
-  if(path){const a=await sb.storage.from('deadline-images').remove([path]);if(a.error){$('dMsg').textContent=a.error.message;return}}
+  const cur=allDeadlines.find(d=>d.id===id)||{};
+  const paths=[path,...((cur.attachments||[]).map(f=>f.path))].filter(Boolean);
+  if(paths.length){const a=await sb.storage.from('deadline-images').remove(paths);if(a.error){$('dMsg').textContent=a.error.message;return}}
   const d=await sb.from('deadlines').delete().eq('id',id);
   if(d.error){$('dMsg').textContent='خطا: '+d.error.message}
   else{
