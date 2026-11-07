@@ -1,318 +1,69 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>چارت درسی مهندسی انرژی | شریف</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>چارت درسی | مهندسی انرژی شریف</title>
+<meta name="description" content="چارت درسی کارشناسی مهندسی انرژی شریف: ۸ نیمسال، ۱۴۰ واحد، با نمایش تعاملی پیش‌نیازها.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta name="description" content="چارت تعاملی دروس کارشناسی مهندسی انرژی دانشگاه صنعتی شریف با روابط پیش‌نیازها.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--site-bg:#07111f;--site-panel:#0f1b2c;--site-line:#21324b;--site-text:#eef4fb;--site-muted:#9cafc8;--accent:#35d6be}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--site-bg);color:var(--site-text);font-family:Vazirmatn,Tahoma,sans-serif}
-.sitebar{position:fixed;inset:0 0 auto;height:66px;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:0 5vw;background:rgba(7,17,31,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--site-line)}
-.sitebar a{color:var(--site-text);text-decoration:none;border:1px solid var(--site-line);background:rgba(15,27,44,.9);padding:8px 13px;border-radius:10px;transition:.2s}
-.sitebar a:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
-.sitebar .brand{font-weight:800;border:0;background:none}.sitebar .brand span{color:var(--accent)}
-.chart-main{padding:94px 4vw 50px}
-.chart-hero{max-width:1500px;margin:0 auto 20px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
-.chart-hero .eyebrow{color:var(--accent);font-weight:700;margin-bottom:8px}
-.chart-hero h1{margin:0;font-size:clamp(28px,4vw,48px)}
-.chart-hero p{margin:8px 0 0;color:var(--site-muted);line-height:1.9}
-.chart-card{max-width:1500px;margin:auto;background:#f7f7f5;border:1px solid #2a3a50;border-radius:20px;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.28);overflow:hidden}
-.chart-card .chart-outer{max-height:calc(100vh - 245px);overflow:auto}
-.chart-card .hint{background:#fff;border:1px solid #e3e1da;border-radius:10px;padding:10px}
-.chart-card .chart-outer::-webkit-scrollbar{height:10px;width:10px}
-.chart-card .chart-outer::-webkit-scrollbar-thumb{background:#a8aaa5;border-radius:20px}
-@media(max-width:700px){.sitebar{height:58px;padding:0 4vw}.sitebar .optional{display:none}.chart-main{padding:82px 10px 35px}.chart-card{padding:9px;border-radius:14px}}
-
-  :root{
-    --bg:#f7f7f5; --card:#ffffff; --text:#22221f; --sub:#5c5b56; --border:#d8d6cf;
-    --pa-bg:#E1F5EE; --pa-bd:#0F6E56; --pa-tx:#085041;
-    --as-bg:#E6F1FB; --as-bd:#185FA5; --as-tx:#0C447C;
-    --an-bg:#FAEEDA; --an-bd:#854F0B; --an-tx:#633806;
-    --om-bg:#F1EFE8; --om-bd:#5F5E5A; --om-tx:#2C2C2A;
-    --sa-bg:#EEEDFE; --sa-bd:#534AB7; --sa-tx:#3C3489;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0; padding:24px; background:var(--bg); color:var(--text); font-family:'Vazirmatn','Tahoma',sans-serif;}
-  h1{font-size:19px; font-weight:700; margin:0 0 4px; text-align:center;}
-  .sub{font-size:12.5px; color:var(--sub); text-align:center; margin:0 0 14px;}
-  .legend{display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:8px; font-size:12px;}
-  .legend span{display:flex; align-items:center; gap:6px;}
-  .swatch{width:14px; height:14px; border-radius:4px; border:1px solid; display:inline-block;}
-  .hint{text-align:center; font-size:12px; color:var(--sub); margin-bottom:18px;}
-  .hint b{color:var(--text);}
-  .chart-outer{overflow-x:auto; padding-bottom:12px;}
-  .chart{position:relative; width:max-content; padding:4px;}
-  svg#arrows{position:absolute; top:0; right:0; z-index:5; pointer-events:none;}
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(8, 178px);
-    column-gap:26px;
-    grid-template-rows: 56px repeat(27, minmax(48px,auto));
-    row-gap:7px;
-    position:relative; z-index:2;
-  }
-  .sem-head{
-    grid-row:1; background:var(--text); color:#fff; border-radius:8px;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    font-size:12.5px; font-weight:700; text-align:center; line-height:1.4;
-  }
-  .sem-head small{font-weight:400; font-size:10.5px; opacity:.85;}
-  .course{
-    border-radius:6px; border:1.4px solid; padding:5px 7px; font-size:11.3px; line-height:1.35;
-    display:flex; flex-direction:column; justify-content:center; align-self:stretch;
-    cursor:pointer; transition:opacity .18s, filter .18s, box-shadow .18s; position:relative;
-  }
-  .course .name{font-weight:500;}
-  .course .units{font-size:9.8px; opacity:.8; margin-top:1px;}
-  .cat-pa{background:var(--pa-bg); border-color:var(--pa-bd); color:var(--pa-tx);}
-  .cat-as{background:var(--as-bg); border-color:var(--as-bd); color:var(--as-tx);}
-  .cat-an{background:var(--an-bg); border-color:var(--an-bd); color:var(--an-tx);}
-  .cat-om{background:var(--om-bg); border-color:var(--om-bd); color:var(--om-tx);}
-  .cat-sa{background:var(--sa-bg); border-color:var(--sa-bd); color:var(--sa-tx);}
-  .grid.dim-mode .course{opacity:.22; filter:grayscale(.4);}
-  .grid.dim-mode .course.hl-self,
-  .grid.dim-mode .course.hl-pre,
-  .grid.dim-mode .course.hl-dep{opacity:1; filter:none;}
-  .course.hl-self{box-shadow:0 0 0 2px var(--text);}
-  .course.hl-pre{box-shadow:0 0 0 2px #185FA5;}
-  .course.hl-dep{box-shadow:0 0 0 2px #D85A30;}
-  .note{font-size:11.3px; color:var(--sub); text-align:center; margin-top:16px; max-width:780px; margin-inline:auto;}
-
-.chart-outer{animation:chartIn .7s ease-out both}
-@keyframes chartIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-</style>
+<script src="theme.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="sitebar">
- <a class="brand" href="index.html">مهندسی انرژی <span>شریف</span></a>
- <div style="display:flex;gap:8px"><a href="index.html">⌂ خانه</a><a class="optional" href="intro.html">معرفی رشته</a></div>
-</nav>
-<main class="chart-main">
- <header class="chart-hero">
-  <div><div class="eyebrow">برنامه آموزشی</div><h1>چارت درسی کارشناسی مهندسی انرژی</h1>
-  <p>۸ نیمسال · ۱۴۰ واحد · با نمایش تعاملی پیش‌نیازها و درس‌های وابسته</p></div>
- </header>
- <section class="chart-card">
- 
-  <h1>چارت درختی دروس کارشناسی مهندسی انرژی — دانشگاه صنعتی شریف</h1>
-  <p class="sub">۸ نیمسال، ۱۴۰ واحد — دروس هم‌موضوع در یک ردیف افقی چیده شده‌اند تا مسیر پیش‌نیازها واضح باشد</p>
-  <div class="legend">
-    <span><i class="swatch" style="background:var(--pa-bg);border-color:var(--pa-bd)"></i>دروس پایه</span>
-    <span><i class="swatch" style="background:var(--as-bg);border-color:var(--as-bd)"></i>دروس اصلی</span>
-    <span><i class="swatch" style="background:var(--an-bg);border-color:var(--an-bd)"></i>دروس انتخابی</span>
-    <span><i class="swatch" style="background:var(--om-bg);border-color:var(--om-bd)"></i>دروس عمومی</span>
-    <span><i class="swatch" style="background:var(--sa-bg);border-color:var(--sa-bd)"></i>کارآموزی / پروژه</span>
+<a class="skip" href="#main">پرش به محتوا</a>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#C2410C"/><path d="M8 40h12l8-20 10 28 8-16h10" fill="none" stroke="#FBF9F4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>مهندسی انرژی شریف</span></a>
+    <nav class="nav" aria-label="بخش‌های سایت"><a href="intro.html">معرفی رشته</a><a href="chart.html" aria-current="page">چارت درسی</a><a href="notes.html">جزوه‌ها و منابع</a><a href="deadlines.html">ددلاین‌ها</a></nav>
+    <button id="themeBtn" class="theme-btn" type="button" aria-pressed="false">حالت تیره</button>
   </div>
-  <p class="hint">روی هر درس <b>کلیک یا هاور</b> کنید: پیش‌نیازهای آن <b style="color:#185FA5">آبی</b> و درس‌هایی که به آن نیاز دارند <b style="color:#D85A30">نارنجی</b> هایلایت می‌شوند.</p>
+</header>
 
-  <div class="chart-outer">
-    <div class="chart" id="chart">
-      <svg id="arrows"></svg>
-      <div class="grid" id="grid"></div>
+<main id="main">
+  <div class="wrap">
+    <section class="page-head compact">
+      <h1>چارت درسی کارشناسی مهندسی انرژی</h1>
+      <p>۸ نیمسال و ۱۴۰ واحد. دروس هم‌موضوع در یک ردیف افقی آمده‌اند تا مسیر پیش‌نیازها دیده شود.</p>
+    </section>
+    <div class="chart-tools">
+      <div class="legend" aria-label="راهنمای رنگ‌ها">
+        <span><i class="swatch cat-pa"></i>دروس پایه</span>
+        <span><i class="swatch cat-as"></i>دروس اصلی</span>
+        <span><i class="swatch cat-an"></i>دروس انتخابی</span>
+        <span><i class="swatch cat-om"></i>دروس عمومی</span>
+        <span><i class="swatch cat-sa"></i>کارآموزی و پروژه</span>
+      </div>
+      <p class="hint">روی هر درس کلیک کن یا نشانگر را روی آن ببر: <b class="p">پیش‌نیازها آبی</b> و <b class="d">درس‌های وابسته نارنجی</b> می‌شوند.</p>
     </div>
+    <p class="scroll-hint">برای دیدن همهٔ نیمسال‌ها، چارت را افقی بکش.</p>
   </div>
-  <p class="note">در برنامه مصوب دانشکده، ستون «هم‌نیاز» برای همه دروس خالی است؛ فقط روابط پیش‌نیازی رسم شده‌اند. «درس عمومی» و «درس اختیاری» جایگاه انتخاب آزاد دانشجو در آن نیمسال هستند و پیش‌نیاز خاصی ندارند.</p>
-
-<script>
-// هر درس: id, نام, واحد, دسته, ستون=نیمسال, ردیف=لِین موضوعی, پیش‌نیاز[]
-const courses = [
-  {id:'riazi1', name:'ریاضی عمومی ۱', u:3, cat:'pa', col:1, row:1},
-  {id:'riazi2', name:'ریاضی عمومی ۲', u:3, cat:'pa', col:2, row:1, pre:['riazi1']},
-  {id:'riazi_mohandesi', name:'ریاضی مهندسی', u:3, cat:'as', col:3, row:1, pre:['riazi2','moadelat']},
-  {id:'barnamerizi_riazi', name:'برنامه‌ریزی ریاضی', u:3, cat:'as', col:4, row:1, pre:['riazi_mohandesi']},
-
-  {id:'moadelat', name:'معادلات دیفرانسیل', u:3, cat:'pa', col:2, row:2, pre:['riazi1']},
-  {id:'amar', name:'آمار و احتمالات مهندسی', u:3, cat:'pa', col:4, row:2, pre:['riazi1']},
-
-  {id:'fizik1', name:'فیزیک ۱', u:3, cat:'pa', col:1, row:3},
-  {id:'fizik2', name:'فیزیک ۲', u:3, cat:'pa', col:2, row:3, pre:['fizik1']},
-  {id:'electronik', name:'الکترونیک', u:3, cat:'as', col:3, row:3, pre:['fizik2']},
-
-  {id:'az_fizik1', name:'آزمایشگاه فیزیک ۱', u:1, cat:'pa', col:1, row:4, pre:['fizik1']},
-  {id:'az_fizik2', name:'آزمایشگاه فیزیک ۲', u:1, cat:'pa', col:2, row:4, pre:['fizik2']},
-
-  {id:'shimi', name:'شیمی عمومی', u:3, cat:'pa', col:1, row:5},
-  {id:'az_shimi', name:'آزمایشگاه شیمی عمومی', u:1, cat:'pa', col:2, row:5, pre:['shimi']},
-
-  {id:'barnamesazi', name:'مبانی برنامه‌سازی کامپیوتر', u:3, cat:'pa', col:1, row:6},
-  {id:'mohasebat', name:'محاسبات عددی', u:2, cat:'pa', col:3, row:6, pre:['barnamesazi']},
-
-  {id:'eghtesad', name:'مبانی اقتصاد', u:3, cat:'pa', col:2, row:7},
-  {id:'eghtesadsanji', name:'اقتصادسنجی', u:3, cat:'pa', col:5, row:7, pre:['eghtesad']},
-  {id:'eghtesad_energy', name:'اقتصاد انرژی', u:3, cat:'as', col:7, row:7, pre:['eghtesad','mabani_tahlil']},
-
-  {id:'static', name:'استاتیک', u:3, cat:'as', col:3, row:8, pre:['fizik1','riazi1']},
-  {id:'moghavemat', name:'مقاومت مصالح', u:3, cat:'as', col:4, row:8, pre:['static']},
-
-  {id:'sialat', name:'مکانیک سیالات', u:3, cat:'as', col:3, row:9, pre:['static','moadelat']},
-
-  {id:'termo1', name:'ترمودینامیک مهندسی ۱', u:3, cat:'as', col:3, row:10, pre:['fizik1','moadelat']},
-  {id:'termo2', name:'ترمودینامیک مهندسی ۲', u:3, cat:'as', col:4, row:10, pre:['termo1']},
-  {id:'mabani_tahlil', name:'مبانی تحلیل سیستم‌های انرژی', u:3, cat:'as', col:5, row:10, pre:['termo2']},
-  {id:'tajdidpazir', name:'مبانی انرژی‌های تجدیدپذیر', u:3, cat:'as', col:6, row:10, pre:['mabani_tahlil']},
-
-  {id:'enteghal_harart', name:'انتقال حرارت', u:3, cat:'as', col:4, row:11, pre:['termo1']},
-  {id:'enteghrasion', name:'مبانی انتگراسیون فرآیند', u:3, cat:'as', col:6, row:11, pre:['termo2','enteghal_harart']},
-
-  {id:'tabdil_energy', name:'تبدیل انرژی', u:3, cat:'as', col:5, row:12, pre:['termo2']},
-  {id:'az_termo', name:'آزمایشگاه ترمودینامیک مهندسی', u:1, cat:'as', col:5, row:13, pre:['termo2']},
-  {id:'momayezi', name:'ممیزی انرژی', u:3, cat:'as', col:6, row:14, pre:['mabani_tahlil']},
-  {id:'zist_mohiti', name:'آثار زیست‌محیطی انرژی', u:3, cat:'as', col:7, row:15, pre:['mabani_tahlil']},
-
-  {id:'bargh1', name:'سیستم‌های انرژی الکتریکی ۱', u:3, cat:'as', col:4, row:16, pre:['fizik2']},
-  {id:'bargh2', name:'سیستم‌های انرژی الکتریکی ۲', u:3, cat:'as', col:5, row:16, pre:['bargh1']},
-  {id:'az_bargh', name:'آزمایشگاه سیستم‌های انرژی الکتریکی', u:1, cat:'as', col:6, row:16, pre:['bargh2']},
-
-  {id:'control', name:'کنترل اتوماتیک', u:3, cat:'as', col:5, row:17, pre:['riazi2','moadelat']},
-
-  {id:'zaban_omumi', name:'زبان عمومی', u:3, cat:'om', col:6, row:18},
-  {id:'zaban_takhassosi', name:'زبان تخصصی', u:2, cat:'as', col:7, row:18, pre:['zaban_omumi']},
-
-  {id:'tarbiat1', name:'تربیت بدنی ۱', u:1, cat:'om', col:3, row:19},
-  {id:'tarbiat2', name:'تربیت بدنی ۲', u:1, cat:'om', col:5, row:19},
-
-  {id:'ashnaei', name:'آشنایی با مهندسی انرژی', u:1, cat:'as', col:1, row:20},
-  {id:'naghshekeshi', name:'نقشه‌کشی صنعتی', u:2, cat:'as', col:2, row:20},
-
-  {id:'adabiat', name:'ادبیات فارسی', u:3, cat:'om', col:1, row:21},
-
-  {id:'omumi_s2', name:'درس عمومی', u:2, cat:'om', col:2, row:22},
-  {id:'omumi_s3', name:'درس عمومی', u:2, cat:'om', col:3, row:22},
-  {id:'omumi_s4', name:'درس عمومی', u:2, cat:'om', col:4, row:22},
-  {id:'omumi_s5', name:'درس عمومی', u:2, cat:'om', col:5, row:22},
-  {id:'omumi_s6', name:'درس عمومی', u:2, cat:'om', col:6, row:22},
-  {id:'omumi_s7', name:'درس عمومی', u:2, cat:'om', col:7, row:22},
-
-  {id:'ekhtiyari1_s7', name:'درس اختیاری ۱', u:3, cat:'an', col:7, row:23},
-  {id:'ekhtiyari1_s8', name:'درس اختیاری ۱', u:3, cat:'an', col:8, row:23},
-  {id:'ekhtiyari2_s7', name:'درس اختیاری ۲', u:3, cat:'an', col:7, row:24},
-  {id:'ekhtiyari2_s8', name:'درس اختیاری ۲', u:3, cat:'an', col:8, row:24},
-  {id:'ekhtiyari3_s8', name:'درس اختیاری ۳', u:3, cat:'an', col:8, row:25},
-  {id:'ekhtiyari4_s8', name:'درس اختیاری ۴', u:3, cat:'an', col:8, row:26},
-
-  {id:'karamoozi', name:'کارآموزی', u:0, cat:'sa', col:7, row:27},
-  {id:'proje', name:'پروژه کارشناسی', u:3, cat:'sa', col:8, row:27},
-];
-const credits = {1:17,2:18,3:20,4:20,5:19,6:15,7:16,8:15};
-
-const gridEl = document.getElementById('grid');
-for(let c=1;c<=8;c++){
-  const h = document.createElement('div');
-  h.className='sem-head';
-  h.style.gridColumn = c;
-  h.innerHTML = `نیم‌سال ${c}<small>جمع واحد: ${credits[c]}</small>`;
-  gridEl.appendChild(h);
-}
-courses.forEach(c=>{
-  const box=document.createElement('div');
-  box.className='course cat-'+c.cat;
-  box.style.gridColumn=c.col;
-  box.style.gridRow=c.row+1;
-  box.setAttribute('data-id',c.id);
-  box.innerHTML=`<div class="name">${c.name}</div><div class="units">${c.u} واحد</div>`;
-  gridEl.appendChild(box);
-});
-
-const byId = Object.fromEntries(courses.map(c=>[c.id,c]));
-const dependents = {};
-courses.forEach(c=>{ if(c.pre) c.pre.forEach(p=>{ (dependents[p]=dependents[p]||[]).push(c.id); }); });
-
-window.addEventListener('load', ()=>{ drawArrows(); bindEvents(); });
-window.addEventListener('resize', drawArrows);
-
-function drawArrows(){
-  const chart=document.getElementById('chart');
-  const svg=document.getElementById('arrows');
-  const chartRect=chart.getBoundingClientRect();
-  svg.setAttribute('width', chart.scrollWidth);
-  svg.setAttribute('height', chart.scrollHeight);
-  svg.innerHTML = `<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#8a8a83" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>`;
-  let paths='';
-  courses.forEach(c=>{
-    if(!c.pre) return;
-    const toEl=document.querySelector(`[data-id="${c.id}"]`);
-    if(!toEl) return;
-    const toR=toEl.getBoundingClientRect();
-    c.pre.forEach(preId=>{
-      const fromEl=document.querySelector(`[data-id="${preId}"]`);
-      if(!fromEl) return;
-      const fromR=fromEl.getBoundingClientRect();
-      const sameCol = Math.abs(fromR.left - toR.left) < 3;
-      let d;
-      if(sameCol){
-        const fx = fromR.left - chartRect.left;
-        const tx = toR.left - chartRect.left;
-        const fromAbove = fromR.top < toR.top;
-        const sy = fromAbove ? fromR.bottom - chartRect.top : fromR.top - chartRect.top;
-        const ey = fromAbove ? toR.top - chartRect.top : toR.bottom - chartRect.top;
-        const bulge = 22;
-        d = `M ${fx} ${sy} C ${fx-bulge} ${sy+(ey-sy)*0.3}, ${tx-bulge} ${ey-(ey-sy)*0.3}, ${tx} ${ey}`;
-      } else {
-        const fx = fromR.left - chartRect.left;
-        const fy = fromR.top - chartRect.top + fromR.height/2;
-        const tx = toR.right - chartRect.left;
-        const ty = toR.top - chartRect.top + toR.height/2;
-        const midX = (fx+tx)/2;
-        d = `M ${fx} ${fy} C ${midX} ${fy}, ${midX} ${ty}, ${tx} ${ty}`;
-      }
-      paths += `<path class="edge" data-from="${preId}" data-to="${c.id}" d="${d}" fill="none" stroke="#8a8a83" stroke-width="1.3" opacity="0.5" marker-end="url(#ah)"/>`;
-    });
-  });
-  svg.innerHTML += paths;
-}
-
-function bindEvents(){
-  const grid=document.getElementById('grid');
-  courses.forEach(c=>{
-    const el=document.querySelector(`[data-id="${c.id}"]`);
-    el.addEventListener('mouseenter', ()=>highlight(c.id));
-    el.addEventListener('mouseleave', clearHighlight);
-    el.addEventListener('click', (e)=>{ e.stopPropagation(); highlight(c.id); });
-  });
-  document.body.addEventListener('click', clearHighlight);
-}
-
-function highlight(id){
-  const grid=document.getElementById('grid');
-  grid.classList.add('dim-mode');
-  document.querySelectorAll('.course').forEach(el=>el.classList.remove('hl-self','hl-pre','hl-dep'));
-  document.querySelectorAll('.edge').forEach(p=>{p.setAttribute('opacity','0.5'); p.setAttribute('stroke','#8a8a83'); p.setAttribute('stroke-width','1.3');});
-  const self = document.querySelector(`[data-id="${id}"]`);
-  if(self) self.classList.add('hl-self');
-  const pre = byId[id].pre || [];
-  pre.forEach(p=>{
-    const el=document.querySelector(`[data-id="${p}"]`);
-    if(el) el.classList.add('hl-pre');
-    const edge=document.querySelector(`.edge[data-from="${p}"][data-to="${id}"]`);
-    if(edge){ edge.setAttribute('opacity','1'); edge.setAttribute('stroke','#185FA5'); edge.setAttribute('stroke-width','2'); }
-  });
-  const deps = dependents[id] || [];
-  deps.forEach(d=>{
-    const el=document.querySelector(`[data-id="${d}"]`);
-    if(el) el.classList.add('hl-dep');
-    const edge=document.querySelector(`.edge[data-from="${id}"][data-to="${d}"]`);
-    if(edge){ edge.setAttribute('opacity','1'); edge.setAttribute('stroke','#D85A30'); edge.setAttribute('stroke-width','2'); }
-  });
-}
-
-function clearHighlight(){
-  const grid=document.getElementById('grid');
-  grid.classList.remove('dim-mode');
-  document.querySelectorAll('.course').forEach(el=>el.classList.remove('hl-self','hl-pre','hl-dep'));
-  document.querySelectorAll('.edge').forEach(p=>{p.setAttribute('opacity','0.5'); p.setAttribute('stroke','#8a8a83'); p.setAttribute('stroke-width','1.3');});
-}
-</script>
-
- </section>
+  <div class="wrap">
+    <div class="chart-frame">
+      <div class="chart-outer">
+        <div class="chart" id="chart">
+          <svg id="arrows" aria-hidden="true"></svg>
+          <div class="grid" id="grid"></div>
+        </div>
+      </div>
+    </div>
+    <p class="chart-note">در برنامهٔ مصوب دانشکده، ستون «هم‌نیاز» برای همهٔ دروس خالی است و فقط روابط پیش‌نیازی رسم شده‌اند. «درس عمومی» و «درس اختیاری» جای انتخاب آزاد دانشجو در آن نیمسال‌اند و پیش‌نیاز خاصی ندارند.</p>
+  </div>
 </main>
-<script>
 
-// هر درس: id, نام, واحد, دسته, ستون=نیمسال, ردیف=لِین موضوعی, پیش‌نیاز[]
+<footer class="site-footer">
+  <div class="wrap">
+    <span>مهندسی انرژی شریف · دانشگاه صنعتی شریف</span>
+    <nav aria-label="پیوندهای پایین صفحه">
+      <a href="https://energy.sharif.ir" target="_blank" rel="noopener">وب‌گاه رسمی دانشکده</a>
+      <a href="admin.html">ورود مدیر</a>
+    </nav>
+  </div>
+</footer>
+<script>
+// هر درس: id، نام، واحد، دسته، ستون = نیمسال، ردیف = لِین موضوعی، پیش‌نیاز[]
 const courses = [
   {id:'riazi1', name:'ریاضی عمومی ۱', u:3, cat:'pa', col:1, row:1},
   {id:'riazi2', name:'ریاضی عمومی ۲', u:3, cat:'pa', col:2, row:1, pre:['riazi1']},
@@ -393,112 +144,116 @@ const courses = [
 ];
 const credits = {1:17,2:18,3:20,4:20,5:19,6:15,7:16,8:15};
 
+const fa = n => String(n).replace(/[0-9]/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
 const gridEl = document.getElementById('grid');
-for(let c=1;c<=8;c++){
+for (let c = 1; c <= 8; c++) {
   const h = document.createElement('div');
-  h.className='sem-head';
+  h.className = 'sem-head';
   h.style.gridColumn = c;
-  h.innerHTML = `نیم‌سال ${c}<small>جمع واحد: ${credits[c]}</small>`;
+  h.innerHTML = `نیمسال ${fa(c)}<small>جمع واحد: ${fa(credits[c])}</small>`;
   gridEl.appendChild(h);
 }
-courses.forEach(c=>{
-  const box=document.createElement('div');
-  box.className='course cat-'+c.cat;
-  box.style.gridColumn=c.col;
-  box.style.gridRow=c.row+1;
-  box.setAttribute('data-id',c.id);
-  box.innerHTML=`<div class="name">${c.name}</div><div class="units">${c.u} واحد</div>`;
+courses.forEach(c => {
+  const box = document.createElement('div');
+  box.className = 'course cat-' + c.cat;
+  box.style.gridColumn = c.col;
+  box.style.gridRow = c.row + 1;
+  box.setAttribute('data-id', c.id);
+  box.setAttribute('tabindex', '0');
+  box.innerHTML = `<div class="name">${c.name}</div><div class="units">${fa(c.u)} واحد</div>`;
   gridEl.appendChild(box);
 });
 
-const byId = Object.fromEntries(courses.map(c=>[c.id,c]));
+const byId = Object.fromEntries(courses.map(c => [c.id, c]));
 const dependents = {};
-courses.forEach(c=>{ if(c.pre) c.pre.forEach(p=>{ (dependents[p]=dependents[p]||[]).push(c.id); }); });
+courses.forEach(c => { if (c.pre) c.pre.forEach(p => { (dependents[p] = dependents[p] || []).push(c.id); }); });
 
-window.addEventListener('load', ()=>{ drawArrows(); bindEvents(); });
+window.addEventListener('load', () => { drawArrows(); bindEvents(); });
 window.addEventListener('resize', drawArrows);
 
-function drawArrows(){
-  const chart=document.getElementById('chart');
-  const svg=document.getElementById('arrows');
-  const chartRect=chart.getBoundingClientRect();
+function drawArrows() {
+  const chart = document.getElementById('chart');
+  const svg = document.getElementById('arrows');
+  const chartRect = chart.getBoundingClientRect();
   svg.setAttribute('width', chart.scrollWidth);
   svg.setAttribute('height', chart.scrollHeight);
-  svg.innerHTML = `<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#8a8a83" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>`;
-  let paths='';
-  courses.forEach(c=>{
-    if(!c.pre) return;
-    const toEl=document.querySelector(`[data-id="${c.id}"]`);
-    if(!toEl) return;
-    const toR=toEl.getBoundingClientRect();
-    c.pre.forEach(preId=>{
-      const fromEl=document.querySelector(`[data-id="${preId}"]`);
-      if(!fromEl) return;
-      const fromR=fromEl.getBoundingClientRect();
+  svg.innerHTML = `<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="ah" d="M2 1L8 5L2 9"/></marker></defs>`;
+  let paths = '';
+  courses.forEach(c => {
+    if (!c.pre) return;
+    const toEl = document.querySelector(`[data-id="${c.id}"]`);
+    if (!toEl) return;
+    const toR = toEl.getBoundingClientRect();
+    c.pre.forEach(preId => {
+      const fromEl = document.querySelector(`[data-id="${preId}"]`);
+      if (!fromEl) return;
+      const fromR = fromEl.getBoundingClientRect();
       const sameCol = Math.abs(fromR.left - toR.left) < 3;
       let d;
-      if(sameCol){
+      if (sameCol) {
         const fx = fromR.left - chartRect.left;
         const tx = toR.left - chartRect.left;
         const fromAbove = fromR.top < toR.top;
         const sy = fromAbove ? fromR.bottom - chartRect.top : fromR.top - chartRect.top;
         const ey = fromAbove ? toR.top - chartRect.top : toR.bottom - chartRect.top;
         const bulge = 22;
-        d = `M ${fx} ${sy} C ${fx-bulge} ${sy+(ey-sy)*0.3}, ${tx-bulge} ${ey-(ey-sy)*0.3}, ${tx} ${ey}`;
+        d = `M ${fx} ${sy} C ${fx - bulge} ${sy + (ey - sy) * 0.3}, ${tx - bulge} ${ey - (ey - sy) * 0.3}, ${tx} ${ey}`;
       } else {
         const fx = fromR.left - chartRect.left;
-        const fy = fromR.top - chartRect.top + fromR.height/2;
+        const fy = fromR.top - chartRect.top + fromR.height / 2;
         const tx = toR.right - chartRect.left;
-        const ty = toR.top - chartRect.top + toR.height/2;
-        const midX = (fx+tx)/2;
+        const ty = toR.top - chartRect.top + toR.height / 2;
+        const midX = (fx + tx) / 2;
         d = `M ${fx} ${fy} C ${midX} ${fy}, ${midX} ${ty}, ${tx} ${ty}`;
       }
-      paths += `<path class="edge" data-from="${preId}" data-to="${c.id}" d="${d}" fill="none" stroke="#8a8a83" stroke-width="1.3" opacity="0.5" marker-end="url(#ah)"/>`;
+      paths += `<path class="edge" data-from="${preId}" data-to="${c.id}" d="${d}" marker-end="url(#ah)"/>`;
     });
   });
   svg.innerHTML += paths;
 }
 
-function bindEvents(){
-  const grid=document.getElementById('grid');
-  courses.forEach(c=>{
-    const el=document.querySelector(`[data-id="${c.id}"]`);
-    el.addEventListener('mouseenter', ()=>highlight(c.id));
+function bindEvents() {
+  courses.forEach(c => {
+    const el = document.querySelector(`[data-id="${c.id}"]`);
+    el.addEventListener('mouseenter', () => highlight(c.id));
     el.addEventListener('mouseleave', clearHighlight);
-    el.addEventListener('click', (e)=>{ e.stopPropagation(); highlight(c.id); });
+    el.addEventListener('focus', () => highlight(c.id));
+    el.addEventListener('blur', clearHighlight);
+    el.addEventListener('click', e => { e.stopPropagation(); highlight(c.id); });
   });
   document.body.addEventListener('click', clearHighlight);
 }
 
-function highlight(id){
-  const grid=document.getElementById('grid');
+function resetEdges() {
+  document.querySelectorAll('.edge').forEach(p => p.classList.remove('pre', 'dep'));
+}
+
+function highlight(id) {
+  const grid = document.getElementById('grid');
   grid.classList.add('dim-mode');
-  document.querySelectorAll('.course').forEach(el=>el.classList.remove('hl-self','hl-pre','hl-dep'));
-  document.querySelectorAll('.edge').forEach(p=>{p.setAttribute('opacity','0.5'); p.setAttribute('stroke','#8a8a83'); p.setAttribute('stroke-width','1.3');});
+  document.querySelectorAll('.course').forEach(el => el.classList.remove('hl-self', 'hl-pre', 'hl-dep'));
+  resetEdges();
   const self = document.querySelector(`[data-id="${id}"]`);
-  if(self) self.classList.add('hl-self');
-  const pre = byId[id].pre || [];
-  pre.forEach(p=>{
-    const el=document.querySelector(`[data-id="${p}"]`);
-    if(el) el.classList.add('hl-pre');
-    const edge=document.querySelector(`.edge[data-from="${p}"][data-to="${id}"]`);
-    if(edge){ edge.setAttribute('opacity','1'); edge.setAttribute('stroke','#185FA5'); edge.setAttribute('stroke-width','2'); }
+  if (self) self.classList.add('hl-self');
+  (byId[id].pre || []).forEach(p => {
+    const el = document.querySelector(`[data-id="${p}"]`);
+    if (el) el.classList.add('hl-pre');
+    const edge = document.querySelector(`.edge[data-from="${p}"][data-to="${id}"]`);
+    if (edge) edge.classList.add('pre');
   });
-  const deps = dependents[id] || [];
-  deps.forEach(d=>{
-    const el=document.querySelector(`[data-id="${d}"]`);
-    if(el) el.classList.add('hl-dep');
-    const edge=document.querySelector(`.edge[data-from="${id}"][data-to="${d}"]`);
-    if(edge){ edge.setAttribute('opacity','1'); edge.setAttribute('stroke','#D85A30'); edge.setAttribute('stroke-width','2'); }
+  (dependents[id] || []).forEach(d => {
+    const el = document.querySelector(`[data-id="${d}"]`);
+    if (el) el.classList.add('hl-dep');
+    const edge = document.querySelector(`.edge[data-from="${id}"][data-to="${d}"]`);
+    if (edge) edge.classList.add('dep');
   });
 }
 
-function clearHighlight(){
-  const grid=document.getElementById('grid');
-  grid.classList.remove('dim-mode');
-  document.querySelectorAll('.course').forEach(el=>el.classList.remove('hl-self','hl-pre','hl-dep'));
-  document.querySelectorAll('.edge').forEach(p=>{p.setAttribute('opacity','0.5'); p.setAttribute('stroke','#8a8a83'); p.setAttribute('stroke-width','1.3');});
+function clearHighlight() {
+  document.getElementById('grid').classList.remove('dim-mode');
+  document.querySelectorAll('.course').forEach(el => el.classList.remove('hl-self', 'hl-pre', 'hl-dep'));
+  resetEdges();
 }
-
 </script>
-</body></html>
+</body>
+</html>

@@ -1,17 +1,33 @@
 <!doctype html>
-<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>مدیریت | مهندسی انرژی شریف</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#07131d;--p:#0d202d;--line:#1d4252;--t:#eaf7fa;--m:#91aeb8;--a:#29d3c2;--d:#ff6b7a;--amber:#ffc857}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0%,#123b4a,#07131d 48%,#050d14);color:var(--t);font-family:Vazirmatn,sans-serif;min-height:100vh}.wrap{max-width:900px;margin:auto;padding:30px 20px 70px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.brand{font-weight:800}.brand span{color:var(--a)}a{color:inherit;text-decoration:none}.back{border:1px solid var(--line);padding:9px 13px;border-radius:10px}.panel{background:linear-gradient(180deg,#102632,#091923);border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 25px 70px #0005;margin-bottom:18px}.panel h1{margin-top:0}.muted{color:var(--m);line-height:1.8}label{display:block;font-size:13px;color:var(--m);margin:13px 0 6px}input,textarea,select{width:100%;background:#071720;color:var(--t);border:1px solid var(--line);border-radius:11px;padding:12px;font:inherit}textarea{min-height:85px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.btn{border:0;background:var(--a);color:#06201f;font:inherit;font-weight:800;padding:12px 16px;border-radius:11px;cursor:pointer;margin-top:16px}.danger{background:#3b1720;color:#ffb8c0;border:1px solid #672b37;padding:7px 10px;border-radius:8px;cursor:pointer}.edit-btn{background:#152f3c;color:#9fe2e8;border:1px solid #285060}.hidden{display:none}.msg{margin-top:12px;color:var(--m);min-height:24px}.list{margin-top:24px;display:grid;gap:10px}.item{border:1px solid var(--line);border-radius:14px;padding:14px;background:#0a1b26;display:flex;justify-content:space-between;gap:10px;align-items:center}.item small{color:var(--m);line-height:1.8}.tabs{display:flex;gap:8px;margin-bottom:18px}.tab{flex:1;border:1px solid var(--line);background:#0a1b26;color:var(--m);padding:11px;border-radius:11px;font:inherit;cursor:pointer}.tab.active{background:rgba(41,211,194,.12);border-color:var(--a);color:var(--a);font-weight:800}.filepick{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 12px;border:1px solid var(--line);border-radius:16px;background:#091923}.filepick input{max-width:100%;min-width:0}.filepick span{font-size:.92rem;color:var(--m);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}.preview{max-width:100%;max-height:220px;border-radius:12px;border:1px solid var(--line);margin-top:10px;display:none}.deadline-item{border-color:rgba(41,211,194,.25)}.deadline-item.editing{border-color:var(--amber);box-shadow:0 0 0 2px rgba(255,200,87,.15)}.actions-cell{display:flex;gap:8px;flex-wrap:wrap;flex-shrink:0}.form-actions{display:flex;gap:10px;flex-wrap:wrap}.form-actions .btn{margin-top:16px}.cancel-btn{background:#3b1720;color:#ffb8c0;border:1px solid #672b37}.editing-banner{background:rgba(255,200,87,.08);border:1px solid rgba(255,200,87,.4);color:var(--amber);padding:10px 12px;border-radius:12px;font-size:13px;margin-bottom:12px}
-@media(max-width:650px){.row,.row3{grid-template-columns:1fr}.top{align-items:flex-start;gap:10px}.item{align-items:flex-start;flex-direction:column}.panel{padding:17px 14px;border-radius:17px}.panel h1{font-size:24px;line-height:1.5}.muted{font-size:12px}.tabs{position:sticky;top:8px;z-index:4;background:#091923;padding:5px;border-radius:14px}label{font-size:12px}input,textarea,select{font-size:13px;padding:11px}.btn{width:100%;font-size:13px}.filepick{display:block}.filepick input{width:100%;margin-bottom:8px}.filepick span{display:block}.actions-cell{width:100%}.form-actions{flex-direction:column}.form-actions .btn{width:100%}}
-.attach-list{display:grid;gap:8px;margin-top:10px}.attach-item{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);background:#091923;border-radius:11px;padding:8px 12px;font-size:13px}.attach-item span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}.attach-item small{color:var(--m)}.attach-item button{flex-shrink:0;padding:5px 9px;font-size:12px}.check{display:flex;align-items:center;gap:10px;margin-top:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#091923;color:var(--t);font-size:13px;cursor:pointer}.check input{width:auto;margin:0;flex-shrink:0}.botcount{display:inline-block;margin-bottom:10px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--m)}</style></head><body><main class="wrap">
-<header class="top"><a class="brand" href="index.html">مهندسی انرژی <span>شریف</span></a><div><a class="back" href="notes.html">منابع</a> <a class="back" href="deadlines.html">ددلاین‌ها</a></div></header>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ورود مدیر | مهندسی انرژی شریف</title>
+<meta name="description" content="پنل مدیریت جزوه‌ها و ددلاین‌ها.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="theme.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">پرش به محتوا</a>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#C2410C"/><path d="M8 40h12l8-20 10 28 8-16h10" fill="none" stroke="#FBF9F4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>مهندسی انرژی شریف</span></a>
+    <nav class="nav" aria-label="بخش‌های سایت"><a href="intro.html">معرفی رشته</a><a href="chart.html">چارت درسی</a><a href="notes.html">جزوه‌ها و منابع</a><a href="deadlines.html">ددلاین‌ها</a></nav>
+    <button id="themeBtn" class="theme-btn" type="button" aria-pressed="false">حالت تیره</button>
+  </div>
+</header>
 
+<main id="main" class="admin-wrap">
 <section id="loginPanel" class="panel"><h1>ورود مدیر</h1><p class="muted">برای جلوگیری از لو رفتن رمز، احراز هویت توسط Supabase انجام می‌شود؛ رمز داخل کد سایت ذخیره نشده است.</p><label>نام کاربری / ایمیل</label><input id="email" type="email" autocomplete="username"><label>رمز عبور</label><input id="password" type="password" autocomplete="current-password"><button id="login" class="btn">ورود</button><div id="loginMsg" class="msg"></div></section>
 
 <section id="adminPanel" class="panel hidden">
-<div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><div><h1>پنل مدیریت</h1><p id="who" class="muted"></p></div><button id="logout" class="danger">خروج</button></div>
-<div class="tabs"><button class="tab active" data-tab="notesPanel">انتشار جزوه</button><button class="tab" data-tab="deadlinePanel">مدیریت ددلاین‌ها</button></div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div><h1>پنل مدیریت</h1><p id="who" class="muted"></p></div><button id="logout" class="danger">خروج</button></div>
+<div class="tabs"><button class="tab active" data-tab="notesPanel">انتشار جزوه</button><button class="tab" data-tab="deadlinePanel">مدیریت ددلاین‌ها</button><button class="tab" data-tab="botPanel">اطلاعیه ربات</button></div>
 
 <div id="notesPanel">
 <label>عنوان فایل</label><input id="title" placeholder="مثلاً جزوه ترمودینامیک ۱"><div class="row"><div><label>درس</label><input id="courseNote" placeholder="مثلاً ترمودینامیک ۱"></div><div><label>نوع</label><select id="type"><option>جزوه</option><option>تمرین</option><option>نمونه سؤال</option><option>حل تمرین</option><option>منبع</option><option>سایر</option></select></div></div>
@@ -27,35 +43,61 @@
 <div class="row"><div><label>درس</label><input id="dCourse" placeholder="مثلاً مکانیک سیالات"></div><div><label>محل تحویل</label><input id="dPlace" placeholder="مثلاً کوئرا / سامانه آموزش / ایمیل استاد"></div></div>
 <label>تاریخ ددلاین</label><div class="row3"><select id="jy"></select><select id="jm"></select><select id="jd"></select></div>
 <label>ساعت</label><input id="jtime" type="time" value="23:59">
+<div id="dueHint" class="due-hint" role="status" aria-live="polite"></div>
 <label>لینک محل بارگذاری (اختیاری)</label><input id="dUrl" type="url" placeholder="https://...">
 <label>توضیحات و سایر جزئیات</label><textarea id="dDesc" placeholder="مثلاً فقط فایل PDF، نام فایل شامل شماره دانشجویی باشد و ..."></textarea>
 <label>عکس سؤال / صورت تمرین (اختیاری)</label><div class="filepick"><input id="dImage" type="file" accept="image/*"><span id="dImageName">هنوز تصویری انتخاب نشده</span></div><img id="preview" class="preview" alt="پیش‌نمایش">
 <label>فایل سؤال / پیوست‌ها (اختیاری، تا ۸ فایل)</label><div class="filepick"><input id="dFiles" type="file" multiple accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip,.rar,.txt,image/*"><span id="dFilesName">هنوز فایلی انتخاب نشده</span></div><div class="muted" style="font-size:12px;margin-top:6px">PDF، Word، PowerPoint، Excel، ZIP، متن یا عکس. حداکثر ۲۰ مگابایت برای هر فایل.</div><div id="dFilesList" class="attach-list"></div>
-<label class="check"><input type="checkbox" id="dNotify"><span>📣 ارسال اعلان به مشترکین ربات تلگرام (برای رویداد جدید یا تغییر مهم)</span></label>
+<label class="check"><input type="checkbox" id="dNotify"><span>ارسال اعلان به مشترکین ربات تلگرام (برای رویداد جدید یا تغییر مهم)</span></label>
 <div class="form-actions">
   <button id="addDeadline" class="btn">ثبت ددلاین</button>
   <button id="cancelEdit" class="btn cancel-btn hidden">لغو ویرایش</button>
 </div>
 <div id="dMsg" class="msg"></div><div id="dList" class="list"></div>
 </div>
+
+<div id="botPanel" class="hidden">
+<p class="muted">یک پیام دلخواه (متن، عکس یا فایل) برای همهٔ کسانی که ربات را استارت کرده‌اند می‌فرستی. ارسال به‌صورت تدریجی انجام می‌شود و برای تعداد زیاد، چند دقیقه طول می‌کشد.</p>
+<div id="botCount2" class="botcount hidden"></div>
+<label>عنوان (اختیاری)</label><input id="bTitle" maxlength="120" placeholder="مثلاً تغییر ساعت کلاس جبرانی">
+<label>متن اطلاعیه</label><textarea id="bBody" maxlength="3500" placeholder="متن پیام را بنویس. لینک‌ها در تلگرام خودکار قابل کلیک می‌شوند."></textarea>
+<div id="bCount" class="muted" style="font-size:12px;margin-top:6px">۰ / ۳۵۰۰</div>
+<label>عکس یا فایل (اختیاری، تا ۸ مورد)</label><div class="filepick"><input id="bFiles" type="file" multiple accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip,.rar,.txt,image/*"><span id="bFilesName">هنوز فایلی انتخاب نشده</span></div>
+<div class="muted" style="font-size:12px;margin-top:6px">عکس‌های JPG، PNG و WebP به‌صورت عکس و بقیه به‌صورت فایل فرستاده می‌شوند. حداکثر ۲۰ مگابایت برای هر فایل.</div>
+<div class="form-actions"><button id="sendBroadcast" class="btn" type="button">ارسال به همهٔ کاربران ربات</button></div>
+<div id="bMsg" class="msg"></div>
+<h2 class="section-title" style="font-size:18px;margin-top:28px">اطلاعیه‌های اخیر</h2>
+<div id="bList" class="list"></div>
+</div>
 </section>
+
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>مهندسی انرژی شریف · دانشگاه صنعتی شریف</span>
+    <nav aria-label="پیوندهای پایین صفحه">
+      <a href="https://energy.sharif.ir" target="_blank" rel="noopener">وب‌گاه رسمی دانشکده</a>
+      <a href="admin.html">ورود مدیر</a>
+    </nav>
+  </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script>
 <script>
 let sb;const $=id=>document.getElementById(id);
 function setup(){if(!window.supabase||SUPABASE_URL.includes('PASTE_')||SUPABASE_ANON_KEY.includes('PASTE_'))throw Error('Supabase هنوز تنظیم نشده است.');sb=supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY)}
 async function boot(){try{setup();const {data:{session}}=await sb.auth.getSession();session?showAdmin(session):showLogin();sb.auth.onAuthStateChange((_e,s)=>s?showAdmin(s):showLogin())}catch(e){$('loginMsg').textContent=e.message}}
 function showLogin(){$('loginPanel').classList.remove('hidden');$('adminPanel').classList.add('hidden')}
-async function showAdmin(session){$('loginPanel').classList.add('hidden');$('adminPanel').classList.remove('hidden');$('who').textContent='وارد شده: '+session.user.email;loadNotes();loadDeadlines()}
+async function showAdmin(session){$('loginPanel').classList.add('hidden');$('adminPanel').classList.remove('hidden');$('who').textContent='وارد شده: '+session.user.email;loadNotes();loadDeadlines();loadBroadcasts()}
 $('login').onclick=async()=>{try{const {error}=await sb.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error)throw error;$('loginMsg').textContent=''}catch(e){$('loginMsg').textContent='ورود ناموفق: '+e.message}}
 $('logout').onclick=()=>sb.auth.signOut();
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('#notesPanel,#deadlinePanel').forEach(x=>x.classList.add('hidden'));$(b.dataset.tab).classList.remove('hidden')});
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('#notesPanel,#deadlinePanel,#botPanel').forEach(x=>x.classList.add('hidden'));$(b.dataset.tab).classList.remove('hidden')});
 
 $('file').addEventListener('change',()=>{const f=$('file').files[0];$('fileName').textContent=f?f.name:'هنوز فایلی انتخاب نشده'});
 $('upload').onclick=async()=>{const file=$('file').files[0],title=$('title').value.trim(),course=$('courseNote').value.trim();if(!file||!title||!course){$('msg').textContent='عنوان، درس و فایل را کامل کنید.';return}if(file.size>20*1024*1024){$('msg').textContent='حداکثر حجم فایل ۲۰ مگابایت است.';return}try{$('msg').textContent='در حال آپلود…';$('upload').disabled=true;$('progress').classList.remove('hidden');const ext=(file.name.split('.').pop()||'bin').toLowerCase().replace(/[^a-z0-9]/g,'');const path=`${crypto.randomUUID()}.${ext||'bin'}`;const up=await sb.storage.from('notes').upload(path,file,{upsert:false,contentType:file.type||'application/octet-stream'});if(up.error)throw up.error;const {data:url}=sb.storage.from('notes').getPublicUrl(path);const ins=await sb.from('notes').insert({title,course,type:$('type').value,description:$('description').value.trim(),file_path:path,file_url:url.publicUrl,published:true}).select().single();if(ins.error){await sb.storage.from('notes').remove([path]);throw ins.error}$('msg').textContent='فایل با موفقیت منتشر شد.';$('title').value='';$('courseNote').value='';$('description').value='';$('file').value='';$('fileName').textContent='هنوز فایلی انتخاب نشده';$('progress').value=100;loadNotes()}catch(e){$('msg').textContent='خطا: '+e.message}finally{$('upload').disabled=false}}
 
 function esc(v){return String(v??'').replace(/[&<>'"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m]))}
-function faDate(v){return new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(v))}
+function faDate(v){return new Intl.DateTimeFormat('fa-IR-u-ca-persian',{timeZone:'Asia/Tehran',weekday:'long',year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(v))}
 async function loadNotes(){const {data,error}=await sb.from('notes').select('*').order('created_at',{ascending:false});if(error){$('list').innerHTML='<div class="msg">'+esc(error.message)+'</div>';return}$('list').innerHTML=(data||[]).map(x=>`<div class="item"><div><b>${esc(x.title)}</b><br><small>${esc(x.course)} · ${esc(x.type||'جزوه')}</small></div><button class="danger" onclick="delNote('${x.id}','${esc(x.file_path)}')">حذف</button></div>`).join('')||'<div class="msg">هنوز فایلی منتشر نشده.</div>'}
 async function delNote(id,path){if(!confirm('این فایل حذف شود؟'))return;const a=await sb.storage.from('notes').remove([path]);if(a.error){$('msg').textContent=a.error.message;return}const d=await sb.from('notes').delete().eq('id',id);$('msg').textContent=d.error?d.error.message:'فایل حذف شد.';loadNotes()}
 
@@ -107,7 +149,7 @@ const MAX_FILES=8,MAX_FILE_MB=20;
 function fmtSize(n){return n>=1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.round(n/1024))+' KB'}
 function renderAttachList(){
   const box=$('dFilesList');
-  box.innerHTML=editingFiles.map((f,i)=>`<div class="attach-item"><span>📎 <a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.name)}</a> <small>${f.size?fmtSize(f.size):''}</small></span><button type="button" class="danger" onclick="removeAttach(${i})">حذف</button></div>`).join('');
+  box.innerHTML=editingFiles.map((f,i)=>`<div class="attach-item"><span><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.name)}</a> <small>${f.size?fmtSize(f.size):''}</small></span><button type="button" class="danger" onclick="removeAttach(${i})">حذف</button></div>`).join('');
 }
 window.removeAttach=function(i){
   const f=editingFiles[i];if(!f)return;
@@ -154,6 +196,7 @@ window.editDeadline=function(id){
     const j=gregorianToJalali(p.gy,p.gm,p.gd);
     $('jy').value=j.jy;$('jm').value=j.jm;$('jd').value=j.jd;
     $('jtime').value=String(p.h).padStart(2,'0')+':'+String(p.m).padStart(2,'0');
+    updateDueHint();
   }catch(_){}
   $('dImage').value='';
   if(x.image_url){
@@ -289,7 +332,7 @@ async function loadDeadlines(){
     <div class="item deadline-item${editingId===x.id?' editing':''}">
       <div>
         <b>${esc(x.title)}</b><br>
-        <small>${esc(x.course)} · ${{assignment:'تمرین و پروژه',quiz:'کوییز',exam:'امتحان'}[x.event_type||'assignment']} · ${faDate(x.due_at)}${(x.attachments||[]).length?' · 📎 '+x.attachments.length+' فایل':''}<br>${esc(x.submit_place||'')}</small>
+        <small>${esc(x.course)} · ${{assignment:'تمرین و پروژه',quiz:'کوییز',exam:'امتحان'}[x.event_type||'assignment']} · ${faDate(x.due_at)}${(x.attachments||[]).length?' · '+x.attachments.length+' فایل':''}<br>${esc(x.submit_place||'')}</small>
       </div>
       <div class="actions-cell">
         <button class="danger edit-btn" onclick="editDeadline('${x.id}')">ویرایش</button>
@@ -312,5 +355,98 @@ async function delDeadline(id,path){
   loadDeadlines();
 }
 
-initJalali();boot();
-</script></body></html>
+
+/* ===== اطلاعیهٔ آزاد برای مشترکین ربات ===== */
+const B_MAX_FILES=8,B_MAX_MB=20;
+const _fa2=n=>String(n).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+$('bBody').addEventListener('input',()=>{$('bCount').textContent=_fa2($('bBody').value.length)+' / '+_fa2(3500)});
+$('bFiles').addEventListener('change',()=>{
+  const fs=[...$('bFiles').files];
+  if(fs.length>B_MAX_FILES){$('bMsg').textContent='حداکثر '+_fa2(B_MAX_FILES)+' فایل مجاز است.';$('bFiles').value=''}
+  else if(fs.some(f=>f.size>B_MAX_MB*1048576)){$('bMsg').textContent='حجم هر فایل باید کمتر از '+_fa2(B_MAX_MB)+' مگابایت باشد.';$('bFiles').value=''}
+  const n=$('bFiles').files.length;
+  $('bFilesName').textContent=n?(n===1?$('bFiles').files[0].name:_fa2(n)+' فایل انتخاب شد'):'هنوز فایلی انتخاب نشده';
+});
+async function botSubscriberCount(){
+  try{const {data,error}=await sb.rpc('bot_subscriber_count');if(error||data==null)return null;return Number(data)}catch(_){return null}
+}
+$('sendBroadcast').onclick=async()=>{
+  const title=$('bTitle').value.trim(),body=$('bBody').value.trim(),picked=[...$('bFiles').files];
+  if(!body&&!picked.length){$('bMsg').textContent='متن یا حداقل یک فایل لازم است.';return}
+  const cnt=await botSubscriberCount();
+  const who=cnt==null?'همهٔ مشترکین ربات':_fa2(cnt)+' نفر';
+  if(!confirm('این اطلاعیه برای '+who+' ارسال می‌شود و بعد از شروع ارسال قابل بازگشت نیست. ادامه می‌دهی؟'))return;
+  const uploaded=[];
+  try{
+    $('sendBroadcast').disabled=true;
+    for(let i=0;i<picked.length;i++){
+      const f=picked[i];
+      $('bMsg').textContent='در حال آپلود فایل '+_fa2(i+1)+' از '+_fa2(picked.length)+'…';
+      const ext=(f.name.split('.').pop()||'bin').toLowerCase().replace(/[^a-z0-9]/g,'')||'bin';
+      const fpath='files/'+crypto.randomUUID()+'.'+ext;
+      const up=await sb.storage.from('deadline-images').upload(fpath,f,{upsert:false,contentType:f.type||'application/octet-stream'});
+      if(up.error)throw up.error;
+      uploaded.push({name:f.name,path:fpath,url:sb.storage.from('deadline-images').getPublicUrl(fpath).data.publicUrl,size:f.size,type:f.type||''});
+    }
+    $('bMsg').textContent='در حال ثبت اطلاعیه…';
+    const ins=await sb.from('bot_broadcasts').insert({title,body,attachments:uploaded}).select().single();
+    if(ins.error)throw ins.error;
+    $('bTitle').value='';$('bBody').value='';$('bFiles').value='';
+    $('bCount').textContent='۰ / '+_fa2(3500);$('bFilesName').textContent='هنوز فایلی انتخاب نشده';
+    $('bMsg').textContent='اطلاعیه در صف ارسال قرار گرفت و طی چند دقیقه به مشترکین می‌رسد.';
+    loadBroadcasts();
+  }catch(e){
+    if(uploaded.length)await sb.storage.from('deadline-images').remove(uploaded.map(f=>f.path)).catch(()=>{});
+    $('bMsg').textContent='ارسال ناموفق: '+e.message;
+  }finally{$('sendBroadcast').disabled=false}
+};
+async function loadBroadcasts(){
+  botSubscriberCount().then(n=>{if(n!=null){const b=$('botCount2');b.textContent='مشترکین ربات: '+_fa2(n)+' نفر';b.classList.remove('hidden')}});
+  const {data,error}=await sb.from('bot_broadcasts').select('*').order('created_at',{ascending:false}).limit(10);
+  if(error){$('bList').innerHTML='<div class="msg">'+esc(error.message)+'</div>';return}
+  const rows=data||[];
+  const counts=await Promise.all(rows.map(r=>sb.from('bot_broadcast_deliveries').select('*',{count:'exact',head:true}).eq('broadcast_id',r.id).then(x=>x.count)));
+  $('bList').innerHTML=rows.length?rows.map((x,i)=>{
+    const prev=(x.title||x.body||'(فقط فایل)').slice(0,90);
+    const nf=(x.attachments||[]).length;
+    return `<div class="item"><div><b>${esc(prev)}</b><br><small>${faDate(x.created_at)}${nf?' · '+_fa2(nf)+' فایل':''} · رسیده به ${counts[i]==null?'—':_fa2(counts[i])} نفر</small></div><div class="actions-cell"><button class="danger" type="button" onclick="delBroadcast('${x.id}')">حذف</button></div></div>`
+  }).join(''):'<div class="msg">هنوز اطلاعیه‌ای ارسال نشده است.</div>';
+}
+window.delBroadcast=async id=>{
+  if(!confirm('این اطلاعیه حذف شود؟ اگر هنوز برای همه ارسال نشده باشد، ارسال باقی‌مانده متوقف می‌شود.'))return;
+  const {data:row}=await sb.from('bot_broadcasts').select('attachments').eq('id',id).single();
+  const d=await sb.from('bot_broadcasts').delete().eq('id',id);
+  if(d.error){$('bMsg').textContent=d.error.message;return}
+  const paths=((row&&row.attachments)||[]).map(f=>f.path).filter(Boolean);
+  if(paths.length)await sb.storage.from('deadline-images').remove(paths).catch(()=>{});
+  $('bMsg').textContent='اطلاعیه حذف شد.';
+  loadBroadcasts();
+};
+initJalali();
+/* ===== نمایش روز هفته‌ی ددلاین هنگام ثبت ===== */
+const _MONTHS=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+const _faN=n=>String(n).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+function updateDueHint(){
+  const el=$('dueHint');if(!el)return;
+  try{
+    const sy=+$('jy').value,sm=+$('jm').value,sd=+$('jd').value;
+    const iso=makeDue(),d=new Date(iso);
+    if(isNaN(d))throw new Error('x');
+    const tp=toTehranParts(iso),j=gregorianToJalali(tp.gy,tp.gm,tp.gd);
+    const wd=new Intl.DateTimeFormat('fa-IR',{timeZone:'Asia/Tehran',weekday:'long'}).format(d);
+    const hh=_faN(String(tp.h).padStart(2,'0'))+':'+_faN(String(tp.m).padStart(2,'0'));
+    const days=Math.round((Date.UTC(tp.gy,tp.gm-1,tp.gd)-(()=>{const n=toTehranParts(new Date().toISOString());return Date.UTC(n.gy,n.gm-1,n.gd)})())/864e5);
+    const rel=days===0?'امروز':days===1?'فردا':days>1?_faN(days)+' روز دیگر':'تاریخ گذشته است';
+    let t='این رویداد برای «'+wd+' '+_faN(j.jd)+' '+_MONTHS[j.jm-1]+' '+_faN(j.jy)+'، ساعت '+hh+'» ثبت می‌شود ('+rel+').';
+    let warn=false;
+    if(j.jd!==sd||j.jm!==sm){t+=' توجه: '+_MONTHS[sm-1]+' '+_faN(sd)+' روز ندارد و تاریخ به ماه بعد رفته است.';warn=true}
+    if(wd==='جمعه'){t+=' این روز جمعه است.';warn=true}
+    if(days<0)warn=true;
+    el.textContent=t;el.classList.toggle('warn',warn);
+  }catch(_){el.textContent='';el.classList.remove('warn')}
+}
+['jy','jm','jd','jtime'].forEach(id=>{$(id).addEventListener('change',updateDueHint);$(id).addEventListener('input',updateDueHint)});
+{const _r=resetDeadlineForm;resetDeadlineForm=function(){_r.apply(this,arguments);updateDueHint()}}
+updateDueHint();boot();
+</script></body>
+</html>
