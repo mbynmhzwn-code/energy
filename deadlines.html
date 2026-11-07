@@ -1,47 +1,70 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>برنامه درسی | مهندسی انرژی شریف</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ددلاین‌ها | مهندسی انرژی شریف</title>
+<meta name="description" content="تمرین‌ها، پروژه‌ها، کوییزها و امتحان‌های درسی مهندسی انرژی شریف در تقویم شمسی.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#07131d;--panel:#0d202d;--panel2:#102a38;--line:#1d4252;--text:#eaf7fa;--muted:#91aeb8;--accent:#29d3c2;--danger:#ff6b7a;--amber:#ffc857}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0%,#103746 0,#07131d 42%,#050d14 100%);color:var(--text);font-family:Vazirmatn,sans-serif;min-height:100vh}.wrap{max-width:1180px;margin:auto;padding:28px 20px 70px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}.brand{font-weight:800;font-size:20px}.brand span{color:var(--accent)}a{color:inherit;text-decoration:none}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{border:1px solid var(--line);background:#0b1b27;padding:9px 13px;border-radius:10px}
-.hero{padding:28px 30px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,rgba(20,57,71,.9),rgba(9,25,36,.92));box-shadow:0 20px 60px #0005;margin-bottom:20px}.eyebrow{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.4px}.hero h1{font-size:clamp(30px,5vw,50px);margin:8px 0}.hero p{color:var(--muted);margin:0;max-width:850px;line-height:2}
-.tools{display:grid;grid-template-columns:minmax(180px,1fr) 190px 190px;gap:10px;margin:18px 0}.tools input,.tools select{background:#091923;border:1px solid var(--line);color:var(--text);border-radius:12px;padding:12px 14px;font-family:inherit}.status{color:var(--muted);font-size:14px;margin:8px 0 18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}.card{background:linear-gradient(180deg,#102632,#0a1b26);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-3px);border-color:#2e7282}.thumb{width:100%;height:180px;object-fit:cover;background:#081923;display:block}.body{padding:18px}.tag{display:inline-block;padding:5px 9px;border-radius:999px;background:#123844;color:#7ce9df;font-size:12px;margin-bottom:10px}.tag.done{background:#302b19;color:#ffd875}.tag.exam{background:#40222b;color:#ff9eaa}.tag.quiz{background:#3a2d16;color:#ffd875}.tag.assignment{background:#123844;color:#7ce9df}.card h3{margin:0 0 8px;font-size:19px}.meta{font-size:13px;color:var(--muted);line-height:2}.deadline{margin-top:13px;padding:12px 13px;border:1px solid rgba(41,211,194,.25);border-radius:12px;background:rgba(41,211,194,.06)}.deadline strong{display:block;color:var(--text);font-size:15px}.count{color:var(--accent);font-weight:800;margin-top:3px}.count.soon{color:var(--amber)}.count.done{color:var(--danger)}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.btn{display:inline-flex;padding:9px 12px;border-radius:10px;font-weight:800;font-size:13px;border:1px solid var(--line);background:#0b1b27}.btn.primary{background:var(--accent);color:#06201f;border-color:var(--accent)}.empty{text-align:center;padding:50px;color:var(--muted);border:1px dashed var(--line);border-radius:18px;grid-column:1/-1}.section-title{margin:38px 0 13px;font-size:22px}.note{color:var(--muted);font-size:12px;margin-top:20px}
-@media(max-width:650px){html,body{overflow-x:hidden}.wrap{padding:14px 12px 45px}.top{align-items:flex-start;gap:9px;flex-direction:column}.brand{font-size:15px}.navlinks{width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a{font-size:11px;white-space:nowrap;padding:8px 10px}.hero{padding:22px 18px;border-radius:17px}.hero h1{font-size:29px;line-height:1.45}.hero p{font-size:13px;line-height:1.9}.tools{grid-template-columns:1fr;gap:8px}.grid{grid-template-columns:1fr;gap:11px}.card{border-radius:15px}.thumb{height:165px}.body{padding:15px}.card h3{font-size:17px}.meta{font-size:12px}}
-
-[hidden]{display:none!important}
-.viewbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:6px 0 4px}
-.seg{display:inline-flex;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0b1b27}.seg button{background:none;border:0;color:var(--muted);padding:9px 20px;font:inherit;font-weight:700;cursor:pointer}.seg button.on{background:var(--accent);color:#06201f}
-.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-left:5px;vertical-align:-1px}
-.cal{border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#102632,#0a1b26);padding:16px;margin-top:14px}
-.calhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;flex-wrap:wrap}.calhead h2{margin:0;font-size:22px}
-.nav{display:flex;gap:6px}.nav button{background:#0b1b27;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 13px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}.nav button:hover{border-color:var(--accent)}
-.dow,.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}.dow div{text-align:center;color:var(--muted);font-size:12px;padding:4px 0}.dow div:last-child{color:var(--danger)}
-.day{min-height:96px;background:#0a1b26;border:1px solid #17394a;border-radius:12px;padding:6px;text-align:right;color:var(--text);font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:4px;overflow:hidden;transition:.15s}.day:hover{border-color:#2e7282}
-.day.today{border-color:var(--accent)}.day.sel{background:#123844;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}.day.fri .dn{color:var(--danger)}.dn{font-size:13px;font-weight:700}
-.chips{display:flex;flex-direction:column;gap:3px;min-width:0}.chip{display:block;font-size:11px;padding:2px 6px;border-radius:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.chip.exam{background:#40222b;color:#ff9eaa}.chip.quiz{background:#3a2d16;color:#ffd875}.chip.assignment{background:#123844;color:#7ce9df}.chip.past{opacity:.5}.more{font-size:11px;color:var(--muted)}
-@media(max-width:650px){.cal{padding:10px;border-radius:15px}.calhead h2{font-size:18px}.dow,.days{gap:4px}.day{min-height:56px;padding:4px;align-items:center;border-radius:9px}.chips{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:3px}.chip{width:8px;height:8px;padding:0;font-size:0;border-radius:50%}.chip.exam{background:#ff6b7a}.chip.quiz{background:#ffc857}.chip.assignment{background:#29d3c2}.more{display:none}.seg button{padding:8px 16px}}
-.btn.file{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="theme.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="wrap">
-<header class="top"><a class="brand" href="index.html">مهندسی انرژی <span>شریف</span></a><nav class="navlinks"><a href="index.html">← خانه</a><a href="notes.html">جزوه‌ها و منابع</a><a href="chart.html">چارت درسی</a><a href="admin.html">مدیریت</a></nav></header>
-<section class="hero"><div class="eyebrow">COURSE PLANNER</div><h1>ددلاین‌ها، کوییزها و امتحان‌ها</h1><p>همهٔ کارهای درسی و رویدادهای مهم هر درس را یکجا ببین. موارد بر اساس زمان مرتب می‌شوند و می‌توانی با فیلتر نوع رویداد یا درس، سریع‌تر موردنظرت را پیدا کنی.</p></section>
-<div class="tools"><input id="search" placeholder="جست‌وجوی درس، عنوان یا توضیحات…"><select id="course"><option value="">همه درس‌ها</option></select><select id="kind"><option value="">همهٔ رویدادها</option><option value="assignment">تمرین و پروژه</option><option value="quiz">کوییز</option><option value="exam">امتحان</option></select></div>
-<div class="viewbar"><div class="seg"><button type="button" id="vCal" class="on">تقویم</button><button type="button" id="vList">فهرست</button></div><div class="legend"><span><i style="background:#ff6b7a"></i>امتحان</span><span><i style="background:#ffc857"></i>کوییز</span><span><i style="background:#29d3c2"></i>تمرین و پروژه</span></div></div>
-<div id="status" class="status">در حال دریافت ددلاین‌ها…</div>
-<div id="calWrap"><section class="cal"><div class="calhead"><h2 id="calTitle"></h2><div class="nav"><button type="button" id="prev">ماه قبل</button><button type="button" id="today">امروز</button><button type="button" id="next">ماه بعد</button></div></div><div class="dow"><div title="شنبه">ش</div><div title="یکشنبه">ی</div><div title="دوشنبه">د</div><div title="سه‌شنبه">س</div><div title="چهارشنبه">چ</div><div title="پنجشنبه">پ</div><div title="جمعه">ج</div></div><div id="days" class="days"></div></section><div id="dayDetail"></div></div>
-<section id="upcomingSection"><h2 class="section-title">رویدادهای پیشِ رو</h2><div id="upcoming" class="grid"></div></section>
-<section id="pastSection"><h2 class="section-title">رویدادهای گذشته</h2><div id="past" class="grid"></div></section>
-<p class="note">برای ثبت یا ویرایش موارد، از بخش «مدیریت» وارد حساب مدیر شوید. نوع رویداد باید در اطلاعات هر مورد با یکی از مقادیر تمرین/پروژه، کوییز یا امتحان مشخص شود.</p>
+<a class="skip" href="#main">پرش به محتوا</a>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#C2410C"/><path d="M8 40h12l8-20 10 28 8-16h10" fill="none" stroke="#FBF9F4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>مهندسی انرژی شریف</span></a>
+    <nav class="nav" aria-label="بخش‌های سایت"><a href="intro.html">معرفی رشته</a><a href="chart.html">چارت درسی</a><a href="notes.html">جزوه‌ها و منابع</a><a href="deadlines.html" aria-current="page">ددلاین‌ها</a></nav>
+    <button id="themeBtn" class="theme-btn" type="button" aria-pressed="false">حالت تیره</button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <section class="page-head">
+      <h1>ددلاین‌ها، کوییزها و امتحان‌ها</h1>
+      <p>همهٔ کارهای درسی را در یک جا ببین. رویدادها بر اساس زمان مرتب‌اند و با فیلتر درس یا نوع رویداد سریع‌تر پیدا می‌شوند.</p>
+    </section>
+    <div class="tools">
+      <input id="search" type="search" placeholder="درس، عنوان یا توضیحات" aria-label="جست‌وجو">
+      <select id="course" aria-label="فیلتر درس"><option value="">همهٔ درس‌ها</option></select>
+      <select id="kind" aria-label="نوع رویداد"><option value="">همهٔ رویدادها</option><option value="assignment">تمرین و پروژه</option><option value="quiz">کوییز</option><option value="exam">امتحان</option></select>
+    </div>
+    <div class="viewbar">
+      <div class="seg" role="group" aria-label="نحوهٔ نمایش"><button type="button" id="vCal" class="on">تقویم</button><button type="button" id="vList">فهرست</button></div>
+      <div class="legend" aria-label="راهنما">
+        <span class="key"><i class="mark exam"></i>امتحان</span>
+        <span class="key"><i class="mark quiz"></i>کوییز</span>
+        <span class="key"><i class="mark assignment"></i>تمرین و پروژه</span>
+      </div>
+    </div>
+    <div id="status" class="status" role="status">در حال دریافت ددلاین‌ها…</div>
+    <div id="calWrap">
+      <section class="cal" aria-label="تقویم">
+        <div class="calhead"><h2 id="calTitle"></h2><div class="cal-nav"><button type="button" id="prev">ماه قبل</button><button type="button" id="today">امروز</button><button type="button" id="next">ماه بعد</button></div></div>
+        <div class="dow"><div title="شنبه">ش</div><div title="یکشنبه">ی</div><div title="دوشنبه">د</div><div title="سه‌شنبه">س</div><div title="چهارشنبه">چ</div><div title="پنجشنبه">پ</div><div title="جمعه">ج</div></div>
+        <div id="days" class="days"></div>
+      </section>
+      <div id="dayDetail"></div>
+    </div>
+    <section id="upcomingSection"><h2 class="section-title">رویدادهای پیش رو</h2><div id="upcoming" class="ev-grid"></div></section>
+    <section id="pastSection"><h2 class="section-title">رویدادهای گذشته</h2><div id="past" class="ev-grid"></div></section>
+    <p class="foot-note">ثبت و ویرایش ددلاین‌ها از بخش «ورود مدیر» در پایین صفحه انجام می‌شود.</p>
+  </div>
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>مهندسی انرژی شریف · دانشگاه صنعتی شریف</span>
+    <nav aria-label="پیوندهای پایین صفحه">
+      <a href="https://energy.sharif.ir" target="_blank" rel="noopener">وب‌گاه رسمی دانشکده</a>
+      <a href="admin.html">ورود مدیر</a>
+    </nav>
+  </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script>
 <script>
 const $=id=>document.getElementById(id),upcoming=$('upcoming'),past=$('past'),search=$('search'),course=$('course'),kind=$('kind'),statusEl=$('status');let all=[];
@@ -51,7 +74,7 @@ function faDate(v){try{return new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year
 function eventKind(x){const raw=String(x.type??x.event_type??x.category??x.kind??'').trim().toLowerCase();if(/exam|امتحان|آزمون|میان.?ترم|پایان.?ترم/.test(raw))return'exam';if(/quiz|کوییز|کوئیز/.test(raw))return'quiz';return'assignment'}
 function kindLabel(k){return k==='exam'?'امتحان':k==='quiz'?'کوییز':'تمرین و پروژه'}
 function relative(v){const d=new Date(v)-Date.now(),m=Math.round(d/60000),h=Math.round(m/60),days=Math.floor(h/24);if(d<=0)return ['برگزار شده / گذشته','done'];if(m<60)return [`کمتر از ${Math.max(1,m)} دقیقه مانده`,'soon'];if(h<24)return [`حدود ${h} ساعت مانده`,'soon'];if(days===1)return ['۱ روز مانده','soon'];return [`${days} روز مانده`,days<=3?'soon':'']}
-function renderCard(x){const d=new Date(x.due_at),pastIt=d<=new Date(),rel=relative(x.due_at),k=eventKind(x),img=x.image_url?`<img class="thumb" src="${esc(x.image_url)}" alt="${esc(x.title)}" loading="lazy">`:'';const submit=x.submit_url?`<a class="btn primary" href="${esc(x.submit_url)}" target="_blank" rel="noopener">ورود به محل بارگذاری ↗</a>`:'';const dateLabel=k==='exam'?'زمان امتحان':k==='quiz'?'زمان کوییز':'مهلت تحویل';const placeLabel=k==='assignment'?'محل تحویل':'محل برگزاری';const attach=(Array.isArray(x.attachments)?x.attachments:[]).filter(f=>f&&/^https?:\/\//i.test(f.url||'')).map(f=>`<a class="btn file" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.name||'فایل')}">📎 ${esc(f.name||'فایل سؤال')}</a>`).join('');return `<article class="card">${img}<div class="body"><span class="tag ${k} ${pastIt?'done':''}">${esc(x.course||'بدون درس')} · ${kindLabel(k)}</span><h3>${esc(x.title)}</h3><div class="meta">${esc(x.description||'')}<br><b>${dateLabel}:</b> ${faDate(x.due_at)}<br><b>${placeLabel}:</b> ${esc(x.submit_place||'—')}</div><div class="deadline"><strong>${pastIt?(k==='assignment'?'مهلت گذشته':'زمان رویداد گذشته'):(k==='assignment'?'مهلت تحویل':'زمان برگزاری')}</strong><div class="count ${rel[1]}">${rel[0]}</div></div><div class="actions">${submit}${attach}</div></div></article>`}
+function renderCard(x){const d=new Date(x.due_at),pastIt=d<=new Date(),rel=relative(x.due_at),k=eventKind(x),img=x.image_url?`<img class="thumb" src="${esc(x.image_url)}" alt="${esc(x.title)}" loading="lazy">`:'';const submit=x.submit_url?`<a class="btn primary" href="${esc(x.submit_url)}" target="_blank" rel="noopener">ورود به محل بارگذاری</a>`:'';const dateLabel=k==='exam'?'زمان امتحان':k==='quiz'?'زمان کوییز':'مهلت تحویل';const placeLabel=k==='assignment'?'محل تحویل':'محل برگزاری';const attach=(Array.isArray(x.attachments)?x.attachments:[]).filter(f=>f&&/^https?:\/\//i.test(f.url||'')).map(f=>`<a class="btn file" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.name||'فایل')}">${esc(f.name||'فایل سؤال')}</a>`).join('');return `<article class="ev">${img}<div class="body"><span class="tag ${k} ${pastIt?'done':''}">${esc(x.course||'بدون درس')} · ${kindLabel(k)}</span><h3>${esc(x.title)}</h3><div class="meta">${esc(x.description||'')}<br><b>${dateLabel}:</b> ${faDate(x.due_at)}<br><b>${placeLabel}:</b> ${esc(x.submit_place||'—')}</div><div class="deadline"><strong>${pastIt?(k==='assignment'?'مهلت گذشته':'زمان رویداد گذشته'):(k==='assignment'?'مهلت تحویل':'زمان برگزاری')}</strong><div class="count ${rel[1]}">${rel[0]}</div></div><div class="actions">${submit}${attach}</div></div></article>`}
 const MN=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'],fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
 function g2j(gy,gm,gd){const g=[0,31,59,90,120,151,181,212,243,273,304,334];let jy;if(gy>1600){jy=979;gy-=1600}else{jy=0;gy-=621}const g2=gm>2?gy+1:gy;let days=365*gy+Math.floor((g2+3)/4)-Math.floor((g2+99)/100)+Math.floor((g2+399)/400)-80+gd+g[gm-1];jy+=33*Math.floor(days/12053);days%=12053;jy+=4*Math.floor(days/1461);days%=1461;if(days>365){jy+=Math.floor((days-1)/365);days=(days-1)%365}const jm=days<186?1+Math.floor(days/31):7+Math.floor((days-186)/30),jd=1+(days<186?days%31:(days-186)%30);return[jy,jm,jd]}
 function j2g(jy,jm,jd){jy+=1595;let days=-355668+365*jy+Math.floor(jy/33)*8+Math.floor(((jy%33)+3)/4)+jd+(jm<7?(jm-1)*31:(jm-7)*30+186),gy=400*Math.floor(days/146097);days%=146097;if(days>36524){gy+=100*Math.floor(--days/36524);days%=36524;if(days>=365)days++}gy+=4*Math.floor(days/1461);days%=1461;if(days>365){gy+=Math.floor((days-1)/365);days=(days-1)%365}let gd=days+1;const sal=[0,31,(gy%4==0&&gy%100!=0)||gy%400==0?29:28,31,30,31,30,31,31,30,31,30,31];let gm=0;while(gm<13&&gd>sal[gm]){gd-=sal[gm];gm++}return[gy,gm,gd]}
@@ -59,10 +82,10 @@ const jOf=d=>g2j(d.getFullYear(),d.getMonth()+1,d.getDate()),jk=(y,m,d)=>y+'-'+m
 let view='cal',cy,cm,sel,evMap={};{const t=jOf(new Date());cy=t[0];cm=t[1];sel=jk(...t)}
 function monthInfo(y,m){const a=j2g(y,m,1),first=Date.UTC(a[0],a[1]-1,a[2]),b=m===12?j2g(y+1,1,1):j2g(y,m+1,1);return{off:(new Date(first).getUTCDay()+1)%7,len:Math.round((Date.UTC(b[0],b[1]-1,b[2])-first)/864e5)}}
 function rows(){const q=search.value.trim().toLowerCase(),c=course.value,k=kind.value;return all.filter(x=>x.due_at&&!isNaN(new Date(x.due_at))&&(!c||x.course===c)&&(!k||eventKind(x)===k)&&(!q||[x.title,x.course,x.description,x.submit_place].join(' ').toLowerCase().includes(q)))}
-const chip=x=>{const k=eventKind(x);return `<span class="chip ${k}${new Date(x.due_at)<=Date.now()?' past':''}" title="${esc((x.course||'')+' · '+kindLabel(k))}">${esc(x.title)}</span>`};
-function renderCal(rs){const{off,len}=monthInfo(cy,cm),tk=jk(...jOf(new Date()));evMap={};rs.forEach(x=>{const k=jk(...jOf(new Date(x.due_at)));(evMap[k]=evMap[k]||[]).push(x)});let h='',n=0;for(let i=0;i<off;i++)h+='<div></div>';for(let d=1;d<=len;d++){const k=jk(cy,cm,d),dayEv=(evMap[k]||[]).sort((a,b)=>new Date(a.due_at)-new Date(b.due_at));n+=dayEv.length;h+=`<button type="button" class="day${k===tk?' today':''}${k===sel?' sel':''}${(off+d-1)%7===6?' fri':''}" data-k="${k}"><span class="dn">${fa(d)}</span><div class="chips">${dayEv.slice(0,3).map(chip).join('')}${dayEv.length>3?`<span class="more">+${fa(dayEv.length-3)} مورد</span>`:''}</div></button>`}
-$('days').innerHTML=h;$('calTitle').textContent=MN[cm-1]+' '+fa(cy);const p=sel?sel.split('-').map(Number):null,box=$('dayDetail');if(!p||p[0]!==cy||p[1]!==cm)box.innerHTML='';else{const ev=evMap[sel]||[];box.innerHTML=`<h2 class="section-title">${fa(p[2])} ${MN[p[1]-1]} ${fa(p[0])}</h2><div class="grid">${ev.length?ev.map(renderCard).join(''):'<div class="empty">در این روز رویدادی ثبت نشده است.</div>'}</div>`}return n}
-function render(){const rs=rows(),now=Date.now();const u=rs.filter(x=>new Date(x.due_at).getTime()>now).sort((a,b)=>new Date(a.due_at)-new Date(b.due_at));const p=rs.filter(x=>new Date(x.due_at).getTime()<=now).sort((a,b)=>new Date(b.due_at)-new Date(a.due_at));upcoming.innerHTML=u.length?u.map(renderCard).join(''):'<div class="empty">رویداد آینده‌ای با این فیلترها پیدا نشد.</div>';past.innerHTML=p.length?p.map(renderCard).join(''):'<div class="empty">رویداد گذشته‌ای با این فیلترها ثبت نشده.</div>';const n=renderCal(rs),c=view==='cal';$('calWrap').hidden=!c;$('upcomingSection').hidden=c;$('pastSection').hidden=c;$('vCal').classList.toggle('on',c);$('vList').classList.toggle('on',!c);statusEl.textContent=c?`${n} مورد در ${MN[cm-1]} ${fa(cy)} · ${u.length} مورد پیشِ رو در کل`:`${rs.length} مورد نمایش داده می‌شود · ${u.length} مورد پیشِ رو`}
+const chip=x=>{const k=eventKind(x);return `<span class="chip-ev ${k}${new Date(x.due_at)<=Date.now()?' past':''}" title="${esc((x.course||'')+' · '+kindLabel(k))}">${esc(x.title)}</span>`};
+function renderCal(rs){const{off,len}=monthInfo(cy,cm),tk=jk(...jOf(new Date()));evMap={};rs.forEach(x=>{const k=jk(...jOf(new Date(x.due_at)));(evMap[k]=evMap[k]||[]).push(x)});let h='',n=0;for(let i=0;i<off;i++)h+='<div></div>';for(let d=1;d<=len;d++){const k=jk(cy,cm,d),dayEv=(evMap[k]||[]).sort((a,b)=>new Date(a.due_at)-new Date(b.due_at));n+=dayEv.length;h+=`<button type="button" class="day${k===tk?' today':''}${k===sel?' sel':''}${(off+d-1)%7===6?' fri':''}" data-k="${k}"><span class="dn">${fa(d)}</span><div class="cell-chips">${dayEv.slice(0,3).map(chip).join('')}${dayEv.length>3?`<span class="more">+${fa(dayEv.length-3)} مورد</span>`:''}</div></button>`}
+$('days').innerHTML=h;$('calTitle').textContent=MN[cm-1]+' '+fa(cy);const p=sel?sel.split('-').map(Number):null,box=$('dayDetail');if(!p||p[0]!==cy||p[1]!==cm)box.innerHTML='';else{const ev=evMap[sel]||[];box.innerHTML=`<h2 class="section-title">${fa(p[2])} ${MN[p[1]-1]} ${fa(p[0])}</h2><div class="ev-grid">${ev.length?ev.map(renderCard).join(''):'<div class="empty">در این روز رویدادی ثبت نشده است.</div>'}</div>`}return n}
+function render(){const rs=rows(),now=Date.now();const u=rs.filter(x=>new Date(x.due_at).getTime()>now).sort((a,b)=>new Date(a.due_at)-new Date(b.due_at));const p=rs.filter(x=>new Date(x.due_at).getTime()<=now).sort((a,b)=>new Date(b.due_at)-new Date(a.due_at));upcoming.innerHTML=u.length?u.map(renderCard).join(''):'<div class="empty">رویداد آینده‌ای با این فیلترها پیدا نشد.</div>';past.innerHTML=p.length?p.map(renderCard).join(''):'<div class="empty">رویداد گذشته‌ای با این فیلترها ثبت نشده.</div>';const n=renderCal(rs),c=view==='cal';$('calWrap').hidden=!c;$('upcomingSection').hidden=c;$('pastSection').hidden=c;$('vCal').classList.toggle('on',c);$('vList').classList.toggle('on',!c);statusEl.textContent=c?`${fa(n)} مورد در ${MN[cm-1]} ${fa(cy)} · ${fa(u.length)} مورد پیشِ رو در کل`:`${rs.length} مورد نمایش داده می‌شود · ${fa(u.length)} مورد پیشِ رو`}
 $('vCal').onclick=()=>{view='cal';render()};$('vList').onclick=()=>{view='list';render()};
 $('prev').onclick=()=>{if(--cm<1){cm=12;cy--}sel=null;render()};$('next').onclick=()=>{if(++cm>12){cm=1;cy++}sel=null;render()};
 $('today').onclick=()=>{const t=jOf(new Date());cy=t[0];cm=t[1];sel=jk(...t);render()};
@@ -70,4 +93,5 @@ $('days').onclick=e=>{const b=e.target.closest('.day');if(b){sel=b.dataset.k;ren
 async function load(){try{const sb=client();const {data,error}=await sb.from('deadlines').select('*').eq('published',true).order('due_at',{ascending:true});if(error)throw error;all=data||[];const courses=[...new Set(all.map(x=>x.course).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'fa'));course.innerHTML='<option value="">همه درس‌ها</option>'+courses.map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join('');render();setInterval(render,60000)}catch(e){statusEl.textContent='خطا: '+e.message;upcoming.innerHTML='<div class="empty">اتصال به سامانه ددلاین‌ها هنوز تنظیم نشده است.</div>';past.innerHTML=''}}
 search.addEventListener('input',render);course.addEventListener('change',render);kind.addEventListener('change',render);load();
 </script>
-</body></html>
+</body>
+</html>
